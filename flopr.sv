@@ -1,5 +1,7 @@
-module flopr(input logic clk,input logic reset,input logic [3:0] d,output logic [3:0] q);
+module flopr #(parameter SIZE = 64) (	input logic clk,input logic reset,
+													input logic [SIZE-1:0]d,
+													output logic [SIZE-1:0]q);
 	always_ff @(posedge clk, posedge reset)
-		if (reset) q <= 4'b0;
+		if (reset) q <= '0;
 		else q <= d;
 endmodule
