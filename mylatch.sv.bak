@@ -1,9 +1,0 @@
-module mylatch(	input logic set,reset,
-					output logic q0,q1);
-							
-		
-		assign q0 = ~(q0 | set);
-		assign q1 = ~(q1 | reset);
-
-endmodule
-	
