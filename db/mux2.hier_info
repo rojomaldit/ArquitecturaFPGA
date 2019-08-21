@@ -1,0 +1,7 @@
+|mylatch
+set => q0.IN1
+reset => q1.IN0
+q0 <= q0.DB_MAX_OUTPUT_PORT_TYPE
+q1 <= q1.DB_MAX_OUTPUT_PORT_TYPE
+
+

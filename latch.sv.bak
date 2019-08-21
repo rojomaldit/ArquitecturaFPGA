@@ -1,0 +1,9 @@
+module latch(	input logic set,reset,
+					output logic q0,q1);
+							
+		
+		assign q0 = ~(nor2 | set);
+		assign q1 = ~(nor1 | reset);
+
+endmodule
+	
