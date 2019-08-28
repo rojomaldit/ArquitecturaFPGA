@@ -1,5 +1,5 @@
 Analysis & Synthesis report for mux2
-Wed Aug 28 11:48:41 2019
+Wed Aug 28 12:19:06 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -14,10 +14,11 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Parameter Settings for User Entity Instance: Top-level Entity: |imem
- 10. Post-Synthesis Netlist Statistics for Top Partition
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+  9. Parameter Settings for User Entity Instance: mux2:_mux
+ 10. Parameter Settings for User Entity Instance: flopr:flop
+ 11. Post-Synthesis Netlist Statistics for Top Partition
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
 
 
 
@@ -43,16 +44,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Aug 28 11:48:41 2019       ;
+; Analysis & Synthesis Status        ; Successful - Wed Aug 28 12:19:06 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; mux2                                        ;
-; Top-level Entity Name              ; imem                                        ;
+; Top-level Entity Name              ; fetch                                       ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 30                                          ;
-;     Total combinational functions  ; 30                                          ;
-;     Dedicated logic registers      ; 0                                           ;
-; Total registers                    ; 0                                           ;
-; Total pins                         ; 38                                          ;
+; Total logic elements               ; 64                                          ;
+;     Total combinational functions  ; 62                                          ;
+;     Dedicated logic registers      ; 64                                          ;
+; Total registers                    ; 64                                          ;
+; Total pins                         ; 131                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -66,7 +67,7 @@ refer to the applicable agreement for further details.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; EP4CE6F17C6        ;                    ;
-; Top-level entity name                                            ; imem               ; mux2               ;
+; Top-level entity name                                            ; fetch              ; mux2               ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -155,52 +156,55 @@ refer to the applicable agreement for further details.
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                        ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                    ; Library ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------+---------+
-; imem.sv                          ; yes             ; User SystemVerilog HDL File  ; /home/mostorero294/ArqComp/Quartus/Mux2/imem.sv ;         ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                         ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                     ; Library ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------+---------+
+; mux2.sv                          ; yes             ; User SystemVerilog HDL File  ; /home/mostorero294/ArqComp/Quartus/Mux2/mux2.sv  ;         ;
+; flopr.sv                         ; yes             ; User SystemVerilog HDL File  ; /home/mostorero294/ArqComp/Quartus/Mux2/flopr.sv ;         ;
+; fetch.sv                         ; yes             ; User SystemVerilog HDL File  ; /home/mostorero294/ArqComp/Quartus/Mux2/fetch.sv ;         ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------+---------+
 
 
-+-------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                 ;
-+---------------------------------------------+---------------+
-; Resource                                    ; Usage         ;
-+---------------------------------------------+---------------+
-; Estimated Total logic elements              ; 30            ;
-;                                             ;               ;
-; Total combinational functions               ; 30            ;
-; Logic element usage by number of LUT inputs ;               ;
-;     -- 4 input functions                    ; 22            ;
-;     -- 3 input functions                    ; 7             ;
-;     -- <=2 input functions                  ; 1             ;
-;                                             ;               ;
-; Logic elements by mode                      ;               ;
-;     -- normal mode                          ; 30            ;
-;     -- arithmetic mode                      ; 0             ;
-;                                             ;               ;
-; Total registers                             ; 0             ;
-;     -- Dedicated logic registers            ; 0             ;
-;     -- I/O registers                        ; 0             ;
-;                                             ;               ;
-; I/O pins                                    ; 38            ;
-;                                             ;               ;
-; Embedded Multiplier 9-bit elements          ; 0             ;
-;                                             ;               ;
-; Maximum fan-out node                        ; addr[4]~input ;
-; Maximum fan-out                             ; 18            ;
-; Total fan-out                               ; 170           ;
-; Average fan-out                             ; 1.60          ;
-+---------------------------------------------+---------------+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 64        ;
+;                                             ;           ;
+; Total combinational functions               ; 62        ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 0         ;
+;     -- 3 input functions                    ; 0         ;
+;     -- <=2 input functions                  ; 62        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 1         ;
+;     -- arithmetic mode                      ; 61        ;
+;                                             ;           ;
+; Total registers                             ; 64        ;
+;     -- Dedicated logic registers            ; 64        ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 131       ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 64        ;
+; Total fan-out                               ; 636       ;
+; Average fan-out                             ; 1.64      ;
++---------------------------------------------+-----------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -208,7 +212,8 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |imem                      ; 30 (30)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 38   ; 0            ; |imem               ; imem        ; work         ;
+; |fetch                     ; 62 (0)              ; 64 (0)                    ; 0           ; 0            ; 0       ; 0         ; 131  ; 0            ; |fetch              ; fetch       ; work         ;
+;    |flopr:flop|            ; 62 (62)             ; 64 (64)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fetch|flopr:flop   ; flopr       ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -218,23 +223,33 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 64    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Synchronous Load   ; 62    ;
+; Number of registers using Asynchronous Clear ; 64    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 2     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |imem ;
-+----------------+-------+---------------------------------------------+
-; Parameter Name ; Value ; Type                                        ;
-+----------------+-------+---------------------------------------------+
-; SIZE           ; 32    ; Signed Integer                              ;
-+----------------+-------+---------------------------------------------+
++--------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mux2:_mux ;
++----------------+-------+-------------------------------+
+; Parameter Name ; Value ; Type                          ;
++----------------+-------+-------------------------------+
+; size           ; 64    ; Signed Integer                ;
++----------------+-------+-------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------+
+; Parameter Settings for User Entity Instance: flopr:flop ;
++----------------+-------+--------------------------------+
+; Parameter Name ; Value ; Type                           ;
++----------------+-------+--------------------------------+
+; SIZE           ; 64    ; Signed Integer                 ;
++----------------+-------+--------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -243,17 +258,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 38                          ;
-; cycloneiii_lcell_comb ; 32                          ;
-;     normal            ; 32                          ;
-;         0 data inputs ; 1                           ;
+; boundary_port         ; 131                         ;
+; cycloneiii_ff         ; 64                          ;
+;     CLR SLD           ; 62                          ;
+;     ENA CLR           ; 2                           ;
+; cycloneiii_lcell_comb ; 62                          ;
+;     arith             ; 61                          ;
+;         2 data inputs ; 61                          ;
+;     normal            ; 1                           ;
 ;         1 data inputs ; 1                           ;
-;         2 data inputs ; 1                           ;
-;         3 data inputs ; 7                           ;
-;         4 data inputs ; 22                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 2.66                        ;
+; Max LUT depth         ; 7.10                        ;
+; Average LUT depth     ; 3.68                        ;
 +-----------------------+-----------------------------+
 
 
@@ -272,7 +288,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Aug 28 11:48:22 2019
+    Info: Processing started: Wed Aug 28 12:18:47 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mux2 -c mux2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -308,30 +324,22 @@ Info (12021): Found 1 design units, including 1 entities, in source file alu.sv
     Info (12023): Found entity 1: alu File: /home/mostorero294/ArqComp/Quartus/Mux2/alu.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file signext_tb.sv
     Info (12023): Found entity 1: signext_tb File: /home/mostorero294/ArqComp/Quartus/Mux2/signext_tb.sv Line: 1
-Info (12127): Elaborating entity "imem" for the top level hierarchy
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "q[4]" is stuck at GND File: /home/mostorero294/ArqComp/Quartus/Mux2/imem.sv Line: 3
-    Warning (13410): Pin "q[5]" is stuck at GND File: /home/mostorero294/ArqComp/Quartus/Mux2/imem.sv Line: 3
-    Warning (13410): Pin "q[9]" is stuck at GND File: /home/mostorero294/ArqComp/Quartus/Mux2/imem.sv Line: 3
-    Warning (13410): Pin "q[10]" is stuck at GND File: /home/mostorero294/ArqComp/Quartus/Mux2/imem.sv Line: 3
-    Warning (13410): Pin "q[11]" is stuck at GND File: /home/mostorero294/ArqComp/Quartus/Mux2/imem.sv Line: 3
-    Warning (13410): Pin "q[12]" is stuck at GND File: /home/mostorero294/ArqComp/Quartus/Mux2/imem.sv Line: 3
-    Warning (13410): Pin "q[13]" is stuck at GND File: /home/mostorero294/ArqComp/Quartus/Mux2/imem.sv Line: 3
-    Warning (13410): Pin "q[14]" is stuck at GND File: /home/mostorero294/ArqComp/Quartus/Mux2/imem.sv Line: 3
-    Warning (13410): Pin "q[20]" is stuck at GND File: /home/mostorero294/ArqComp/Quartus/Mux2/imem.sv Line: 3
-    Warning (13410): Pin "q[21]" is stuck at GND File: /home/mostorero294/ArqComp/Quartus/Mux2/imem.sv Line: 3
-    Warning (13410): Pin "q[23]" is stuck at GND File: /home/mostorero294/ArqComp/Quartus/Mux2/imem.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file fetch.sv
+    Info (12023): Found entity 1: fetch File: /home/mostorero294/ArqComp/Quartus/Mux2/fetch.sv Line: 1
+Info (12127): Elaborating entity "fetch" for the top level hierarchy
+Info (12128): Elaborating entity "mux2" for hierarchy "mux2:_mux" File: /home/mostorero294/ArqComp/Quartus/Mux2/fetch.sv Line: 6
+Info (12128): Elaborating entity "flopr" for hierarchy "flopr:flop" File: /home/mostorero294/ArqComp/Quartus/Mux2/fetch.sv Line: 7
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 68 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 6 input pins
-    Info (21059): Implemented 32 output pins
-    Info (21061): Implemented 30 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 13 warnings
-    Info: Peak virtual memory: 948 megabytes
-    Info: Processing ended: Wed Aug 28 11:48:41 2019
+Info (21057): Implemented 195 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 67 input pins
+    Info (21059): Implemented 64 output pins
+    Info (21061): Implemented 64 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 953 megabytes
+    Info: Processing ended: Wed Aug 28 12:19:06 2019
     Info: Elapsed time: 00:00:19
-    Info: Total CPU time (on all processors): 00:00:46
+    Info: Total CPU time (on all processors): 00:00:45
 
 

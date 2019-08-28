@@ -1,5 +1,5 @@
 Flow report for mux2
-Wed Aug 28 11:48:41 2019
+Wed Aug 28 12:19:06 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,18 +40,18 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Wed Aug 28 11:48:41 2019       ;
+; Flow Status                        ; Successful - Wed Aug 28 12:19:06 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; mux2                                        ;
-; Top-level Entity Name              ; imem                                        ;
+; Top-level Entity Name              ; fetch                                       ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE6F17C6                                 ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 30                                          ;
-;     Total combinational functions  ; 30                                          ;
-;     Dedicated logic registers      ; 0                                           ;
-; Total registers                    ; 0                                           ;
-; Total pins                         ; 38                                          ;
+; Total logic elements               ; 64                                          ;
+;     Total combinational functions  ; 62                                          ;
+;     Dedicated logic registers      ; 64                                          ;
+; Total registers                    ; 64                                          ;
+; Total pins                         ; 131                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 08/28/2019 11:48:23 ;
+; Start date & time ; 08/28/2019 12:18:47 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; mux2                ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+-------------+------------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id       ;
 +--------------------------------------+----------------------------------------+---------------+-------------+------------------+
-; COMPILER_SIGNATURE_ID                ; 123633793758283.156700370207886        ; --            ; --          ; --               ;
+; COMPILER_SIGNATURE_ID                ; 123633793758283.156700552708902        ; --            ; --          ; --               ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; imem_tb          ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; sillyfunction_tb ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; flopr_tb         ;
@@ -100,13 +100,13 @@ refer to the applicable agreement for further details.
 ; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --            ; --          ; --               ;
 ; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --            ; --          ; --               ;
 ; NOMINAL_CORE_SUPPLY_VOLTAGE          ; 1.2V                                   ; --            ; --          ; --               ;
-; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; imem        ; Top              ;
-; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; imem        ; Top              ;
-; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; imem        ; Top              ;
+; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; fetch       ; Top              ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; fetch       ; Top              ;
+; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; fetch       ; Top              ;
 ; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                    ; --            ; --          ; --               ;
 ; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --               ;
 ; PROJECT_OUTPUT_DIRECTORY             ; output_files                           ; --            ; --          ; --               ;
-; TOP_LEVEL_ENTITY                     ; imem                                   ; mux2          ; --          ; --               ;
+; TOP_LEVEL_ENTITY                     ; fetch                                  ; mux2          ; --          ; --               ;
 +--------------------------------------+----------------------------------------+---------------+-------------+------------------+
 
 
@@ -115,8 +115,8 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:19     ; 1.0                     ; 899 MB              ; 00:00:46                           ;
-; Total                ; 00:00:19     ; --                      ; --                  ; 00:00:46                           ;
+; Analysis & Synthesis ; 00:00:19     ; 1.0                     ; 904 MB              ; 00:00:44                           ;
+; Total                ; 00:00:19     ; --                      ; --                  ; 00:00:44                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
