@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed Aug 28 11:48:41 2019
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : mux2
+Top-level Entity Name : imem
+Family : Cyclone IV E
+Total logic elements : 30
+    Total combinational functions : 30
+    Dedicated logic registers : 0
+Total registers : 0
+Total pins : 38
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
