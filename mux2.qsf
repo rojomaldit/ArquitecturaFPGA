@@ -69,6 +69,7 @@ set_global_assignment -name EDA_TEST_BENCH_NAME signext_tb -section_id eda_simul
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id signext_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME signext_tb -section_id signext_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE signext_tb.sv -section_id signext_tb
+set_global_assignment -name SYSTEMVERILOG_FILE alu_tb.sv
 set_global_assignment -name SYSTEMVERILOG_FILE imem.sv
 set_global_assignment -name SYSTEMVERILOG_FILE signext.sv
 set_global_assignment -name SYSTEMVERILOG_FILE mux2.sv
