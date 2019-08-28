@@ -1,10 +1,11 @@
 module imem #(parameter SIZE = 32) (input logic[5:0] addr,
                                     output logic [SIZE-1:0]q
                                    );
+
   logic[SIZE-1:0] aux = 0;
-  always_comb
+  
   case(addr)
-    'h00: aux = 'hf8000000;
+    'h00: assign aux = 'hf8000000;
     'h01: assign aux = 'hf8008001;
     'h02: assign aux = 'hf8010002;
     'h03: assign aux = 'hf8018003;
