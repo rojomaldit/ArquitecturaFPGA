@@ -3,3 +3,6 @@
 ./output_files
 ./simulation
 *.bak
+*.qpf
+*.qws
+*.rpt
