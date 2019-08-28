@@ -7,53 +7,53 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 d/home/mostorero294/ArqComp/Quartus/Mux2/simulation/modelsim
-vflopr
+Z0 dC:/Users/rojomaldit/Desktop/ArquitecturaFPGA/simulation/modelsim
+vsignext
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1566403038
+Z2 !s110 1567009793
 !i10b 1
-!s100 _27ogMY^d3o<Nkj?5]`4Q3
-I^0HiYFf8E?n7@V_;P_I?P1
+!s100 dDh@98bkBga<6DCQC`b7?0
+Ik7<Tz]eZz1TA:<VT;<E1Y3
 Z3 VDg1SIo80bB@j0V0VzS_@n1
-!s105 flopr_sv_unit
+!s105 signext_sv_unit
 S1
 R0
-w1566400543
-8/home/mostorero294/ArqComp/Quartus/Mux2/flopr.sv
-F/home/mostorero294/ArqComp/Quartus/Mux2/flopr.sv
+w1567007748
+8C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/signext.sv
+FC:/Users/rojomaldit/Desktop/ArquitecturaFPGA/signext.sv
 L0 1
 Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1566403038.000000
-!s107 /home/mostorero294/ArqComp/Quartus/Mux2/flopr.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/mostorero294/ArqComp/Quartus/Mux2|/home/mostorero294/ArqComp/Quartus/Mux2/flopr.sv|
+Z5 !s108 1567009793.000000
+!s107 C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/signext.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/rojomaldit/Desktop/ArquitecturaFPGA|C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/signext.sv|
 !i113 1
 Z6 o-sv -work work
-Z7 !s92 -sv -work work +incdir+/home/mostorero294/ArqComp/Quartus/Mux2
+Z7 !s92 -sv -work work +incdir+C:/Users/rojomaldit/Desktop/ArquitecturaFPGA
 Z8 tCvgOpt 0
-vflopr_tb
+vsignext_tb
 R1
 R2
 !i10b 1
-!s100 8CFVE<XAzE<O?6n:[`WbI2
-I50U3c:`G0L_?J>_ke]22m3
+!s100 N]2JUZcCQE_@A2RGjdzgm3
+Io9[>;bJ]QPFAK<GW]jBn?0
 R3
-!s105 flopr_tb_sv_unit
+!s105 signext_tb_sv_unit
 S1
 R0
-w1566402803
-8/home/mostorero294/ArqComp/Quartus/Mux2/flopr_tb.sv
-F/home/mostorero294/ArqComp/Quartus/Mux2/flopr_tb.sv
+w1567009784
+8C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/signext_tb.sv
+FC:/Users/rojomaldit/Desktop/ArquitecturaFPGA/signext_tb.sv
 L0 1
 R4
 r1
 !s85 0
 31
 R5
-!s107 /home/mostorero294/ArqComp/Quartus/Mux2/flopr_tb.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/mostorero294/ArqComp/Quartus/Mux2|/home/mostorero294/ArqComp/Quartus/Mux2/flopr_tb.sv|
+!s107 C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/signext_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/rojomaldit/Desktop/ArquitecturaFPGA|C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/signext_tb.sv|
 !i113 1
 R6
 R7

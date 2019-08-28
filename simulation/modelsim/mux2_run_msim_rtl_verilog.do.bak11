@@ -5,11 +5,11 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
-vlog -sv -work work +incdir+/home/mostorero294/ArqComp/Quartus/Mux2 {/home/mostorero294/ArqComp/Quartus/Mux2/flopr.sv}
+vlog -sv -work work +incdir+C:/Users/rojomaldit/Desktop/ArquitecturaFPGA {C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/signext.sv}
 
-vlog -sv -work work +incdir+/home/mostorero294/ArqComp/Quartus/Mux2 {/home/mostorero294/ArqComp/Quartus/Mux2/flopr_tb.sv}
+vlog -sv -work work +incdir+C:/Users/rojomaldit/Desktop/ArquitecturaFPGA {C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/signext_tb.sv}
 
-vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  flopr_tb
+vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  signext_tb
 
 add wave *
 view structure
