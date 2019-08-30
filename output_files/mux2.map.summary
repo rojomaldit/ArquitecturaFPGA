@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Fri Aug 30 12:26:41 2019
+Analysis & Synthesis Status : Successful - Fri Aug 30 12:57:17 2019
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : mux2
 Top-level Entity Name : regfile
 Family : Cyclone IV E
-Total logic elements : 4,789
-    Total combinational functions : 2,816
+Total logic elements : 4,786
+    Total combinational functions : 2,877
     Dedicated logic registers : 2,048
 Total registers : 2048
 Total pins : 209

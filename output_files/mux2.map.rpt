@@ -1,5 +1,5 @@
 Analysis & Synthesis report for mux2
-Fri Aug 30 12:26:41 2019
+Fri Aug 30 12:57:17 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -42,13 +42,13 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Aug 30 12:26:41 2019       ;
+; Analysis & Synthesis Status        ; Successful - Fri Aug 30 12:57:17 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; mux2                                        ;
 ; Top-level Entity Name              ; regfile                                     ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 4,789                                       ;
-;     Total combinational functions  ; 2,816                                       ;
+; Total logic elements               ; 4,786                                       ;
+;     Total combinational functions  ; 2,877                                       ;
 ;     Dedicated logic registers      ; 2,048                                       ;
 ; Total registers                    ; 2048                                        ;
 ; Total pins                         ; 209                                         ;
@@ -162,13 +162,13 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                            ; Library ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------+---------+
-; regfile.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/regfile.sv ;         ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                           ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                       ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------+---------+
+; regfile.sv                       ; yes             ; User SystemVerilog HDL File  ; /home/mostorero294/ArqComp/Quartus/Mux2/regfile.sv ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -176,17 +176,17 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 4,789     ;
+; Estimated Total logic elements              ; 4,786     ;
 ;                                             ;           ;
-; Total combinational functions               ; 2816      ;
+; Total combinational functions               ; 2877      ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 2576      ;
-;     -- 3 input functions                    ; 128       ;
-;     -- <=2 input functions                  ; 112       ;
+;     -- 4 input functions                    ; 2577      ;
+;     -- 3 input functions                    ; 225       ;
+;     -- <=2 input functions                  ; 75        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 2812      ;
-;     -- arithmetic mode                      ; 4         ;
+;     -- normal mode                          ; 2877      ;
+;     -- arithmetic mode                      ; 0         ;
 ;                                             ;           ;
 ; Total registers                             ; 2048      ;
 ;     -- Dedicated logic registers            ; 2048      ;
@@ -198,7 +198,7 @@ refer to the applicable agreement for further details.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 2048      ;
-; Total fan-out                               ; 17317     ;
+; Total fan-out                               ; 17539     ;
 ; Average fan-out                             ; 3.28      ;
 +---------------------------------------------+-----------+
 
@@ -208,7 +208,7 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |regfile                   ; 2816 (2816)         ; 2048 (2048)               ; 0           ; 0            ; 0       ; 0         ; 209  ; 0            ; |regfile            ; regfile     ; work         ;
+; |regfile                   ; 2877 (2877)         ; 2048 (2048)               ; 0           ; 0            ; 0       ; 0         ; 209  ; 0            ; |regfile            ; regfile     ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -236,17 +236,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; boundary_port         ; 209                         ;
 ; cycloneiii_ff         ; 2048                        ;
 ;     ENA               ; 2048                        ;
-; cycloneiii_lcell_comb ; 2816                        ;
-;     arith             ; 4                           ;
-;         2 data inputs ; 4                           ;
-;     normal            ; 2812                        ;
-;         1 data inputs ; 76                          ;
-;         2 data inputs ; 32                          ;
-;         3 data inputs ; 128                         ;
-;         4 data inputs ; 2576                        ;
+; cycloneiii_lcell_comb ; 2877                        ;
+;     normal            ; 2877                        ;
+;         1 data inputs ; 75                          ;
+;         3 data inputs ; 225                         ;
+;         4 data inputs ; 2577                        ;
 ;                       ;                             ;
 ; Max LUT depth         ; 5.00                        ;
-; Average LUT depth     ; 4.23                        ;
+; Average LUT depth     ; 4.25                        ;
 +-----------------------+-----------------------------+
 
 
@@ -265,75 +262,72 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri Aug 30 12:26:22 2019
+    Info: Processing started: Fri Aug 30 12:56:55 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mux2 -c mux2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file regfile_tb.sv
-    Info (12023): Found entity 1: regfile_tb File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/regfile_tb.sv Line: 1
+    Info (12023): Found entity 1: regfile_tb File: /home/mostorero294/ArqComp/Quartus/Mux2/regfile_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file fetch_tb.sv
-    Info (12023): Found entity 1: fetch_tb File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/fetch_tb.sv Line: 1
+    Info (12023): Found entity 1: fetch_tb File: /home/mostorero294/ArqComp/Quartus/Mux2/fetch_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file execute.sv
-    Info (12023): Found entity 1: execute File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/execute.sv Line: 1
+    Info (12023): Found entity 1: execute File: /home/mostorero294/ArqComp/Quartus/Mux2/execute.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file regfile.sv
-    Info (12023): Found entity 1: regfile File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/regfile.sv Line: 1
+    Info (12023): Found entity 1: regfile File: /home/mostorero294/ArqComp/Quartus/Mux2/regfile.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file maindec_tb.sv
-    Info (12023): Found entity 1: maindec_tb File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/maindec_tb.sv Line: 1
+    Info (12023): Found entity 1: maindec_tb File: /home/mostorero294/ArqComp/Quartus/Mux2/maindec_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file maindec.sv
-    Info (12023): Found entity 1: maindec File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/maindec.sv Line: 1
+    Info (12023): Found entity 1: maindec File: /home/mostorero294/ArqComp/Quartus/Mux2/maindec.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file imem_tb.sv
-    Info (12023): Found entity 1: imem_tb File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/imem_tb.sv Line: 1
+    Info (12023): Found entity 1: imem_tb File: /home/mostorero294/ArqComp/Quartus/Mux2/imem_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu_tb.sv
-    Info (12023): Found entity 1: alu_tb File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/alu_tb.sv Line: 1
+    Info (12023): Found entity 1: alu_tb File: /home/mostorero294/ArqComp/Quartus/Mux2/alu_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file imem.sv
-    Info (12023): Found entity 1: imem File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/imem.sv Line: 1
+    Info (12023): Found entity 1: imem File: /home/mostorero294/ArqComp/Quartus/Mux2/imem.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file signext.sv
-    Info (12023): Found entity 1: signext File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/signext.sv Line: 1
+    Info (12023): Found entity 1: signext File: /home/mostorero294/ArqComp/Quartus/Mux2/signext.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux2.sv
-    Info (12023): Found entity 1: mux2 File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/mux2.sv Line: 1
+    Info (12023): Found entity 1: mux2 File: /home/mostorero294/ArqComp/Quartus/Mux2/mux2.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux4.sv
-    Info (12023): Found entity 1: mux4 File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/mux4.sv Line: 1
+    Info (12023): Found entity 1: mux4 File: /home/mostorero294/ArqComp/Quartus/Mux2/mux4.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux8.sv
-    Info (12023): Found entity 1: mux8 File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/mux8.sv Line: 1
+    Info (12023): Found entity 1: mux8 File: /home/mostorero294/ArqComp/Quartus/Mux2/mux8.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux16.sv
-    Info (12023): Found entity 1: mux16 File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/mux16.sv Line: 1
+    Info (12023): Found entity 1: mux16 File: /home/mostorero294/ArqComp/Quartus/Mux2/mux16.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux32.sv
-    Info (12023): Found entity 1: mux32 File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/mux32.sv Line: 1
+    Info (12023): Found entity 1: mux32 File: /home/mostorero294/ArqComp/Quartus/Mux2/mux32.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file mux64.sv
-    Info (12023): Found entity 1: mux64 File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/mux64.sv Line: 1
+    Info (12023): Found entity 1: mux64 File: /home/mostorero294/ArqComp/Quartus/Mux2/mux64.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file flopr.sv
-    Info (12023): Found entity 1: flopr File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/flopr.sv Line: 1
+    Info (12023): Found entity 1: flopr File: /home/mostorero294/ArqComp/Quartus/Mux2/flopr.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file flopenr.sv
-    Info (12023): Found entity 1: flopenr File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/flopenr.sv Line: 1
+    Info (12023): Found entity 1: flopenr File: /home/mostorero294/ArqComp/Quartus/Mux2/flopenr.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sillyfunction.sv
-    Info (12023): Found entity 1: sillyfunction File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/sillyfunction.sv Line: 1
+    Info (12023): Found entity 1: sillyfunction File: /home/mostorero294/ArqComp/Quartus/Mux2/sillyfunction.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file sillyfunction_tb.sv
-    Info (12023): Found entity 1: sillyfunction_tb File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/sillyfunction_tb.sv Line: 1
+    Info (12023): Found entity 1: sillyfunction_tb File: /home/mostorero294/ArqComp/Quartus/Mux2/sillyfunction_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file flopr_tb.sv
-    Info (12023): Found entity 1: flopr_tb File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/flopr_tb.sv Line: 1
+    Info (12023): Found entity 1: flopr_tb File: /home/mostorero294/ArqComp/Quartus/Mux2/flopr_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu.sv
-    Info (12023): Found entity 1: alu File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/alu.sv Line: 1
+    Info (12023): Found entity 1: alu File: /home/mostorero294/ArqComp/Quartus/Mux2/alu.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file signext_tb.sv
-    Info (12023): Found entity 1: signext_tb File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/signext_tb.sv Line: 1
+    Info (12023): Found entity 1: signext_tb File: /home/mostorero294/ArqComp/Quartus/Mux2/signext_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file fetch.sv
-    Info (12023): Found entity 1: fetch File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/fetch.sv Line: 1
+    Info (12023): Found entity 1: fetch File: /home/mostorero294/ArqComp/Quartus/Mux2/fetch.sv Line: 1
 Info (12127): Elaborating entity "regfile" for the top level hierarchy
-Warning (10199): Verilog HDL Case Statement warning at regfile.sv(23): case item expression never matches the case expression File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/regfile.sv Line: 23
 Info (276014): Found 1 instances of uninferred RAM logic
-    Info (276007): RAM logic "regs" is uninferred due to asynchronous read logic File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/regfile.sv Line: 15
+    Info (276007): RAM logic "regs" is uninferred due to asynchronous read logic File: /home/mostorero294/ArqComp/Quartus/Mux2/regfile.sv Line: 15
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "we3" File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/regfile.sv Line: 3
-Info (21057): Implemented 4998 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 5059 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 81 input pins
     Info (21059): Implemented 128 output pins
-    Info (21061): Implemented 4789 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 618 megabytes
-    Info: Processing ended: Fri Aug 30 12:26:41 2019
-    Info: Elapsed time: 00:00:19
-    Info: Total CPU time (on all processors): 00:00:40
+    Info (21061): Implemented 4850 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 969 megabytes
+    Info: Processing ended: Fri Aug 30 12:57:17 2019
+    Info: Elapsed time: 00:00:22
+    Info: Total CPU time (on all processors): 00:00:48
 
 

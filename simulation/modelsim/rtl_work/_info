@@ -7,53 +7,53 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/rojomaldit/Desktop/ArquitecturaFPGA/simulation/modelsim
+Z0 d/home/mostorero294/ArqComp/Quartus/Mux2/simulation/modelsim
 vregfile
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1567178806
+Z2 !s110 1567180654
 !i10b 1
-!s100 `QO8IJG;1odAX@YVNWi]W2
-I=`TMHgb48mB4NUU9DclnT3
+!s100 N@^o6@KUL?697F2D1Knm00
+IV<LJVQR;nzEN^ONm9NmgC3
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 !s105 regfile_sv_unit
 S1
 R0
-w1567177932
-8C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/regfile.sv
-FC:/Users/rojomaldit/Desktop/ArquitecturaFPGA/regfile.sv
+w1567180393
+8/home/mostorero294/ArqComp/Quartus/Mux2/regfile.sv
+F/home/mostorero294/ArqComp/Quartus/Mux2/regfile.sv
 L0 1
 Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1567178806.000000
-!s107 C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/regfile.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/rojomaldit/Desktop/ArquitecturaFPGA|C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/regfile.sv|
+Z5 !s108 1567180654.000000
+!s107 /home/mostorero294/ArqComp/Quartus/Mux2/regfile.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/mostorero294/ArqComp/Quartus/Mux2|/home/mostorero294/ArqComp/Quartus/Mux2/regfile.sv|
 !i113 1
 Z6 o-sv -work work
-Z7 !s92 -sv -work work +incdir+C:/Users/rojomaldit/Desktop/ArquitecturaFPGA
+Z7 !s92 -sv -work work +incdir+/home/mostorero294/ArqComp/Quartus/Mux2
 Z8 tCvgOpt 0
 vregfile_tb
 R1
 R2
 !i10b 1
-!s100 5YJB<FXd]IdYDBChnVTSk2
-IVhLRGeE7:W2I1^;95?_>90
+!s100 ADQWzJo]_0WT]7_3R>98<3
+IR9^DZa`bUoKLGRFG2Um3W0
 R3
 !s105 regfile_tb_sv_unit
 S1
 R0
-w1567178779
-8C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/regfile_tb.sv
-FC:/Users/rojomaldit/Desktop/ArquitecturaFPGA/regfile_tb.sv
+w1567179970
+8/home/mostorero294/ArqComp/Quartus/Mux2/regfile_tb.sv
+F/home/mostorero294/ArqComp/Quartus/Mux2/regfile_tb.sv
 L0 1
 R4
 r1
 !s85 0
 31
 R5
-!s107 C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/regfile_tb.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/rojomaldit/Desktop/ArquitecturaFPGA|C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/regfile_tb.sv|
+!s107 /home/mostorero294/ArqComp/Quartus/Mux2/regfile_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/mostorero294/ArqComp/Quartus/Mux2|/home/mostorero294/ArqComp/Quartus/Mux2/regfile_tb.sv|
 !i113 1
 R6
 R7
