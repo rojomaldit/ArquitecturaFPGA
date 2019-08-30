@@ -12,18 +12,18 @@ module regfile (input logic[4:0] ra1, ra2, wa3,
                               64'd20, 64'd21, 64'd22, 64'd23,
                               64'd24, 64'd25, 64'd26, 64'd27,
                               64'd28, 64'd29, 64'd30, 64'd0
-                            }
+                            };
   
-  rd1 = regs[ra1];
-  rd2 = regs[ra2];
+  assign rd1 = regs[ra1];
+  assign rd2 = regs[ra2];
 
   always_ff @(posedge clk)
   if (clk) begin
-    always_comb
     case(wa3)
       'd32: regs[wa3-1] = 0;
       default: regs[wa3-1] = wd3;
     endcase
-  end
+  $stop;
+  end 
 
 endmodule
