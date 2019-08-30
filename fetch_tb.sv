@@ -4,7 +4,7 @@ module fetch_tb();
 	
 	fetch test(PCSRC,clk,reset,PCBRANCH,IMEMADDR);
 	always begin
-		clk = ~clk;#5ns;
+		clk = ~clk; #5ns;
 	end
 	
 	initial begin 

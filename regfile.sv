@@ -23,7 +23,6 @@ module regfile (input logic[4:0] ra1, ra2, wa3,
       'd32: regs[wa3-1] = 0;
       default: regs[wa3-1] = wd3;
     endcase
-  $stop;
   end 
 
 endmodule
