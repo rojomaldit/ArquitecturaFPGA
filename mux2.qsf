@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE6F17C6
-set_global_assignment -name TOP_LEVEL_ENTITY fetch
+set_global_assignment -name TOP_LEVEL_ENTITY regfile
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "10:01:22  AUGUST 16, 2019"
 set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
@@ -63,6 +63,17 @@ set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME flopr_tb -section_id flop
 set_global_assignment -name EDA_TEST_BENCH_NAME signext_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id signext_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME signext_tb -section_id signext_tb
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id imem_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME imem_tb -section_id imem_tb
+set_global_assignment -name EDA_TEST_BENCH_NAME imem_tb -section_id eda_simulation
+set_global_assignment -name EDA_TEST_BENCH_FILE sillyfunction_tb.sv -section_id sillyfunction_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE flopr_tb.sv -section_id flopr_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE signext_tb.sv -section_id signext_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE imem_tb.sv -section_id imem_tb
+set_global_assignment -name SYSTEMVERILOG_FILE regfile.sv
+set_global_assignment -name SYSTEMVERILOG_FILE maindec_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE maindec.sv
+set_global_assignment -name SYSTEMVERILOG_FILE imem_tb.sv
 set_global_assignment -name SYSTEMVERILOG_FILE alu_tb.sv
 set_global_assignment -name SYSTEMVERILOG_FILE imem.sv
 set_global_assignment -name SYSTEMVERILOG_FILE signext.sv
@@ -79,13 +90,6 @@ set_global_assignment -name SYSTEMVERILOG_FILE sillyfunction_tb.sv
 set_global_assignment -name SYSTEMVERILOG_FILE flopr_tb.sv
 set_global_assignment -name SYSTEMVERILOG_FILE alu.sv
 set_global_assignment -name SYSTEMVERILOG_FILE signext_tb.sv
-set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id imem_tb
-set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME imem_tb -section_id imem_tb
-set_global_assignment -name EDA_TEST_BENCH_NAME imem_tb -section_id eda_simulation
-set_global_assignment -name EDA_TEST_BENCH_FILE sillyfunction_tb.sv -section_id sillyfunction_tb
-set_global_assignment -name EDA_TEST_BENCH_FILE flopr_tb.sv -section_id flopr_tb
-set_global_assignment -name EDA_TEST_BENCH_FILE signext_tb.sv -section_id signext_tb
-set_global_assignment -name EDA_TEST_BENCH_FILE imem_tb.sv -section_id imem_tb
 set_global_assignment -name SYSTEMVERILOG_FILE fetch.sv
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top

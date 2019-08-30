@@ -18,12 +18,12 @@ module regfile (input logic[4:0] ra1, ra2, wa3,
   rd2 = regs[ra2];
 
   always_ff @(posedge clk)
-		if (clk) begin
-      always_comb
-      case(wa3)
-        'd32: regs[wa3] = 0;
-        default: 'b1: regs[wa3] = wd3;
-      endcase
-    end
+  if (clk) begin
+    always_comb
+    case(wa3)
+      'd32: regs[wa3-1] = 0;
+      default: regs[wa3-1] = wd3;
+    endcase
+  end
 
 endmodule
