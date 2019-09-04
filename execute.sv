@@ -10,7 +10,7 @@
     mux2 _mux(readData2_E, signImm_E, AluSrc, muxOut);
     alu _alu(readData1_E, muxOut, AluControl, aluResult_E, zero_E);
 
-    assign PCBranch_E = (signImm_E <<< 1) + PC_E;
+    assign PCBranch_E = (signImm_E <<< 2) + PC_E;
 
 endmodule
 	
