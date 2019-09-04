@@ -1,5 +1,5 @@
 Analysis & Synthesis report for mux2
-Fri Aug 30 12:57:17 2019
+Wed Sep  4 09:55:46 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -42,16 +42,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Aug 30 12:57:17 2019       ;
+; Analysis & Synthesis Status        ; Successful - Wed Sep  4 09:55:46 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; mux2                                        ;
-; Top-level Entity Name              ; regfile                                     ;
+; Top-level Entity Name              ; signext                                     ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 4,786                                       ;
-;     Total combinational functions  ; 2,877                                       ;
-;     Dedicated logic registers      ; 2,048                                       ;
-; Total registers                    ; 2048                                        ;
-; Total pins                         ; 209                                         ;
+; Total logic elements               ; 27                                          ;
+;     Total combinational functions  ; 27                                          ;
+;     Dedicated logic registers      ; 0                                           ;
+; Total registers                    ; 0                                           ;
+; Total pins                         ; 96                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -65,7 +65,7 @@ refer to the applicable agreement for further details.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; EP4CE6F17C6        ;                    ;
-; Top-level entity name                                            ; regfile            ; mux2               ;
+; Top-level entity name                                            ; signext            ; mux2               ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -154,11 +154,10 @@ refer to the applicable agreement for further details.
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 2           ;
+; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -167,40 +166,40 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+------------------------------+----------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                       ; Library ;
 +----------------------------------+-----------------+------------------------------+----------------------------------------------------+---------+
-; regfile.sv                       ; yes             ; User SystemVerilog HDL File  ; /home/mostorero294/ArqComp/Quartus/Mux2/regfile.sv ;         ;
+; signext.sv                       ; yes             ; User SystemVerilog HDL File  ; /home/mostorero294/ArqComp/Quartus/Mux2/signext.sv ;         ;
 +----------------------------------+-----------------+------------------------------+----------------------------------------------------+---------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 4,786     ;
-;                                             ;           ;
-; Total combinational functions               ; 2877      ;
-; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 2577      ;
-;     -- 3 input functions                    ; 225       ;
-;     -- <=2 input functions                  ; 75        ;
-;                                             ;           ;
-; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 2877      ;
-;     -- arithmetic mode                      ; 0         ;
-;                                             ;           ;
-; Total registers                             ; 2048      ;
-;     -- Dedicated logic registers            ; 2048      ;
-;     -- I/O registers                        ; 0         ;
-;                                             ;           ;
-; I/O pins                                    ; 209       ;
-;                                             ;           ;
-; Embedded Multiplier 9-bit elements          ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 2048      ;
-; Total fan-out                               ; 17539     ;
-; Average fan-out                             ; 3.28      ;
-+---------------------------------------------+-----------+
++------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                ;
++---------------------------------------------+--------------+
+; Resource                                    ; Usage        ;
++---------------------------------------------+--------------+
+; Estimated Total logic elements              ; 27           ;
+;                                             ;              ;
+; Total combinational functions               ; 27           ;
+; Logic element usage by number of LUT inputs ;              ;
+;     -- 4 input functions                    ; 23           ;
+;     -- 3 input functions                    ; 1            ;
+;     -- <=2 input functions                  ; 3            ;
+;                                             ;              ;
+; Logic elements by mode                      ;              ;
+;     -- normal mode                          ; 27           ;
+;     -- arithmetic mode                      ; 0            ;
+;                                             ;              ;
+; Total registers                             ; 0            ;
+;     -- Dedicated logic registers            ; 0            ;
+;     -- I/O registers                        ; 0            ;
+;                                             ;              ;
+; I/O pins                                    ; 96           ;
+;                                             ;              ;
+; Embedded Multiplier 9-bit elements          ; 0            ;
+;                                             ;              ;
+; Maximum fan-out node                        ; Selector43~2 ;
+; Maximum fan-out                             ; 44           ;
+; Total fan-out                               ; 261          ;
+; Average fan-out                             ; 1.19         ;
++---------------------------------------------+--------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -208,7 +207,7 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |regfile                   ; 2877 (2877)         ; 2048 (2048)               ; 0           ; 0            ; 0       ; 0         ; 209  ; 0            ; |regfile            ; regfile     ; work         ;
+; |signext                   ; 27 (27)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 96   ; 0            ; |signext            ; signext     ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -218,12 +217,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 2048  ;
+; Total registers                              ; 0     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 2048  ;
+; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -233,17 +232,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 209                         ;
-; cycloneiii_ff         ; 2048                        ;
-;     ENA               ; 2048                        ;
-; cycloneiii_lcell_comb ; 2877                        ;
-;     normal            ; 2877                        ;
-;         1 data inputs ; 75                          ;
-;         3 data inputs ; 225                         ;
-;         4 data inputs ; 2577                        ;
+; boundary_port         ; 96                          ;
+; cycloneiii_lcell_comb ; 27                          ;
+;     normal            ; 27                          ;
+;         2 data inputs ; 3                           ;
+;         3 data inputs ; 1                           ;
+;         4 data inputs ; 23                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 5.00                        ;
-; Average LUT depth     ; 4.25                        ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 2.83                        ;
 +-----------------------+-----------------------------+
 
 
@@ -252,7 +249,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -262,7 +259,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri Aug 30 12:56:55 2019
+    Info: Processing started: Wed Sep  4 09:55:27 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mux2 -c mux2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -314,20 +311,24 @@ Info (12021): Found 1 design units, including 1 entities, in source file signext
     Info (12023): Found entity 1: signext_tb File: /home/mostorero294/ArqComp/Quartus/Mux2/signext_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file fetch.sv
     Info (12023): Found entity 1: fetch File: /home/mostorero294/ArqComp/Quartus/Mux2/fetch.sv Line: 1
-Info (12127): Elaborating entity "regfile" for the top level hierarchy
-Info (276014): Found 1 instances of uninferred RAM logic
-    Info (276007): RAM logic "regs" is uninferred due to asynchronous read logic File: /home/mostorero294/ArqComp/Quartus/Mux2/regfile.sv Line: 15
+Info (12127): Elaborating entity "signext" for the top level hierarchy
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 5059 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 81 input pins
-    Info (21059): Implemented 128 output pins
-    Info (21061): Implemented 4850 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 969 megabytes
-    Info: Processing ended: Fri Aug 30 12:57:17 2019
-    Info: Elapsed time: 00:00:22
-    Info: Total CPU time (on all processors): 00:00:48
+Warning (21074): Design contains 5 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "a[0]" File: /home/mostorero294/ArqComp/Quartus/Mux2/signext.sv Line: 1
+    Warning (15610): No output dependent on input pin "a[1]" File: /home/mostorero294/ArqComp/Quartus/Mux2/signext.sv Line: 1
+    Warning (15610): No output dependent on input pin "a[2]" File: /home/mostorero294/ArqComp/Quartus/Mux2/signext.sv Line: 1
+    Warning (15610): No output dependent on input pin "a[3]" File: /home/mostorero294/ArqComp/Quartus/Mux2/signext.sv Line: 1
+    Warning (15610): No output dependent on input pin "a[4]" File: /home/mostorero294/ArqComp/Quartus/Mux2/signext.sv Line: 1
+Info (21057): Implemented 123 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 32 input pins
+    Info (21059): Implemented 64 output pins
+    Info (21061): Implemented 27 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 948 megabytes
+    Info: Processing ended: Wed Sep  4 09:55:46 2019
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:45
 
 
