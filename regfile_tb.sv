@@ -4,7 +4,7 @@ module regfile_tb();
   logic clk = 0, we3 = 0;
 
   regfile test(ra1,ra2,wa3,wd3,we3,clk,rd1,rd2);
-  always #10 clk = ~clk;
+  always #5 clk = ~clk;
 
   initial begin
 	 for(int k = 0; k < 32; k++) begin
