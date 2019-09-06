@@ -17,12 +17,13 @@ module regfile (input logic[4:0] ra1, ra2, wa3,
   assign rd1 = regs[ra1];
   assign rd2 = regs[ra2];
 
-  always_ff @(posedge clk)
-  if (clk) begin
-    case(wa3)
-      'd32: regs[wa3-1] = 0;
-      default: regs[wa3-1] = wd3;
-    endcase
+	always_ff @(posedge clk) begin
+	 if(we3) begin
+		 case(wa3)
+			'd31: regs[wa3-1] = 0;
+			 default: regs[wa3] = wd3;
+		 endcase
+	 end
   end 
 
 endmodule
