@@ -1,0 +1,110 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/simulation/modelsim
+vfetch
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1570797796
+!i10b 1
+!s100 cTYZh]Z3QA0W7`ALIPSjm0
+IfziW0ABL?`kKW9H`cBBD:0
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s105 fetch_sv_unit
+S1
+R0
+Z4 w1570796912
+8C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab1/fetch.sv
+FC:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab1/fetch.sv
+L0 1
+Z5 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z6 !s108 1570797796.000000
+!s107 C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab1/fetch.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab1|C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab1/fetch.sv|
+!i113 1
+Z7 o-sv -work work
+Z8 !s92 -sv -work work {+incdir+C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab1}
+Z9 tCvgOpt 0
+vfetch_tb
+R1
+R2
+!i10b 1
+!s100 oLNf95BSMUgmA@XBEdlFQ3
+IZ_aaNA;Z=i4>ckj0PR:VB3
+R3
+!s105 fetch_tb_sv_unit
+S1
+R0
+R4
+8C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/../Lab1/fetch_tb.sv
+FC:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/../Lab1/fetch_tb.sv
+L0 1
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/../Lab1/fetch_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/../Lab1|C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/../Lab1/fetch_tb.sv|
+!i113 1
+R7
+!s92 -sv -work work {+incdir+C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/../Lab1}
+R9
+vflopr
+R1
+Z10 !s110 1570797795
+!i10b 1
+!s100 J49jK_chWNbi6gESNf_d`3
+IHIG^;HE<^6HH=A3:LJYMh2
+R3
+!s105 flopr_sv_unit
+S1
+R0
+R4
+8C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab1/flopr.sv
+FC:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab1/flopr.sv
+L0 1
+R5
+r1
+!s85 0
+31
+!s108 1570797795.000000
+!s107 C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab1/flopr.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab1|C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab1/flopr.sv|
+!i113 1
+R7
+R8
+R9
+vmux2
+R1
+R10
+!i10b 1
+!s100 JMY4?WLlaFSX]jm<cFVeg1
+I;AJhQn2680?d3c=0`Ac3Z2
+R3
+!s105 mux2_sv_unit
+S1
+R0
+R4
+8C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab1/mux2.sv
+FC:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab1/mux2.sv
+L0 1
+R5
+r1
+!s85 0
+31
+!s108 1570797793.000000
+!s107 C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab1/mux2.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab1|C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab1/mux2.sv|
+!i113 1
+R7
+R8
+R9
