@@ -1,9 +1,9 @@
-module maindec(input logic[10:0] op,
+module maindec(input logic[10:0] Op,
                output logic Reg2Loc, ALUSrc, RegWrite, MemtoReg, MemRead, MemWrite, Branch,
                output logic[1:0] ALUOp);
     always_comb
 
-	case(op)
+	casez(Op)
 		11'b111_1100_0010: begin
 			Reg2Loc = 'b0;
 			ALUSrc = 'b1;
@@ -24,7 +24,7 @@ module maindec(input logic[10:0] op,
 			Branch = 'b0;
 			ALUOp = 'b0;
         end
-		11'b101_1010_0???: begin
+		11'b101_1010_0zzz: begin
 			Reg2Loc = 'b1;
 			ALUSrc = 'b0;
 			MemtoReg = 'b0;
@@ -73,7 +73,7 @@ module maindec(input logic[10:0] op,
 			MemWrite = 'b0;
 			Branch = 'b0;
 			ALUOp = 'b10;
-        end
+        end	
 		default: begin
 			Reg2Loc = 'b0;
 			ALUSrc = 'b0;
