@@ -4,7 +4,7 @@ module regfile (input logic[4:0] ra1, ra2, wa3,
                 output logic [63:0] rd1, rd2
                );
   
-  logic[63:0] regs[31:0] = '{ 64'b0, 64'd1, 64'd2, 64'd3,
+  logic[63:0] regs[0:31] = '{ 64'b0, 64'd1, 64'd2, 64'd3,
                               64'd4, 64'd5, 64'd6, 64'd7,
                               64'd8, 64'd9, 64'd10, 64'd11,
                               64'd12, 64'd13, 64'd14, 64'd15,

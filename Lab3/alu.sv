@@ -2,7 +2,7 @@ module alu #(parameter SIZE = 64) (input logic [SIZE-1:0]a,
 											  input logic [SIZE-1:0]b,  
 											  input logic [3:0]ALUControl,
 											  output logic [SIZE-1: 0]result,
-											  output logic [SIZE-1: 0]zero);
+											  output logic zero);
 	logic [SIZE-1:0] y;
 	always_comb 
 	case (ALUControl)
@@ -15,6 +15,6 @@ module alu #(parameter SIZE = 64) (input logic [SIZE-1:0]a,
 		default: y = 0;
 	endcase
 	assign result = y;
-	assign zero  = y ? 0 : 1;
+	assign zero  = ~(|y);
 
 endmodule 
