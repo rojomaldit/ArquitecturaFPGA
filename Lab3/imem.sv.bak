@@ -20,13 +20,9 @@ module imem #(parameter SIZE = 32) (input logic[5:0] addr,
     'h0D: aux = 'hf843000d;
     'h0E: aux = 'hcb0e01ce;
     'h0F: aux = 'hb400004e;
-	 'h10: aux = 'h00000000;
-	 'h11: aux = 'h00000000;
-	 'h12: aux = 'h00000000;
-	 'h13: aux = 'h00000000;
-    'h14: aux = 'hcb01000f;
-    'h15: aux = 'h8b01000f;
-    'h20: aux = 'hf803800f;
+    'h10: aux = 'hcb01000f;
+    'h11: aux = 'h8b01000f;
+    'h12: aux = 'hf803800f;
     default: aux = 0;
   endcase
 

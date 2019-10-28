@@ -1,5 +1,5 @@
 Flow report for Lab3
-Mon Oct 28 14:29:16 2019
+Mon Oct 28 15:12:24 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,13 +40,13 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Mon Oct 28 14:29:15 2019       ;
+; Flow Status                        ; Successful - Mon Oct 28 15:12:24 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Lab3                                        ;
 ; Top-level Entity Name              ; processor_arm                               ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 1,044                                       ;
-;     Total combinational functions  ; 804                                         ;
+; Total logic elements               ; 1,045                                       ;
+;     Total combinational functions  ; 805                                         ;
 ;     Dedicated logic registers      ; 476                                         ;
 ; Total registers                    ; 476                                         ;
 ; Total pins                         ; 132                                         ;
@@ -62,7 +62,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/28/2019 14:28:43 ;
+; Start date & time ; 10/28/2019 15:11:59 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Lab3                ;
 +-------------------+---------------------+
@@ -73,7 +73,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+---------------+----------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name   ; Section Id     ;
 +--------------------------------------+----------------------------------------+---------------+---------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 88491857916260.157228372207720         ; --            ; --            ; --             ;
+; COMPILER_SIGNATURE_ID                ; 88491857916260.157228631900780         ; --            ; --            ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --            ; processor_tb   ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; processor_tb                           ; --            ; --            ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                            ; --            ; --            ; eda_simulation ;
@@ -97,8 +97,8 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:33     ; 1.0                     ; 4860 MB             ; 00:00:49                           ;
-; Total                ; 00:00:33     ; --                      ; --                  ; 00:00:49                           ;
+; Analysis & Synthesis ; 00:00:25     ; 1.0                     ; 4847 MB             ; 00:00:49                           ;
+; Total                ; 00:00:25     ; --                      ; --                  ; 00:00:49                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

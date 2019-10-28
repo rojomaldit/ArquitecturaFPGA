@@ -1,0 +1,5 @@
+Me esta dando mucha paja hacer un buen README, te lo dejo a vos octa. En resumen, el codigo anda si le metes 
+4 NOPs despues del branch (uno para cada etapa de pipe despues del fetch del CBZ), asi te aseguras que el salto ande. 
+Hay que hacer un informe que muestre cuantos ciclos tardaba la version sin pipe (Lab2) vs la version con pipe (Lab3)
+esas cosas las podes ver desde el ModelSim.
+                        Besis. 
