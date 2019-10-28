@@ -1,7 +1,7 @@
-	module execute ( input logic AluSrc,
+	module execute #(parameter size = 64)( input logic AluSrc,
                     input logic[3:0] AluControl,
-                    input logic[63:0] PC_E, signImm_E, readData1_E, readData2_E,
-                    output logic[63:0] PCBranch_E, aluResult_E, writeData_E, 
+                    input logic[size-1:0] PC_E, signImm_E, readData1_E, readData2_E,
+                    output logic[size-1:0] PCBranch_E, aluResult_E, writeData_E, 
                     output logic zero_E);
 	
     logic[63:0] muxOut;
