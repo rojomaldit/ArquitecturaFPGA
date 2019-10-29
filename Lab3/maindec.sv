@@ -4,6 +4,16 @@ module maindec(input logic[10:0] Op,
     always_comb
 
 	casez(Op)
+		11'b100_1001_000z: begin
+			Reg2Loc = 'b0;
+			ALUSrc = 'b1;
+			MemtoReg = 'b0;
+			RegWrite = 'b1;
+			MemRead = 'b0;
+			MemWrite = 'b0;
+			Branch = 'b0;
+			ALUOp = 'b10;
+        end
 		11'b111_1100_0010: begin
 			Reg2Loc = 'b0;
 			ALUSrc = 'b1;
@@ -16,7 +26,7 @@ module maindec(input logic[10:0] Op,
         end
 		11'b111_1100_0000: begin
 			Reg2Loc = 'b1;
-			ALUSrc = 'b1;
+			AL	USrc = 'b1;
 			MemtoReg = 'b0;
 			RegWrite = 'b0;
 			MemRead = 'b0;
