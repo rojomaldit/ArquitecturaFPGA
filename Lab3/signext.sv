@@ -6,6 +6,8 @@ module signext(input logic[31:0] a,
 	assign opcode = a[31:21];
 	always_comb
 	casez(opcode)
+        11'b100_1000_100z:
+            temp = {52'b0,a[21:10]};
 		11'b111_1100_0010:
 			temp = {{55{a[20]}},a[20:12]};
 		11'b111_1100_0000:
