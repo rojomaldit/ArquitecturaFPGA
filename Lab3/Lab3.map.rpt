@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Lab3
-Tue Oct 29 20:16:13 2019
+Tue Oct 29 20:49:07 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Oct 29 20:16:13 2019       ;
+; Analysis & Synthesis Status        ; Successful - Tue Oct 29 20:49:07 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Lab3                                        ;
 ; Top-level Entity Name              ; processor_arm                               ;
@@ -1089,7 +1089,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Oct 29 20:15:53 2019
+    Info: Processing started: Tue Oct 29 20:48:47 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab3 -c Lab3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -1184,9 +1184,9 @@ Info (12128): Elaborating entity "memory" for hierarchy "datapath:dp|memory:MEMO
 Info (12128): Elaborating entity "flopr" for hierarchy "datapath:dp|flopr:MEM_WB" File: C:/Users/rojomaldit/Desktop/ARQ/ArquitecturaFPGA/Lab3/datapath.sv Line: 92
 Info (12128): Elaborating entity "writeback" for hierarchy "datapath:dp|writeback:WRITEBACK" File: C:/Users/rojomaldit/Desktop/ARQ/ArquitecturaFPGA/Lab3/datapath.sv Line: 98
 Info (12128): Elaborating entity "imem" for hierarchy "imem:instrMem" File: C:/Users/rojomaldit/Desktop/ARQ/ArquitecturaFPGA/Lab3/processor_arm.sv Line: 47
-Warning (10030): Net "rom.data_a" at imem.sv(25) has no driver or initial value, using a default initial value '0' File: C:/Users/rojomaldit/Desktop/ARQ/ArquitecturaFPGA/Lab3/imem.sv Line: 25
-Warning (10030): Net "rom.waddr_a" at imem.sv(25) has no driver or initial value, using a default initial value '0' File: C:/Users/rojomaldit/Desktop/ARQ/ArquitecturaFPGA/Lab3/imem.sv Line: 25
-Warning (10030): Net "rom.we_a" at imem.sv(25) has no driver or initial value, using a default initial value '0' File: C:/Users/rojomaldit/Desktop/ARQ/ArquitecturaFPGA/Lab3/imem.sv Line: 25
+Warning (10030): Net "rom.data_a" at imem.sv(24) has no driver or initial value, using a default initial value '0' File: C:/Users/rojomaldit/Desktop/ARQ/ArquitecturaFPGA/Lab3/imem.sv Line: 24
+Warning (10030): Net "rom.waddr_a" at imem.sv(24) has no driver or initial value, using a default initial value '0' File: C:/Users/rojomaldit/Desktop/ARQ/ArquitecturaFPGA/Lab3/imem.sv Line: 24
+Warning (10030): Net "rom.we_a" at imem.sv(24) has no driver or initial value, using a default initial value '0' File: C:/Users/rojomaldit/Desktop/ARQ/ArquitecturaFPGA/Lab3/imem.sv Line: 24
 Info (12128): Elaborating entity "dmem" for hierarchy "dmem:dataMem" File: C:/Users/rojomaldit/Desktop/ARQ/ArquitecturaFPGA/Lab3/processor_arm.sv Line: 56
 Info (12128): Elaborating entity "flopr" for hierarchy "flopr:IF_ID_TOP" File: C:/Users/rojomaldit/Desktop/ARQ/ArquitecturaFPGA/Lab3/processor_arm.sv Line: 62
 Warning (276020): Inferred RAM node "dmem:dataMem|mem_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
@@ -1317,9 +1317,9 @@ Info (21057): Implemented 1469 device resources after synthesis - the final reso
     Info (21061): Implemented 1113 logic cells
     Info (21064): Implemented 224 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 684 megabytes
-    Info: Processing ended: Tue Oct 29 20:16:13 2019
+    Info: Peak virtual memory: 683 megabytes
+    Info: Processing ended: Tue Oct 29 20:49:07 2019
     Info: Elapsed time: 00:00:20
-    Info: Total CPU time (on all processors): 00:00:42
+    Info: Total CPU time (on all processors): 00:00:40
 
 

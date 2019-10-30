@@ -10,7 +10,7 @@ cModel Technology
 Z0 dC:/Users/rojomaldit/Desktop/ARQ/ArquitecturaFPGA/Lab3/simulation/modelsim
 valu
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1572390980
+Z2 !s110 1572392953
 !i10b 1
 !s100 =1Cme]Bz]B]LXKHMefK0g3
 Ing0eMLZF7CGHLhC:>CcW[2
@@ -26,7 +26,7 @@ Z5 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z6 !s108 1572390980.000000
+Z6 !s108 1572392953.000000
 !s107 C:/Users/rojomaldit/Desktop/ARQ/ArquitecturaFPGA/Lab3/alu.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/rojomaldit/Desktop/ARQ/ArquitecturaFPGA/Lab3|C:/Users/rojomaldit/Desktop/ARQ/ArquitecturaFPGA/Lab3/alu.sv|
 !i113 1
@@ -257,13 +257,13 @@ vimem
 R1
 R2
 !i10b 1
-!s100 OQWR?d=^KBmKD0l[RDAHo1
-Ih_9JDA@VV7azQ5D53KZB41
+!s100 D>4BQi1WX^IGX5C>_VDRQ3
+I_CN1gi^8MFORVinSETjM[0
 R3
 !s105 imem_sv_unit
 S1
 R0
-w1572390934
+w1572392925
 8C:/Users/rojomaldit/Desktop/ARQ/ArquitecturaFPGA/Lab3/imem.sv
 FC:/Users/rojomaldit/Desktop/ARQ/ArquitecturaFPGA/Lab3/imem.sv
 L0 1
@@ -280,7 +280,7 @@ R8
 R9
 vmaindec
 R1
-Z23 !s110 1572390979
+R2
 !i10b 1
 !s100 maN>KAkf2KM1KOef20kgo0
 I<>?a>WWhOBlm7cXgN9R0m3
@@ -296,7 +296,7 @@ R5
 r1
 !s85 0
 31
-Z24 !s108 1572390979.000000
+Z23 !s108 1572392952.000000
 !s107 C:/Users/rojomaldit/Desktop/ARQ/ArquitecturaFPGA/Lab3/maindec.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/rojomaldit/Desktop/ARQ/ArquitecturaFPGA/Lab3|C:/Users/rojomaldit/Desktop/ARQ/ArquitecturaFPGA/Lab3/maindec.sv|
 !i113 1
@@ -305,7 +305,7 @@ R8
 R9
 vmemory
 R1
-R23
+Z24 !s110 1572392952
 !i10b 1
 !s100 2oVfh`njDO=6=8JZkQzMO3
 IJ56P:hX>l9iD=3KP@6j_42
@@ -321,7 +321,7 @@ R5
 r1
 !s85 0
 31
-R24
+R23
 !s107 C:/Users/rojomaldit/Desktop/ARQ/ArquitecturaFPGA/Lab3/memory.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/rojomaldit/Desktop/ARQ/ArquitecturaFPGA/Lab3|C:/Users/rojomaldit/Desktop/ARQ/ArquitecturaFPGA/Lab3/memory.sv|
 !i113 1
@@ -330,7 +330,7 @@ R8
 R9
 vmux2
 R1
-R23
+R24
 !i10b 1
 !s100 ZcFDEPCUJJ5S4b`8L47QX0
 I9CmU8GcQVzWge2CDVO<9U1
@@ -346,7 +346,7 @@ R5
 r1
 !s85 0
 31
-R24
+R23
 !s107 C:/Users/rojomaldit/Desktop/ARQ/ArquitecturaFPGA/Lab3/mux2.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/rojomaldit/Desktop/ARQ/ArquitecturaFPGA/Lab3|C:/Users/rojomaldit/Desktop/ARQ/ArquitecturaFPGA/Lab3/mux2.sv|
 !i113 1
@@ -355,7 +355,7 @@ R8
 R9
 vprocessor_arm
 R1
-R23
+R24
 !i10b 1
 !s100 NIJEBNU5H]_0gE@^?jcW41
 IPjdbU15BLJlgoz^`Q3;=o0
@@ -371,7 +371,7 @@ R5
 r1
 !s85 0
 31
-R24
+R23
 !s107 C:/Users/rojomaldit/Desktop/ARQ/ArquitecturaFPGA/Lab3/processor_arm.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/rojomaldit/Desktop/ARQ/ArquitecturaFPGA/Lab3|C:/Users/rojomaldit/Desktop/ARQ/ArquitecturaFPGA/Lab3/processor_arm.sv|
 !i113 1
@@ -405,7 +405,7 @@ R8
 R9
 vregfile
 R1
-R23
+R24
 !i10b 1
 !s100 KYFX5GL9`]JoQnkQHZz[S0
 I2McF[igC^5Li8P5Ijm3Kg2
@@ -421,7 +421,7 @@ R5
 r1
 !s85 0
 31
-R24
+R23
 !s107 C:/Users/rojomaldit/Desktop/ARQ/ArquitecturaFPGA/Lab3/regfile.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/rojomaldit/Desktop/ARQ/ArquitecturaFPGA/Lab3|C:/Users/rojomaldit/Desktop/ARQ/ArquitecturaFPGA/Lab3/regfile.sv|
 !i113 1
@@ -430,7 +430,7 @@ R8
 R9
 vsignext
 R1
-R23
+R24
 !i10b 1
 !s100 MzEzTJFS>i=G@f3oV[VLN1
 I4IO[3z`o9?n5PG5C2^HLS0
@@ -446,7 +446,7 @@ R5
 r1
 !s85 0
 31
-R24
+R23
 !s107 C:/Users/rojomaldit/Desktop/ARQ/ArquitecturaFPGA/Lab3/signext.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/rojomaldit/Desktop/ARQ/ArquitecturaFPGA/Lab3|C:/Users/rojomaldit/Desktop/ARQ/ArquitecturaFPGA/Lab3/signext.sv|
 !i113 1
@@ -455,7 +455,7 @@ R8
 R9
 vwriteback
 R1
-R23
+R24
 !i10b 1
 !s100 hk5;3<F?WSmSJ]D;T7OMW3
 Ig4bRzkzCUdAGHemM<c0f<3
@@ -471,7 +471,7 @@ R5
 r1
 !s85 0
 31
-R24
+R23
 !s107 C:/Users/rojomaldit/Desktop/ARQ/ArquitecturaFPGA/Lab3/writeback.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/rojomaldit/Desktop/ARQ/ArquitecturaFPGA/Lab3|C:/Users/rojomaldit/Desktop/ARQ/ArquitecturaFPGA/Lab3/writeback.sv|
 !i113 1
