@@ -51,7 +51,7 @@ module maindec(input logic[10:0] Op,
         // ADDI
         11'b100_1000_100z:begin
 			Reg2Loc = 'b1;
-			ALUSrc = 'b0;
+			ALUSrc = 'b1;
 			MemtoReg = 'b0;
 			RegWrite = 'b1;
 			MemRead = 'b0;
