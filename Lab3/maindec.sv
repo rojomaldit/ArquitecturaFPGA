@@ -4,6 +4,7 @@ module maindec(input logic[10:0] Op,
     always_comb
 
 	casez(Op)
+		// LDUR
         11'b111_1100_0010: begin
 			Reg2Loc = 'b0;
 			ALUSrc = 'b1;
@@ -14,6 +15,7 @@ module maindec(input logic[10:0] Op,
 			Branch = 'b0;
 			ALUOp = 'b0;
         end
+		// STUR
 		11'b111_1100_0000: begin
 			Reg2Loc = 'b1;
 			ALUSrc = 'b1;
@@ -24,7 +26,7 @@ module maindec(input logic[10:0] Op,
 			Branch = 'b0;
 			ALUOp = 'b0;
         end
-        //CBZ
+        // CBZ
 		11'b101_1010_0zzz: begin
 			Reg2Loc = 'b1;
 			ALUSrc = 'b0;
@@ -35,7 +37,7 @@ module maindec(input logic[10:0] Op,
 			Branch = 'b1;
 			ALUOp = 'b01;
         end
-        //ADD 
+        // ADD 
 		11'b100_0101_1000: begin
 			Reg2Loc = 'b0;
 			ALUSrc = 'b0;
@@ -46,7 +48,7 @@ module maindec(input logic[10:0] Op,
 			Branch = 'b0;
 			ALUOp = 'b10;
         end
-        //ADDI
+        // ADDI
         11'b100_1000_100z:begin
 			Reg2Loc = 'b1;
 			ALUSrc = 'b0;
@@ -57,6 +59,7 @@ module maindec(input logic[10:0] Op,
 			Branch = 'b0;
 			ALUOp = 'b10;
         end 
+		// SUB
         11'b110_0101_1000: begin
 			Reg2Loc = 'b0;
 			ALUSrc = 'b0;
@@ -67,6 +70,7 @@ module maindec(input logic[10:0] Op,
 			Branch = 'b0;
 			ALUOp = 'b10;
         end
+		// AND
 		11'b100_0101_0000: begin
 			Reg2Loc = 'b0;
 			ALUSrc = 'b0;
@@ -77,6 +81,7 @@ module maindec(input logic[10:0] Op,
 			Branch = 'b0;
 			ALUOp = 'b10;
         end
+		// ORR
 		11'b101_0101_0000: begin
 			Reg2Loc = 'b0;
 			ALUSrc = 'b0;
