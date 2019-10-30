@@ -6,7 +6,7 @@ module datapath #(parameter N = 64)
 					input logic AluSrc,
 					input logic [3:0] AluControl,
 					input logic	Branch,
-					input logic NZero,
+					input logic Nzero,
 					input logic memRead,
 					input logic memWrite,
 					input logic regWrite,	
@@ -51,7 +51,7 @@ module datapath #(parameter N = 64)
 									
 	flopr 	#(272)	ID_EX 	(.clk(clk),
 										.reset(reset), 
-										.d({NZero, AluSrc, AluControl, Branch, memRead, memWrite, regWrite, memtoReg,	
+										.d({Nzero, AluSrc, AluControl, Branch, memRead, memWrite, regWrite, memtoReg,	
 											qIF_ID[95:32], signImm_D, readData1_D, readData2_D, qIF_ID[4:0]}),
 										.q(qID_EX));	
 	
@@ -74,7 +74,7 @@ module datapath #(parameter N = 64)
 										.q(qEX_MEM));	
 	
 										
-	memory				MEMORY	(	.NZero_W(qEX_MEM[203]),
+	memory				MEMORY	(	.Nzero_W(qEX_MEM[203]),
 											.Branch_W(qEX_MEM[202]), 
 											.zero_W(qEX_MEM[133]), 
 											.PCSrc_W(PCSrc));

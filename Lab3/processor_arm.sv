@@ -31,7 +31,7 @@ module processor_arm #(parameter N = 64)
 									.AluSrc(AluSrc), 
 									.AluControl(AluControl), 
 									.Branch(Branch),
-									.NZero(Nzero),
+									.Nzero(Nzero),
 									.memRead(memRead),
 									.memWrite(memWrite), 
 									.regWrite(regWrite), 
