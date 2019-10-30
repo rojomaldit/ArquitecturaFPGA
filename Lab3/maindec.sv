@@ -1,5 +1,5 @@
 module maindec(input logic[10:0] Op,
-               output logic Reg2Loc, ALUSrc, RegWrite, MemtoReg, MemRead, MemWrite, Branch,
+               output logic Reg2Loc, ALUSrc, RegWrite, MemtoReg, MemRead, MemWrite, Branch, NZero,
                output logic[1:0] ALUOp);
     always_comb
 
@@ -13,6 +13,7 @@ module maindec(input logic[10:0] Op,
 			MemRead = 'b1;
 			MemWrite = 'b0;
 			Branch = 'b0;
+			NZero = 'b0;
 			ALUOp = 'b0;
         end
 		// STUR
@@ -24,9 +25,10 @@ module maindec(input logic[10:0] Op,
 			MemRead = 'b0;
 			MemWrite = 'b1;
 			Branch = 'b0;
+			NZero = 'b0;	
 			ALUOp = 'b0;
         end
-        // CBZ
+      // CBZ
 		11'b101_1010_0zzz: begin
 			Reg2Loc = 'b1;
 			ALUSrc = 'b0;
@@ -35,6 +37,19 @@ module maindec(input logic[10:0] Op,
 			MemRead = 'b0;
 			MemWrite = 'b0;
 			Branch = 'b1;
+			NZero = 'b0;			
+			ALUOp = 'b01;
+        end
+		  // CBNZ
+		11'b101_1010_1zzz: begin
+			Reg2Loc = 'b1;
+			ALUSrc = 'b0;
+			MemtoReg = 'b0;
+			RegWrite = 'b0;
+			MemRead = 'b0;
+			MemWrite = 'b0;
+			Branch = 'b1;
+			NZero = 'b1;			
 			ALUOp = 'b01;
         end
         // ADD 
@@ -46,6 +61,7 @@ module maindec(input logic[10:0] Op,
 			MemRead = 'b0;
 			MemWrite = 'b0;
 			Branch = 'b0;
+			NZero = 'b0;
 			ALUOp = 'b10;
         end
         // ADDI
@@ -57,6 +73,7 @@ module maindec(input logic[10:0] Op,
 			MemRead = 'b0;
 			MemWrite = 'b0;
 			Branch = 'b0;
+			NZero = 'b0;
 			ALUOp = 'b10;
         end 
 		// SUB
@@ -68,6 +85,7 @@ module maindec(input logic[10:0] Op,
 			MemRead = 'b0;
 			MemWrite = 'b0;
 			Branch = 'b0;
+			NZero = 'b0;
 			ALUOp = 'b10;
         end
 		// AND
@@ -79,6 +97,7 @@ module maindec(input logic[10:0] Op,
 			MemRead = 'b0;
 			MemWrite = 'b0;
 			Branch = 'b0;
+			NZero = 'b0;
 			ALUOp = 'b10;
         end
 		// ORR
@@ -90,8 +109,9 @@ module maindec(input logic[10:0] Op,
 			MemRead = 'b0;
 			MemWrite = 'b0;
 			Branch = 'b0;
+			NZero = 'b0;
 			ALUOp = 'b10;
-        end	
+        end
 		default: begin
 			Reg2Loc = 'b0;
 			ALUSrc = 'b0;
@@ -100,6 +120,7 @@ module maindec(input logic[10:0] Op,
 			MemRead = 'b0;
 			MemWrite = 'b0;
 			Branch = 'b0;
+			NZero = 'b0;
 			ALUOp = 'b0;
         end
 	endcase
