@@ -4,527 +4,523 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "DM_writeData[0]",
+					"name" : "q[0]",
 					"strict" : false
 				},
 				{
-					"name" : "DM_writeData[1]",
+					"name" : "q[1]",
 					"strict" : false
 				},
 				{
-					"name" : "DM_writeData[2]",
+					"name" : "q[2]",
 					"strict" : false
 				},
 				{
-					"name" : "DM_writeData[3]",
+					"name" : "q[3]",
 					"strict" : false
 				},
 				{
-					"name" : "DM_writeData[4]",
+					"name" : "q[4]",
 					"strict" : false
 				},
 				{
-					"name" : "DM_writeData[5]",
+					"name" : "q[5]",
 					"strict" : false
 				},
 				{
-					"name" : "DM_writeData[6]",
+					"name" : "q[6]",
 					"strict" : false
 				},
 				{
-					"name" : "DM_writeData[7]",
+					"name" : "q[7]",
 					"strict" : false
 				},
 				{
-					"name" : "DM_writeData[8]",
+					"name" : "q[8]",
 					"strict" : false
 				},
 				{
-					"name" : "DM_writeData[9]",
+					"name" : "q[9]",
 					"strict" : false
 				},
 				{
-					"name" : "DM_writeData[10]",
+					"name" : "q[10]",
 					"strict" : false
 				},
 				{
-					"name" : "DM_writeData[11]",
+					"name" : "q[11]",
 					"strict" : false
 				},
 				{
-					"name" : "DM_writeData[12]",
+					"name" : "q[12]",
 					"strict" : false
 				},
 				{
-					"name" : "DM_writeData[13]",
+					"name" : "q[13]",
 					"strict" : false
 				},
 				{
-					"name" : "DM_writeData[14]",
+					"name" : "q[14]",
 					"strict" : false
 				},
 				{
-					"name" : "DM_writeData[15]",
+					"name" : "q[15]",
 					"strict" : false
 				},
 				{
-					"name" : "DM_writeData[16]",
+					"name" : "q[16]",
 					"strict" : false
 				},
 				{
-					"name" : "DM_writeData[17]",
+					"name" : "q[17]",
 					"strict" : false
 				},
 				{
-					"name" : "DM_writeData[18]",
+					"name" : "q[18]",
 					"strict" : false
 				},
 				{
-					"name" : "DM_writeData[19]",
+					"name" : "q[19]",
 					"strict" : false
 				},
 				{
-					"name" : "DM_writeData[20]",
+					"name" : "q[20]",
 					"strict" : false
 				},
 				{
-					"name" : "DM_writeData[21]",
+					"name" : "q[21]",
 					"strict" : false
 				},
 				{
-					"name" : "DM_writeData[22]",
+					"name" : "q[22]",
 					"strict" : false
 				},
 				{
-					"name" : "DM_writeData[23]",
+					"name" : "q[23]",
 					"strict" : false
 				},
 				{
-					"name" : "DM_writeData[24]",
+					"name" : "q[24]",
 					"strict" : false
 				},
 				{
-					"name" : "DM_writeData[25]",
+					"name" : "q[25]",
 					"strict" : false
 				},
 				{
-					"name" : "DM_writeData[26]",
+					"name" : "q[26]",
 					"strict" : false
 				},
 				{
-					"name" : "DM_writeData[27]",
+					"name" : "q[27]",
 					"strict" : false
 				},
 				{
-					"name" : "DM_writeData[28]",
+					"name" : "q[28]",
 					"strict" : false
 				},
 				{
-					"name" : "DM_writeData[29]",
+					"name" : "q[29]",
 					"strict" : false
 				},
 				{
-					"name" : "DM_writeData[30]",
+					"name" : "q[30]",
 					"strict" : false
 				},
 				{
-					"name" : "DM_writeData[31]",
+					"name" : "q[31]",
 					"strict" : false
 				},
 				{
-					"name" : "DM_writeData[32]",
+					"name" : "q[32]",
 					"strict" : false
 				},
 				{
-					"name" : "DM_writeData[33]",
+					"name" : "q[33]",
 					"strict" : false
 				},
 				{
-					"name" : "DM_writeData[34]",
+					"name" : "q[34]",
 					"strict" : false
 				},
 				{
-					"name" : "DM_writeData[35]",
+					"name" : "q[35]",
 					"strict" : false
 				},
 				{
-					"name" : "DM_writeData[36]",
+					"name" : "q[36]",
 					"strict" : false
 				},
 				{
-					"name" : "DM_writeData[37]",
+					"name" : "q[37]",
 					"strict" : false
 				},
 				{
-					"name" : "DM_writeData[38]",
+					"name" : "q[38]",
 					"strict" : false
 				},
 				{
-					"name" : "DM_writeData[39]",
+					"name" : "q[39]",
 					"strict" : false
 				},
 				{
-					"name" : "DM_writeData[40]",
+					"name" : "q[40]",
 					"strict" : false
 				},
 				{
-					"name" : "DM_writeData[41]",
+					"name" : "q[41]",
 					"strict" : false
 				},
 				{
-					"name" : "DM_writeData[42]",
+					"name" : "q[42]",
 					"strict" : false
 				},
 				{
-					"name" : "DM_writeData[43]",
+					"name" : "q[43]",
 					"strict" : false
 				},
 				{
-					"name" : "DM_writeData[44]",
+					"name" : "q[44]",
 					"strict" : false
 				},
 				{
-					"name" : "DM_writeData[45]",
+					"name" : "q[45]",
 					"strict" : false
 				},
 				{
-					"name" : "DM_writeData[46]",
+					"name" : "q[46]",
 					"strict" : false
 				},
 				{
-					"name" : "DM_writeData[47]",
+					"name" : "q[47]",
 					"strict" : false
 				},
 				{
-					"name" : "DM_writeData[48]",
+					"name" : "q[48]",
 					"strict" : false
 				},
 				{
-					"name" : "DM_writeData[49]",
+					"name" : "q[49]",
 					"strict" : false
 				},
 				{
-					"name" : "DM_writeData[50]",
+					"name" : "q[50]",
 					"strict" : false
 				},
 				{
-					"name" : "DM_writeData[51]",
+					"name" : "q[51]",
 					"strict" : false
 				},
 				{
-					"name" : "DM_writeData[52]",
+					"name" : "q[52]",
 					"strict" : false
 				},
 				{
-					"name" : "DM_writeData[53]",
+					"name" : "q[53]",
 					"strict" : false
 				},
 				{
-					"name" : "DM_writeData[54]",
+					"name" : "q[54]",
 					"strict" : false
 				},
 				{
-					"name" : "DM_writeData[55]",
+					"name" : "q[55]",
 					"strict" : false
 				},
 				{
-					"name" : "DM_writeData[56]",
+					"name" : "q[56]",
 					"strict" : false
 				},
 				{
-					"name" : "DM_writeData[57]",
+					"name" : "q[57]",
 					"strict" : false
 				},
 				{
-					"name" : "DM_writeData[58]",
+					"name" : "q[58]",
 					"strict" : false
 				},
 				{
-					"name" : "DM_writeData[59]",
+					"name" : "q[59]",
 					"strict" : false
 				},
 				{
-					"name" : "DM_writeData[60]",
+					"name" : "q[60]",
 					"strict" : false
 				},
 				{
-					"name" : "DM_writeData[61]",
+					"name" : "q[61]",
 					"strict" : false
 				},
 				{
-					"name" : "DM_writeData[62]",
+					"name" : "q[62]",
 					"strict" : false
 				},
 				{
-					"name" : "DM_writeData[63]",
+					"name" : "q[63]",
 					"strict" : false
 				},
 				{
-					"name" : "DM_addr[0]",
+					"name" : "d[0]",
 					"strict" : false
 				},
 				{
-					"name" : "DM_addr[1]",
-					"strict" : false
-				},
-				{
-					"name" : "DM_addr[2]",
-					"strict" : false
-				},
-				{
-					"name" : "DM_addr[3]",
-					"strict" : false
-				},
-				{
-					"name" : "DM_addr[4]",
-					"strict" : false
-				},
-				{
-					"name" : "DM_addr[5]",
-					"strict" : false
-				},
-				{
-					"name" : "DM_addr[6]",
-					"strict" : false
-				},
-				{
-					"name" : "DM_addr[7]",
-					"strict" : false
-				},
-				{
-					"name" : "DM_addr[8]",
-					"strict" : false
-				},
-				{
-					"name" : "DM_addr[9]",
-					"strict" : false
-				},
-				{
-					"name" : "DM_addr[10]",
-					"strict" : false
-				},
-				{
-					"name" : "DM_addr[11]",
-					"strict" : false
-				},
-				{
-					"name" : "DM_addr[12]",
-					"strict" : false
-				},
-				{
-					"name" : "DM_addr[13]",
-					"strict" : false
-				},
-				{
-					"name" : "DM_addr[14]",
-					"strict" : false
-				},
-				{
-					"name" : "DM_addr[15]",
-					"strict" : false
-				},
-				{
-					"name" : "DM_addr[16]",
-					"strict" : false
-				},
-				{
-					"name" : "DM_addr[17]",
-					"strict" : false
-				},
-				{
-					"name" : "DM_addr[18]",
-					"strict" : false
-				},
-				{
-					"name" : "DM_addr[19]",
-					"strict" : false
-				},
-				{
-					"name" : "DM_addr[20]",
-					"strict" : false
-				},
-				{
-					"name" : "DM_addr[21]",
-					"strict" : false
-				},
-				{
-					"name" : "DM_addr[22]",
-					"strict" : false
-				},
-				{
-					"name" : "DM_addr[23]",
-					"strict" : false
-				},
-				{
-					"name" : "DM_addr[24]",
-					"strict" : false
-				},
-				{
-					"name" : "DM_addr[25]",
-					"strict" : false
-				},
-				{
-					"name" : "DM_addr[26]",
-					"strict" : false
-				},
-				{
-					"name" : "DM_addr[27]",
-					"strict" : false
-				},
-				{
-					"name" : "DM_addr[28]",
-					"strict" : false
-				},
-				{
-					"name" : "DM_addr[29]",
-					"strict" : false
-				},
-				{
-					"name" : "DM_addr[30]",
-					"strict" : false
-				},
-				{
-					"name" : "DM_addr[31]",
-					"strict" : false
-				},
-				{
-					"name" : "DM_addr[32]",
-					"strict" : false
-				},
-				{
-					"name" : "DM_addr[33]",
-					"strict" : false
-				},
-				{
-					"name" : "DM_addr[34]",
-					"strict" : false
-				},
-				{
-					"name" : "DM_addr[35]",
-					"strict" : false
-				},
-				{
-					"name" : "DM_addr[36]",
-					"strict" : false
-				},
-				{
-					"name" : "DM_addr[37]",
-					"strict" : false
-				},
-				{
-					"name" : "DM_addr[38]",
-					"strict" : false
-				},
-				{
-					"name" : "DM_addr[39]",
-					"strict" : false
-				},
-				{
-					"name" : "DM_addr[40]",
-					"strict" : false
-				},
-				{
-					"name" : "DM_addr[41]",
-					"strict" : false
-				},
-				{
-					"name" : "DM_addr[42]",
-					"strict" : false
-				},
-				{
-					"name" : "DM_addr[43]",
-					"strict" : false
-				},
-				{
-					"name" : "DM_addr[44]",
-					"strict" : false
-				},
-				{
-					"name" : "DM_addr[45]",
-					"strict" : false
-				},
-				{
-					"name" : "DM_addr[46]",
-					"strict" : false
-				},
-				{
-					"name" : "DM_addr[47]",
-					"strict" : false
-				},
-				{
-					"name" : "DM_addr[48]",
-					"strict" : false
-				},
-				{
-					"name" : "DM_addr[49]",
-					"strict" : false
-				},
-				{
-					"name" : "DM_addr[50]",
-					"strict" : false
-				},
-				{
-					"name" : "DM_addr[51]",
-					"strict" : false
-				},
-				{
-					"name" : "DM_addr[52]",
-					"strict" : false
-				},
-				{
-					"name" : "DM_addr[53]",
-					"strict" : false
-				},
-				{
-					"name" : "DM_addr[54]",
-					"strict" : false
-				},
-				{
-					"name" : "DM_addr[55]",
-					"strict" : false
-				},
-				{
-					"name" : "DM_addr[56]",
-					"strict" : false
-				},
-				{
-					"name" : "DM_addr[57]",
-					"strict" : false
-				},
-				{
-					"name" : "DM_addr[58]",
-					"strict" : false
-				},
-				{
-					"name" : "DM_addr[59]",
-					"strict" : false
-				},
-				{
-					"name" : "DM_addr[60]",
-					"strict" : false
-				},
-				{
-					"name" : "DM_addr[61]",
-					"strict" : false
-				},
-				{
-					"name" : "DM_addr[62]",
-					"strict" : false
-				},
-				{
-					"name" : "DM_addr[63]",
-					"strict" : false
-				},
-				{
-					"name" : "DM_writeEnable",
-					"strict" : false
-				},
-				{
-					"name" : "CLOCK_50",
+					"name" : "enable",
 					"strict" : false
 				},
 				{
 					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "d[1]",
+					"strict" : false
+				},
+				{
+					"name" : "d[2]",
+					"strict" : false
+				},
+				{
+					"name" : "d[3]",
+					"strict" : false
+				},
+				{
+					"name" : "d[4]",
+					"strict" : false
+				},
+				{
+					"name" : "d[5]",
+					"strict" : false
+				},
+				{
+					"name" : "d[6]",
+					"strict" : false
+				},
+				{
+					"name" : "d[7]",
+					"strict" : false
+				},
+				{
+					"name" : "d[8]",
+					"strict" : false
+				},
+				{
+					"name" : "d[9]",
+					"strict" : false
+				},
+				{
+					"name" : "d[10]",
+					"strict" : false
+				},
+				{
+					"name" : "d[11]",
+					"strict" : false
+				},
+				{
+					"name" : "d[12]",
+					"strict" : false
+				},
+				{
+					"name" : "d[13]",
+					"strict" : false
+				},
+				{
+					"name" : "d[14]",
+					"strict" : false
+				},
+				{
+					"name" : "d[15]",
+					"strict" : false
+				},
+				{
+					"name" : "d[16]",
+					"strict" : false
+				},
+				{
+					"name" : "d[17]",
+					"strict" : false
+				},
+				{
+					"name" : "d[18]",
+					"strict" : false
+				},
+				{
+					"name" : "d[19]",
+					"strict" : false
+				},
+				{
+					"name" : "d[20]",
+					"strict" : false
+				},
+				{
+					"name" : "d[21]",
+					"strict" : false
+				},
+				{
+					"name" : "d[22]",
+					"strict" : false
+				},
+				{
+					"name" : "d[23]",
+					"strict" : false
+				},
+				{
+					"name" : "d[24]",
+					"strict" : false
+				},
+				{
+					"name" : "d[25]",
+					"strict" : false
+				},
+				{
+					"name" : "d[26]",
+					"strict" : false
+				},
+				{
+					"name" : "d[27]",
+					"strict" : false
+				},
+				{
+					"name" : "d[28]",
+					"strict" : false
+				},
+				{
+					"name" : "d[29]",
+					"strict" : false
+				},
+				{
+					"name" : "d[30]",
+					"strict" : false
+				},
+				{
+					"name" : "d[31]",
+					"strict" : false
+				},
+				{
+					"name" : "d[32]",
+					"strict" : false
+				},
+				{
+					"name" : "d[33]",
+					"strict" : false
+				},
+				{
+					"name" : "d[34]",
+					"strict" : false
+				},
+				{
+					"name" : "d[35]",
+					"strict" : false
+				},
+				{
+					"name" : "d[36]",
+					"strict" : false
+				},
+				{
+					"name" : "d[37]",
+					"strict" : false
+				},
+				{
+					"name" : "d[38]",
+					"strict" : false
+				},
+				{
+					"name" : "d[39]",
+					"strict" : false
+				},
+				{
+					"name" : "d[40]",
+					"strict" : false
+				},
+				{
+					"name" : "d[41]",
+					"strict" : false
+				},
+				{
+					"name" : "d[42]",
+					"strict" : false
+				},
+				{
+					"name" : "d[43]",
+					"strict" : false
+				},
+				{
+					"name" : "d[44]",
+					"strict" : false
+				},
+				{
+					"name" : "d[45]",
+					"strict" : false
+				},
+				{
+					"name" : "d[46]",
+					"strict" : false
+				},
+				{
+					"name" : "d[47]",
+					"strict" : false
+				},
+				{
+					"name" : "d[48]",
+					"strict" : false
+				},
+				{
+					"name" : "d[49]",
+					"strict" : false
+				},
+				{
+					"name" : "d[50]",
+					"strict" : false
+				},
+				{
+					"name" : "d[51]",
+					"strict" : false
+				},
+				{
+					"name" : "d[52]",
+					"strict" : false
+				},
+				{
+					"name" : "d[53]",
+					"strict" : false
+				},
+				{
+					"name" : "d[54]",
+					"strict" : false
+				},
+				{
+					"name" : "d[55]",
+					"strict" : false
+				},
+				{
+					"name" : "d[56]",
+					"strict" : false
+				},
+				{
+					"name" : "d[57]",
+					"strict" : false
+				},
+				{
+					"name" : "d[58]",
+					"strict" : false
+				},
+				{
+					"name" : "d[59]",
+					"strict" : false
+				},
+				{
+					"name" : "d[60]",
+					"strict" : false
+				},
+				{
+					"name" : "d[61]",
+					"strict" : false
+				},
+				{
+					"name" : "d[62]",
+					"strict" : false
+				},
+				{
+					"name" : "d[63]",
 					"strict" : false
 				}
 			]
