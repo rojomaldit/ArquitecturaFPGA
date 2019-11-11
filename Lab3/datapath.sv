@@ -26,9 +26,6 @@ module datapath #(parameter N = 64)
 	logic [203:0] qEX_MEM;
 	logic [134:0] qMEM_WB;
 
-	logic [1:0] forwardA , forwardB;
-	logic [4:0] F_instruction,S_instruction;
-
 	fetch 	#(64) 	FETCH 	(.PCSrc_F(PCSrc),
 										.clk(clk),
 										.reset(reset),
@@ -46,9 +43,7 @@ module datapath #(parameter N = 64)
 
 	hd_unit hdu(.ID_EX_MemToReg(qID_EX[261]),
 											.EX_Mem_MemToReg(qEX_MEM[198]),
-											.ID_EX_RegisterRD(qID_EX[4:0]), 
-											.IF_ID_RegisterRS(F_instruction),
-											.IF_ID_RegisterRT(S_instruction),
+											.ID_EX_RegisterRD(qID_EX[4:0]),
 											.EX_MEM_RegisterRD(qEX_MEM[4:0]),
 											.enable(enable));
 
