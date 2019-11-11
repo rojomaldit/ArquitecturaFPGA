@@ -90,18 +90,18 @@ module datapath #(parameter N = 64)
                     .writeData_E(writeData_E), 
                     .zero_E(zero_E));
 
-  memory        MEMORY  (  .Nzero_W(qEX_MEM[203]),
-                      .Branch_W(qEX_MEM[202]), 
-                      .zero_W(qEX_MEM[133]), 
-                      .PCSrc_W(PCSrc));
-
   flopr   #(204)  EX_MEM   (.clk(clk),
                     .reset(reset), 
                     .d({qID_EX[271],qID_EX[265:261], PCBranch_E, zero_E, aluResult_E, writeData_E, qID_EX[4:0]}),
                     .q(qEX_MEM));  
 
+  memory        MEMORY  (  .Nzero_W(qEX_MEM[203]),
+                      .Branch_W(qEX_MEM[202]), 
+                      .zero_W(qEX_MEM[133]), 
+                      .PCSrc_W(PCSrc));
+
   // Salida de señales a Data Memory
-  assign DM_writeData = qEX_MEM[68:5];
+  assign DM_writeData = qEX_MEM[68:º5];
   assign DM_addr = qEX_MEM[132:69];
 
   // Salida de señales de control:
