@@ -14,7 +14,7 @@ module datapath #(parameter N = 64)
 					input logic [31:0] IM_readData,
 					input logic [N-1:0] DM_readData,
 					output logic [N-1:0] IM_addr, DM_addr, DM_writeData,
-					output logic DM_writeEnable, DM_readEnable
+					output logic DM_writeEnable, DM_readEnable,
 					output logic enable);
 
 	logic [N-1:0] PCBranch_E, aluResult_E, writeData_E, writeData3; 
@@ -33,14 +33,14 @@ module datapath #(parameter N = 64)
 										.clk(clk),
 										.reset(reset),
 										.PCBranch_F(qEX_MEM[197:134]),
-										.imem_addr_F(IM_addr)
+										.imem_addr_F(IM_addr),
 										.enable(enable));								
 
 
 	flopre 	#(96)		IF_ID 	(.clk(clk),
 										.reset(reset), 
 										.d({IM_addr, IM_readData}),
-										.q(qIF_ID)
+										.q(qIF_ID),
 										.enable(enable));
 
 
@@ -68,7 +68,7 @@ module datapath #(parameter N = 64)
 										.signImm_D(signImm_D),
 										.readData1_D(readData1_D),
 										.readData2_D(readData2_D),
-										.wa3_D(qMEM_WB[4:0])),
+										.wa3_D(qMEM_WB[4:0]),
 										.F_instruction(F_instruction),
 										.S_instruction(S_instruction));
 
@@ -89,10 +89,8 @@ module datapath #(parameter N = 64)
 										.PCBranch_E(PCBranch_E), 
 										.aluResult_E(aluResult_E), 
 										.writeData_E(writeData_E), 
-										.zero_E(zero_E));											
-
-
-.ForwardA(forwardA),
+										.zero_E(zero_E),											
+										.ForwardA(forwardA),
 										.ForwardB(forwardB),
 										.writeData3_W(writeData3),
 										.DM_addr(qEX_MEM[132:69]));	
@@ -107,11 +105,6 @@ module datapath #(parameter N = 64)
 										.reset(reset), 
 										.d({qID_EX[271],qID_EX[265:261], PCBranch_E, zero_E, aluResult_E, writeData_E, qID_EX[4:0]}),
 										.q(qEX_MEM));	
-
-	memory				MEMORY	(.Branch_W(qEX_MEM[202]), 
-										.BranchNotZero(qEX_MEM[203]),
-										.zero_W(qEX_MEM[133]), 
-										.PCSrc_W(PCSrc));
 
 	// Salida de señales a Data Memory
 	assign DM_writeData = qEX_MEM[68:5];

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Lab3
-Wed Nov 06 10:18:02 2019
+Mon Nov 11 12:58:48 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -10,15 +10,32 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. User-Specified and Inferred Latches
-  9. General Register Statistics
- 10. Parameter Settings for User Entity Instance: Top-level Entity: |flopre
- 11. Post-Synthesis Netlist Statistics for Top Partition
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
+  5. Parameter Settings for User Entity Instance: Top-level Entity: |processor_arm
+  6. Parameter Settings for User Entity Instance: datapath:dp
+  7. Parameter Settings for User Entity Instance: datapath:dp|fetch:FETCH
+  8. Parameter Settings for User Entity Instance: datapath:dp|fetch:FETCH|mux2:_mux
+  9. Parameter Settings for User Entity Instance: datapath:dp|fetch:FETCH|flopr:flop
+ 10. Parameter Settings for User Entity Instance: datapath:dp|fetch:FETCH|flopre:f
+ 11. Parameter Settings for User Entity Instance: datapath:dp|flopre:IF_ID
+ 12. Parameter Settings for User Entity Instance: datapath:dp|mux2:m_hdu
+ 13. Parameter Settings for User Entity Instance: datapath:dp|decode:DECODE
+ 14. Parameter Settings for User Entity Instance: datapath:dp|decode:DECODE|mux2:ra2mux
+ 15. Parameter Settings for User Entity Instance: datapath:dp|flopr:ID_EX
+ 16. Parameter Settings for User Entity Instance: datapath:dp|execute:EXECUTE
+ 17. Parameter Settings for User Entity Instance: datapath:dp|execute:EXECUTE|mux2:_mux
+ 18. Parameter Settings for User Entity Instance: datapath:dp|execute:EXECUTE|alu:_alu
+ 19. Parameter Settings for User Entity Instance: datapath:dp|flopr:EX_MEM
+ 20. Parameter Settings for User Entity Instance: datapath:dp|flopr:MEM_WB
+ 21. Parameter Settings for User Entity Instance: datapath:dp|writeback:WRITEBACK
+ 22. Parameter Settings for User Entity Instance: datapath:dp|writeback:WRITEBACK|mux2:MtoRmux
+ 23. Parameter Settings for User Entity Instance: flopre:IF_ID_TOP
+ 24. Port Connectivity Checks: "datapath:dp|execute:EXECUTE"
+ 25. Port Connectivity Checks: "datapath:dp|flopr:ID_EX"
+ 26. Port Connectivity Checks: "datapath:dp|decode:DECODE"
+ 27. Port Connectivity Checks: "datapath:dp|mux2:m_hdu"
+ 28. Port Connectivity Checks: "datapath:dp|fetch:FETCH|flopre:f"
+ 29. Port Connectivity Checks: "datapath:dp"
+ 30. Analysis & Synthesis Messages
 
 
 
@@ -44,20 +61,20 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Nov 06 10:18:02 2019       ;
+; Analysis & Synthesis Status        ; Failed - Mon Nov 11 12:58:48 2019           ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Lab3                                        ;
-; Top-level Entity Name              ; flopre                                      ;
+; Top-level Entity Name              ; processor_arm                               ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 64                                          ;
-;     Total combinational functions  ; 64                                          ;
-;     Dedicated logic registers      ; 0                                           ;
-; Total registers                    ; 0                                           ;
-; Total pins                         ; 131                                         ;
-; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0                                           ;
-; Embedded Multiplier 9-bit elements ; 0                                           ;
-; Total PLLs                         ; 0                                           ;
+; Total logic elements               ; N/A until Partition Merge                   ;
+;     Total combinational functions  ; N/A until Partition Merge                   ;
+;     Dedicated logic registers      ; N/A until Partition Merge                   ;
+; Total registers                    ; N/A until Partition Merge                   ;
+; Total pins                         ; N/A until Partition Merge                   ;
+; Total virtual pins                 ; N/A until Partition Merge                   ;
+; Total memory bits                  ; N/A until Partition Merge                   ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
+; Total PLLs                         ; N/A until Partition Merge                   ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -66,7 +83,7 @@ refer to the applicable agreement for further details.
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
-; Top-level entity name                                            ; flopre             ; Lab3               ;
+; Top-level entity name                                            ; processor_arm      ; Lab3               ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
 ; VHDL Show LMF Mapping Messages                                   ; Off                ;                    ;
 ; VHDL Version                                                     ; VHDL_2008          ; VHDL_1993          ;
@@ -163,178 +180,260 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                      ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                  ; Library ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------+---------+
-; flopre.sv                        ; yes             ; User SystemVerilog HDL File  ; C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv ;         ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |processor_arm ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; N              ; 64    ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                ;
-+---------------------------------------------+--------------+
-; Resource                                    ; Usage        ;
-+---------------------------------------------+--------------+
-; Estimated Total logic elements              ; 64           ;
-;                                             ;              ;
-; Total combinational functions               ; 64           ;
-; Logic element usage by number of LUT inputs ;              ;
-;     -- 4 input functions                    ; 64           ;
-;     -- 3 input functions                    ; 0            ;
-;     -- <=2 input functions                  ; 0            ;
-;                                             ;              ;
-; Logic elements by mode                      ;              ;
-;     -- normal mode                          ; 64           ;
-;     -- arithmetic mode                      ; 0            ;
-;                                             ;              ;
-; Total registers                             ; 0            ;
-;     -- Dedicated logic registers            ; 0            ;
-;     -- I/O registers                        ; 0            ;
-;                                             ;              ;
-; I/O pins                                    ; 131          ;
-;                                             ;              ;
-; Embedded Multiplier 9-bit elements          ; 0            ;
-;                                             ;              ;
-; Maximum fan-out node                        ; enable~input ;
-; Maximum fan-out                             ; 64           ;
-; Total fan-out                               ; 451          ;
-; Average fan-out                             ; 1.38         ;
-+---------------------------------------------+--------------+
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; N              ; 64    ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |flopre                    ; 64 (64)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 131  ; 0            ; |flopre             ; flopre      ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|fetch:FETCH ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; size           ; 64    ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                ;
-+-----------------------------------------------------+---------------------+------------------------+
-; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
-+-----------------------------------------------------+---------------------+------------------------+
-; q[0]$latch                                          ; enable              ; yes                    ;
-; q[1]$latch                                          ; enable              ; yes                    ;
-; q[2]$latch                                          ; enable              ; yes                    ;
-; q[3]$latch                                          ; enable              ; yes                    ;
-; q[4]$latch                                          ; enable              ; yes                    ;
-; q[5]$latch                                          ; enable              ; yes                    ;
-; q[6]$latch                                          ; enable              ; yes                    ;
-; q[7]$latch                                          ; enable              ; yes                    ;
-; q[8]$latch                                          ; enable              ; yes                    ;
-; q[9]$latch                                          ; enable              ; yes                    ;
-; q[10]$latch                                         ; enable              ; yes                    ;
-; q[11]$latch                                         ; enable              ; yes                    ;
-; q[12]$latch                                         ; enable              ; yes                    ;
-; q[13]$latch                                         ; enable              ; yes                    ;
-; q[14]$latch                                         ; enable              ; yes                    ;
-; q[15]$latch                                         ; enable              ; yes                    ;
-; q[16]$latch                                         ; enable              ; yes                    ;
-; q[17]$latch                                         ; enable              ; yes                    ;
-; q[18]$latch                                         ; enable              ; yes                    ;
-; q[19]$latch                                         ; enable              ; yes                    ;
-; q[20]$latch                                         ; enable              ; yes                    ;
-; q[21]$latch                                         ; enable              ; yes                    ;
-; q[22]$latch                                         ; enable              ; yes                    ;
-; q[23]$latch                                         ; enable              ; yes                    ;
-; q[24]$latch                                         ; enable              ; yes                    ;
-; q[25]$latch                                         ; enable              ; yes                    ;
-; q[26]$latch                                         ; enable              ; yes                    ;
-; q[27]$latch                                         ; enable              ; yes                    ;
-; q[28]$latch                                         ; enable              ; yes                    ;
-; q[29]$latch                                         ; enable              ; yes                    ;
-; q[30]$latch                                         ; enable              ; yes                    ;
-; q[31]$latch                                         ; enable              ; yes                    ;
-; q[32]$latch                                         ; enable              ; yes                    ;
-; q[33]$latch                                         ; enable              ; yes                    ;
-; q[34]$latch                                         ; enable              ; yes                    ;
-; q[35]$latch                                         ; enable              ; yes                    ;
-; q[36]$latch                                         ; enable              ; yes                    ;
-; q[37]$latch                                         ; enable              ; yes                    ;
-; q[38]$latch                                         ; enable              ; yes                    ;
-; q[39]$latch                                         ; enable              ; yes                    ;
-; q[40]$latch                                         ; enable              ; yes                    ;
-; q[41]$latch                                         ; enable              ; yes                    ;
-; q[42]$latch                                         ; enable              ; yes                    ;
-; q[43]$latch                                         ; enable              ; yes                    ;
-; q[44]$latch                                         ; enable              ; yes                    ;
-; q[45]$latch                                         ; enable              ; yes                    ;
-; q[46]$latch                                         ; enable              ; yes                    ;
-; q[47]$latch                                         ; enable              ; yes                    ;
-; q[48]$latch                                         ; enable              ; yes                    ;
-; q[49]$latch                                         ; enable              ; yes                    ;
-; q[50]$latch                                         ; enable              ; yes                    ;
-; q[51]$latch                                         ; enable              ; yes                    ;
-; q[52]$latch                                         ; enable              ; yes                    ;
-; q[53]$latch                                         ; enable              ; yes                    ;
-; q[54]$latch                                         ; enable              ; yes                    ;
-; q[55]$latch                                         ; enable              ; yes                    ;
-; q[56]$latch                                         ; enable              ; yes                    ;
-; q[57]$latch                                         ; enable              ; yes                    ;
-; q[58]$latch                                         ; enable              ; yes                    ;
-; q[59]$latch                                         ; enable              ; yes                    ;
-; q[60]$latch                                         ; enable              ; yes                    ;
-; q[61]$latch                                         ; enable              ; yes                    ;
-; q[62]$latch                                         ; enable              ; yes                    ;
-; q[63]$latch                                         ; enable              ; yes                    ;
-; Number of user-specified and inferred latches = 64  ;                     ;                        ;
-+-----------------------------------------------------+---------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|fetch:FETCH|mux2:_mux ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; N              ; 64    ; Signed Integer                                        ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|fetch:FETCH|flopr:flop ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; SIZE           ; 64    ; Signed Integer                                         ;
++----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|fetch:FETCH|flopre:f ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; SIZE           ; 64    ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|flopre:IF_ID ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; SIZE           ; 96    ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|mux2:m_hdu ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; N              ; 12    ; Signed Integer                             ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |flopre ;
+; Parameter Settings for User Entity Instance: datapath:dp|decode:DECODE ;
 +----------------+-------+-----------------------------------------------+
 ; Parameter Name ; Value ; Type                                          ;
 +----------------+-------+-----------------------------------------------+
-; SIZE           ; 64    ; Signed Integer                                ;
+; N              ; 64    ; Signed Integer                                ;
 +----------------+-------+-----------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; boundary_port         ; 131                         ;
-; cycloneiii_lcell_comb ; 64                          ;
-;     normal            ; 64                          ;
-;         4 data inputs ; 64                          ;
-;                       ;                             ;
-; Max LUT depth         ; 1.00                        ;
-; Average LUT depth     ; 1.00                        ;
-+-----------------------+-----------------------------+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|decode:DECODE|mux2:ra2mux ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; N              ; 5     ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:01     ;
-+----------------+--------------+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|flopr:ID_EX ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; SIZE           ; 282   ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|execute:EXECUTE ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; N              ; 64    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|execute:EXECUTE|mux2:_mux ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; N              ; 64    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|execute:EXECUTE|alu:_alu ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; SIZE           ; 64    ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|flopr:EX_MEM ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; SIZE           ; 204   ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|flopr:MEM_WB ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; SIZE           ; 135   ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|writeback:WRITEBACK ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; N              ; 64    ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|writeback:WRITEBACK|mux2:MtoRmux ;
++----------------+-------+------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                             ;
++----------------+-------+------------------------------------------------------------------+
+; N              ; 64    ; Signed Integer                                                   ;
++----------------+-------+------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: flopre:IF_ID_TOP ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; SIZE           ; 11    ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:dp|execute:EXECUTE"                                            ;
++--------------+---------+------------------+--------------------------------------------------------+
+; Port         ; Type    ; Severity         ; Details                                                ;
++--------------+---------+------------------+--------------------------------------------------------+
+; ForwardA     ; Unknown ; Critical Warning ; Named port was not declared by the instantiated entity ;
+; ForwardB     ; Unknown ; Critical Warning ; Named port was not declared by the instantiated entity ;
+; writeData3_W ; Unknown ; Critical Warning ; Named port was not declared by the instantiated entity ;
+; DM_addr      ; Unknown ; Critical Warning ; Named port was not declared by the instantiated entity ;
++--------------+---------+------------------+--------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:dp|flopr:ID_EX"                                                                                                                                                              ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                                                               ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; d    ; Input  ; Warning  ; Input port expression (293 bits) is wider than the input port (282 bits) it drives.  The 11 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; q    ; Output ; Warning  ; Output or bidir port (282 bits) is wider than the port expression (272 bits) it drives; bit(s) "q[281..272]" have no fanouts                                                          ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:dp|decode:DECODE"                                               ;
++---------------+---------+------------------+--------------------------------------------------------+
+; Port          ; Type    ; Severity         ; Details                                                ;
++---------------+---------+------------------+--------------------------------------------------------+
+; F_instruction ; Unknown ; Critical Warning ; Named port was not declared by the instantiated entity ;
+; S_instruction ; Unknown ; Critical Warning ; Named port was not declared by the instantiated entity ;
++---------------+---------+------------------+--------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:dp|mux2:m_hdu"                                                                                                                         ;
++-------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                                                        ;
++-------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------+
+; d0    ; Input  ; Warning  ; Input port expression (11 bits) is smaller than the input port (12 bits) it drives.  Extra input bit(s) "d0[11..11]" will be connected to GND. ;
+; d0    ; Input  ; Info     ; Stuck at GND                                                                                                                                   ;
+; d1    ; Input  ; Warning  ; Input port expression (11 bits) is smaller than the input port (12 bits) it drives.  Extra input bit(s) "d1[11..11]" will be connected to GND. ;
+; y     ; Output ; Warning  ; Output or bidir port (12 bits) is wider than the port expression (11 bits) it drives; bit(s) "y[11..11]" have no fanouts                       ;
+; y[11] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                            ;
++-------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:dp|fetch:FETCH|flopre:f"                                                                                                                                                 ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                                                                                                                                            ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; clk  ; Input ; Warning  ; Input port expression (64 bits) is wider than the input port (1 bits) it drives.  The 63 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; d    ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (64 bits) it drives.  Extra input bit(s) "d[63..1]" will be connected to GND.                                        ;
++------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:dp"                                                                                                       ;
++----------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port           ; Type   ; Severity ; Details                                                                                                  ;
++----------------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; IM_addr[63..8] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
+; IM_addr[1..0]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                      ;
+; enable         ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++----------------+--------+----------+----------------------------------------------------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -343,7 +442,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Nov 06 10:17:40 2019
+    Info: Processing started: Mon Nov 11 12:58:22 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab3 -c Lab3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -420,85 +519,224 @@ Info (12021): Found 1 design units, including 1 entities, in source file flopre.
     Info (12023): Found entity 1: flopre File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file flopre_tb.sv
     Info (12023): Found entity 1: flopre_tb File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre_tb.sv Line: 1
-Info (12127): Elaborating entity "flopre" for the top level hierarchy
-Warning (10240): Verilog HDL Always Construct warning at flopre.sv(6): inferring latch(es) for variable "q", which holds its previous value in one or more paths through the always construct File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 6
-Info (10041): Inferred latch for "q[0]" at flopre.sv(6) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 6
-Info (10041): Inferred latch for "q[1]" at flopre.sv(6) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 6
-Info (10041): Inferred latch for "q[2]" at flopre.sv(6) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 6
-Info (10041): Inferred latch for "q[3]" at flopre.sv(6) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 6
-Info (10041): Inferred latch for "q[4]" at flopre.sv(6) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 6
-Info (10041): Inferred latch for "q[5]" at flopre.sv(6) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 6
-Info (10041): Inferred latch for "q[6]" at flopre.sv(6) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 6
-Info (10041): Inferred latch for "q[7]" at flopre.sv(6) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 6
-Info (10041): Inferred latch for "q[8]" at flopre.sv(6) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 6
-Info (10041): Inferred latch for "q[9]" at flopre.sv(6) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 6
-Info (10041): Inferred latch for "q[10]" at flopre.sv(6) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 6
-Info (10041): Inferred latch for "q[11]" at flopre.sv(6) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 6
-Info (10041): Inferred latch for "q[12]" at flopre.sv(6) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 6
-Info (10041): Inferred latch for "q[13]" at flopre.sv(6) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 6
-Info (10041): Inferred latch for "q[14]" at flopre.sv(6) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 6
-Info (10041): Inferred latch for "q[15]" at flopre.sv(6) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 6
-Info (10041): Inferred latch for "q[16]" at flopre.sv(6) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 6
-Info (10041): Inferred latch for "q[17]" at flopre.sv(6) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 6
-Info (10041): Inferred latch for "q[18]" at flopre.sv(6) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 6
-Info (10041): Inferred latch for "q[19]" at flopre.sv(6) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 6
-Info (10041): Inferred latch for "q[20]" at flopre.sv(6) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 6
-Info (10041): Inferred latch for "q[21]" at flopre.sv(6) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 6
-Info (10041): Inferred latch for "q[22]" at flopre.sv(6) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 6
-Info (10041): Inferred latch for "q[23]" at flopre.sv(6) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 6
-Info (10041): Inferred latch for "q[24]" at flopre.sv(6) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 6
-Info (10041): Inferred latch for "q[25]" at flopre.sv(6) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 6
-Info (10041): Inferred latch for "q[26]" at flopre.sv(6) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 6
-Info (10041): Inferred latch for "q[27]" at flopre.sv(6) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 6
-Info (10041): Inferred latch for "q[28]" at flopre.sv(6) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 6
-Info (10041): Inferred latch for "q[29]" at flopre.sv(6) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 6
-Info (10041): Inferred latch for "q[30]" at flopre.sv(6) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 6
-Info (10041): Inferred latch for "q[31]" at flopre.sv(6) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 6
-Info (10041): Inferred latch for "q[32]" at flopre.sv(6) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 6
-Info (10041): Inferred latch for "q[33]" at flopre.sv(6) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 6
-Info (10041): Inferred latch for "q[34]" at flopre.sv(6) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 6
-Info (10041): Inferred latch for "q[35]" at flopre.sv(6) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 6
-Info (10041): Inferred latch for "q[36]" at flopre.sv(6) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 6
-Info (10041): Inferred latch for "q[37]" at flopre.sv(6) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 6
-Info (10041): Inferred latch for "q[38]" at flopre.sv(6) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 6
-Info (10041): Inferred latch for "q[39]" at flopre.sv(6) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 6
-Info (10041): Inferred latch for "q[40]" at flopre.sv(6) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 6
-Info (10041): Inferred latch for "q[41]" at flopre.sv(6) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 6
-Info (10041): Inferred latch for "q[42]" at flopre.sv(6) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 6
-Info (10041): Inferred latch for "q[43]" at flopre.sv(6) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 6
-Info (10041): Inferred latch for "q[44]" at flopre.sv(6) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 6
-Info (10041): Inferred latch for "q[45]" at flopre.sv(6) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 6
-Info (10041): Inferred latch for "q[46]" at flopre.sv(6) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 6
-Info (10041): Inferred latch for "q[47]" at flopre.sv(6) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 6
-Info (10041): Inferred latch for "q[48]" at flopre.sv(6) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 6
-Info (10041): Inferred latch for "q[49]" at flopre.sv(6) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 6
-Info (10041): Inferred latch for "q[50]" at flopre.sv(6) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 6
-Info (10041): Inferred latch for "q[51]" at flopre.sv(6) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 6
-Info (10041): Inferred latch for "q[52]" at flopre.sv(6) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 6
-Info (10041): Inferred latch for "q[53]" at flopre.sv(6) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 6
-Info (10041): Inferred latch for "q[54]" at flopre.sv(6) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 6
-Info (10041): Inferred latch for "q[55]" at flopre.sv(6) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 6
-Info (10041): Inferred latch for "q[56]" at flopre.sv(6) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 6
-Info (10041): Inferred latch for "q[57]" at flopre.sv(6) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 6
-Info (10041): Inferred latch for "q[58]" at flopre.sv(6) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 6
-Info (10041): Inferred latch for "q[59]" at flopre.sv(6) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 6
-Info (10041): Inferred latch for "q[60]" at flopre.sv(6) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 6
-Info (10041): Inferred latch for "q[61]" at flopre.sv(6) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 6
-Info (10041): Inferred latch for "q[62]" at flopre.sv(6) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 6
-Info (10041): Inferred latch for "q[63]" at flopre.sv(6) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 6
-Info (286030): Timing-Driven Synthesis is running
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "clk" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 1
-Info (21057): Implemented 195 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 67 input pins
-    Info (21059): Implemented 64 output pins
-    Info (21061): Implemented 64 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4813 megabytes
-    Info: Processing ended: Wed Nov 06 10:18:02 2019
-    Info: Elapsed time: 00:00:22
-    Info: Total CPU time (on all processors): 00:00:44
+Warning (10236): Verilog HDL Implicit Net warning at datapath.sv(58): created implicit net for "BranchNotZero" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/datapath.sv Line: 58
+Info (12127): Elaborating entity "processor_arm" for the top level hierarchy
+Info (12128): Elaborating entity "controller" for hierarchy "controller:c" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/processor_arm.sv Line: 25
+Info (12128): Elaborating entity "maindec" for hierarchy "controller:c|maindec:decPpal" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/controller.sv Line: 19
+Info (12128): Elaborating entity "aludec" for hierarchy "controller:c|aludec:decAlu" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/controller.sv Line: 24
+Info (12128): Elaborating entity "datapath" for hierarchy "datapath:dp" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/processor_arm.sv Line: 45
+Info (12128): Elaborating entity "fetch" for hierarchy "datapath:dp|fetch:FETCH" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/datapath.sv Line: 37
+Info (12128): Elaborating entity "mux2" for hierarchy "datapath:dp|fetch:FETCH|mux2:_mux" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/fetch.sv Line: 9
+Info (12128): Elaborating entity "flopr" for hierarchy "datapath:dp|fetch:FETCH|flopr:flop" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/fetch.sv Line: 10
+Info (12128): Elaborating entity "flopre" for hierarchy "datapath:dp|fetch:FETCH|flopre:f" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/fetch.sv Line: 11
+Warning (10240): Verilog HDL Always Construct warning at flopre.sv(7): inferring latch(es) for variable "q", which holds its previous value in one or more paths through the always construct File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[0]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[1]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[2]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[3]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[4]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[5]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[6]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[7]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[8]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[9]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[10]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[11]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[12]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[13]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[14]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[15]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[16]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[17]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[18]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[19]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[20]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[21]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[22]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[23]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[24]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[25]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[26]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[27]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[28]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[29]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[30]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[31]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[32]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[33]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[34]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[35]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[36]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[37]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[38]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[39]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[40]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[41]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[42]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[43]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[44]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[45]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[46]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[47]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[48]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[49]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[50]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[51]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[52]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[53]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[54]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[55]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[56]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[57]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[58]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[59]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[60]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[61]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[62]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[63]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (12128): Elaborating entity "flopre" for hierarchy "datapath:dp|flopre:IF_ID" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/datapath.sv Line: 44
+Warning (10240): Verilog HDL Always Construct warning at flopre.sv(7): inferring latch(es) for variable "q", which holds its previous value in one or more paths through the always construct File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[0]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[1]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[2]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[3]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[4]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[5]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[6]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[7]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[8]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[9]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[10]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[11]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[12]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[13]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[14]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[15]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[16]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[17]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[18]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[19]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[20]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[21]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[22]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[23]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[24]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[25]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[26]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[27]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[28]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[29]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[30]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[31]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[32]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[33]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[34]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[35]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[36]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[37]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[38]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[39]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[40]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[41]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[42]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[43]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[44]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[45]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[46]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[47]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[48]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[49]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[50]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[51]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[52]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[53]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[54]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[55]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[56]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[57]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[58]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[59]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[60]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[61]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[62]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[63]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[64]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[65]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[66]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[67]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[68]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[69]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[70]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[71]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[72]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[73]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[74]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[75]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[76]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[77]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[78]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[79]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[80]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[81]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[82]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[83]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[84]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[85]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[86]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[87]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[88]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[89]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[90]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[91]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[92]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[93]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[94]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[95]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Warning (12125): Using design file hd_unit.sv, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: hd_unit File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/hd_unit.sv Line: 1
+Info (12128): Elaborating entity "hd_unit" for hierarchy "datapath:dp|hd_unit:hdu" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/datapath.sv Line: 53
+Info (12128): Elaborating entity "mux2" for hierarchy "datapath:dp|mux2:m_hdu" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/datapath.sv Line: 60
+Info (12128): Elaborating entity "decode" for hierarchy "datapath:dp|decode:DECODE" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/datapath.sv Line: 73
+Info (12128): Elaborating entity "mux2" for hierarchy "datapath:dp|decode:DECODE|mux2:ra2mux" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/decode.sv Line: 12
+Info (12128): Elaborating entity "regfile" for hierarchy "datapath:dp|decode:DECODE|regfile:registers" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/decode.sv Line: 15
+Info (12128): Elaborating entity "signext" for hierarchy "datapath:dp|decode:DECODE|signext:ext" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/decode.sv Line: 22
+Info (12128): Elaborating entity "flopr" for hierarchy "datapath:dp|flopr:ID_EX" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/datapath.sv Line: 79
+Info (12128): Elaborating entity "execute" for hierarchy "datapath:dp|execute:EXECUTE" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/datapath.sv Line: 96
+Info (12128): Elaborating entity "mux2" for hierarchy "datapath:dp|execute:EXECUTE|mux2:_mux" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/execute.sv Line: 10
+Info (12128): Elaborating entity "alu" for hierarchy "datapath:dp|execute:EXECUTE|alu:_alu" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/execute.sv Line: 11
+Info (12128): Elaborating entity "memory" for hierarchy "datapath:dp|memory:MEMORY" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/datapath.sv Line: 102
+Info (12128): Elaborating entity "flopr" for hierarchy "datapath:dp|flopr:EX_MEM" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/datapath.sv Line: 107
+Info (12128): Elaborating entity "flopr" for hierarchy "datapath:dp|flopr:MEM_WB" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/datapath.sv Line: 120
+Info (12128): Elaborating entity "writeback" for hierarchy "datapath:dp|writeback:WRITEBACK" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/datapath.sv Line: 126
+Info (12128): Elaborating entity "imem" for hierarchy "imem:instrMem" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/processor_arm.sv Line: 49
+Warning (10030): Net "rom.data_a" at imem.sv(24) has no driver or initial value, using a default initial value '0' File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/imem.sv Line: 24
+Warning (10030): Net "rom.waddr_a" at imem.sv(24) has no driver or initial value, using a default initial value '0' File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/imem.sv Line: 24
+Warning (10030): Net "rom.we_a" at imem.sv(24) has no driver or initial value, using a default initial value '0' File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/imem.sv Line: 24
+Info (12128): Elaborating entity "dmem" for hierarchy "dmem:dataMem" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/processor_arm.sv Line: 58
+Info (12128): Elaborating entity "flopre" for hierarchy "flopre:IF_ID_TOP" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/processor_arm.sv Line: 64
+Warning (10240): Verilog HDL Always Construct warning at flopre.sv(7): inferring latch(es) for variable "q", which holds its previous value in one or more paths through the always construct File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[0]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[1]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[2]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[3]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[4]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[5]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[6]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[7]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[8]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[9]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Info (10041): Inferred latch for "q[10]" at flopre.sv(7) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 7
+Error (12002): Port "DM_addr" does not exist in macrofunction "EXECUTE" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/datapath.sv Line: 96
+Error (12002): Port "ForwardA" does not exist in macrofunction "EXECUTE" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/datapath.sv Line: 96
+Error (12002): Port "ForwardB" does not exist in macrofunction "EXECUTE" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/datapath.sv Line: 96
+Error (12002): Port "writeData3_W" does not exist in macrofunction "EXECUTE" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/datapath.sv Line: 96
+Error (12002): Port "F_instruction" does not exist in macrofunction "DECODE" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/datapath.sv Line: 73
+Error (12002): Port "S_instruction" does not exist in macrofunction "DECODE" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/datapath.sv Line: 73
+Warning (12241): 6 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 6 errors, 10 warnings
+    Error: Peak virtual memory: 4822 megabytes
+    Error: Processing ended: Mon Nov 11 12:58:49 2019
+    Error: Elapsed time: 00:00:27
+    Error: Total CPU time (on all processors): 00:00:52
 
 

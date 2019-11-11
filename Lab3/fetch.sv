@@ -8,7 +8,7 @@ module fetch #(parameter size = 64)(input logic PCSrc_F,
 	logic[size - 1:0] muxOut,flopOut,floprOut,adderOut;
 	mux2 #(size) _mux(adderOut,PCBranch_F,PCSrc_F,muxOut);
 	flopr	#(size) flop(clk,reset,muxOut,flopOut);
-	flopre #(N) f(floprOut,clk,enable,reset,imem_addr_F);
+	flopre #(size) f(floprOut,clk,enable,reset,imem_addr_F);
    assign adderOut = flopOut + 4;
 	assign imem_addr_F = flopOut;
 endmodule

@@ -57,16 +57,10 @@ module processor_arm #(parameter N = 64)
 									.readData(DM_readData), 
 									.dump(dump)); 							
 		 
-							
-	flopr #(11)		IF_ID_TOP(.clk(CLOCK_50),
-									.reset(reset), 
-									.d(q[31:21]), 
-									.q(instr));
-
 	flopre #(11)		IF_ID_TOP(.clk(CLOCK_50),
 									.reset(reset), 
 									.d(q[31:21]), 
-									.q(instr)
+									.q(instr),
 									.enable(enable));
 
 endmodule
