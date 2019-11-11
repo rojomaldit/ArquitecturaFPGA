@@ -1,6 +1,6 @@
 module imem (input logic [5:0] addr,
-				 output logic [31:0] q);
-			
+         output logic [31:0] q);
+      
 logic [31:0] rom [0:18] = '{
   32'h8b000009,
   32'h8b000008,
