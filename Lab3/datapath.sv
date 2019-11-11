@@ -68,9 +68,7 @@ module datapath #(parameter N = 64)
 										.signImm_D(signImm_D),
 										.readData1_D(readData1_D),
 										.readData2_D(readData2_D),
-										.wa3_D(qMEM_WB[4:0]),
-										.F_instruction(F_instruction),
-										.S_instruction(S_instruction));
+										.wa3_D(qMEM_WB[4:0]));
 
 	flopr 	#(282)	ID_EX 	(.clk(clk),
 										.reset(reset), 
@@ -89,12 +87,7 @@ module datapath #(parameter N = 64)
 										.PCBranch_E(PCBranch_E), 
 										.aluResult_E(aluResult_E), 
 										.writeData_E(writeData_E), 
-										.zero_E(zero_E),											
-										.ForwardA(forwardA),
-										.ForwardB(forwardB),
-										.writeData3_W(writeData3),
-										.DM_addr(qEX_MEM[132:69]));	
-
+										.zero_E(zero_E));
 
 	memory				MEMORY	(	.Nzero_W(qEX_MEM[203]),
 											.Branch_W(qEX_MEM[202]), 
