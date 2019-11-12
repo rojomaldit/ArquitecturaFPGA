@@ -101,7 +101,7 @@ module datapath #(parameter N = 64)
                       .PCSrc_W(PCSrc));
 
   // Salida de señales a Data Memory
-  assign DM_writeData = qEX_MEM[68:º5];
+  assign DM_writeData = qEX_MEM[68:5];
   assign DM_addr = qEX_MEM[132:69];
 
   // Salida de señales de control:
