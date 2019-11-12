@@ -1,5 +1,5 @@
 Flow report for Lab3
-Mon Nov 11 13:31:41 2019
+Tue Nov 12 14:56:31 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Mon Nov 11 13:31:41 2019       ;
+; Flow Status                        ; Successful - Tue Nov 12 14:56:31 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Lab3                                        ;
 ; Top-level Entity Name              ; processor_arm                               ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 286                                         ;
-;     Total combinational functions  ; 283                                         ;
-;     Dedicated logic registers      ; 136                                         ;
-; Total registers                    ; 136                                         ;
+; Total logic elements               ; 304                                         ;
+;     Total combinational functions  ; 301                                         ;
+;     Dedicated logic registers      ; 135                                         ;
+; Total registers                    ; 135                                         ;
 ; Total pins                         ; 132                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 4,096                                       ;
@@ -62,7 +62,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/11/2019 13:31:18 ;
+; Start date & time ; 11/12/2019 14:56:14 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Lab3                ;
 +-------------------+---------------------+
@@ -73,7 +73,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+---------------+----------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name   ; Section Id     ;
 +--------------------------------------+----------------------------------------+---------------+---------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 88491857916260.157348987700788         ; --            ; --            ; --             ;
+; COMPILER_SIGNATURE_ID                ; 202887946718159.157358137405384        ; --            ; --            ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --            ; flopre_tb      ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --            ; flopr_tb       ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --            ; signext_tb     ;
@@ -109,18 +109,18 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:23     ; 1.0                     ; 4839 MB             ; 00:00:48                           ;
-; Total                ; 00:00:23     ; --                      ; --                  ; 00:00:48                           ;
+; Analysis & Synthesis ; 00:00:17     ; 1.0                     ; 681 MB              ; 00:00:39                           ;
+; Total                ; 00:00:17     ; --                      ; --                  ; 00:00:39                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                    ;
-+----------------------+------------------+------------+------------+----------------+
-; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
-+----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; LAPTOP-CJ035B0D  ; Windows 10 ; 10.0       ; x86_64         ;
-+----------------------+------------------+------------+------------+----------------+
++-----------------------------------------------------------------------------------+
+; Flow OS Summary                                                                   ;
++----------------------+------------------+-----------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++----------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis ; rm               ; Windows 7 ; 6.1        ; x86_64         ;
++----------------------+------------------+-----------+------------+----------------+
 
 
 ------------

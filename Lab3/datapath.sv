@@ -26,6 +26,8 @@ module datapath #(parameter N = 64)
   logic [203:0] qEX_MEM;
   logic [134:0] qMEM_WB;
 
+  logic [4:0] first_i, second_i;
+
   fetch   #(64)   FETCH   (.PCSrc_F(PCSrc),
                     .clk(clk),
                     .reset(reset),
@@ -42,10 +44,11 @@ module datapath #(parameter N = 64)
 
 
   hd_unit hdu(.ID_EX_MemToReg(qID_EX[261]),
-                      .EX_Mem_MemToReg(qEX_MEM[198]),
-                      .ID_EX_RegisterRD(qID_EX[4:0]),
-                      .EX_MEM_RegisterRD(qEX_MEM[4:0]),
-                      .enable(enable));
+              .ID_EX_RegisterRD(qID_EX[4:0]),
+              .EX_MEM_RegisterRD(qEX_MEM[4:0]),
+              .IF_ID_RegisterRS(first_i),
+              .IF_ID_RegisterRT(second_i),
+              .enable(enable));
 
   logic [10:0]controlSignals;
 
@@ -69,11 +72,13 @@ module datapath #(parameter N = 64)
                     .signImm_D(signImm_D),
                     .readData1_D(readData1_D),
                     .readData2_D(readData2_D),
-                    .wa3_D(qMEM_WB[4:0]));
+                    .wa3_D(qMEM_WB[4:0]),
+                    .first_i(first_i),
+                    .second_i(second_i));
 
-  flopr   #(282)  ID_EX   (.clk(clk),
+  flopr   #(272)  ID_EX   (.clk(clk),
                     .reset(reset), 
-                    .d({ F_instruction, S_instruction, controlSignals, Nzero, AluSrc, AluControl, Branch, memRead, memWrite, regWrite, memtoReg,  
+                    .d({ controlSignals, Nzero, AluSrc, AluControl, Branch, memRead, memWrite, regWrite, memtoReg,  
                          qIF_ID[95:32], signImm_D, readData1_D, readData2_D, qIF_ID[4:0] }),
                     .q(qID_EX));
 

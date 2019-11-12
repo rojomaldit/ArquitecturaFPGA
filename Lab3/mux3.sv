@@ -2,6 +2,7 @@ module mux3 #(parameter N = 64)(input logic[N-1:0] a,b,c,
                       input logic[1:0] s,
                       output logic[N-1:0] out);
                       
+ logic[N-1:0] result; 
   always_comb begin 
     case(s)
     2'b00: result = a;
@@ -10,4 +11,5 @@ module mux3 #(parameter N = 64)(input logic[N-1:0] a,b,c,
     default: result = a;
     endcase
   end
+  assign out = result; 
 endmodule

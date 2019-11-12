@@ -10,190 +10,190 @@
 # Copying C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -sv -work work +incdir+C:/Users/mat_o/Desktop/Cosas\ Facultad/ArqComp/ArquitecturaFPGA/Lab3 {C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/writeback.sv}
+# vlog -sv -work work +incdir+C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3 {C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/hd_unit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:34:16 on Nov 11,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3" C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/writeback.sv 
-# -- Compiling module writeback
-# 
-# Top level modules:
-# 	writeback
-# End time: 13:34:16 on Nov 11,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/mat_o/Desktop/Cosas\ Facultad/ArqComp/ArquitecturaFPGA/Lab3 {C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/signext.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:34:16 on Nov 11,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3" C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/signext.sv 
-# -- Compiling module signext
-# 
-# Top level modules:
-# 	signext
-# End time: 13:34:16 on Nov 11,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/mat_o/Desktop/Cosas\ Facultad/ArqComp/ArquitecturaFPGA/Lab3 {C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/regfile.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:34:17 on Nov 11,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3" C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/regfile.sv 
-# -- Compiling module regfile
-# 
-# Top level modules:
-# 	regfile
-# End time: 13:34:17 on Nov 11,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/mat_o/Desktop/Cosas\ Facultad/ArqComp/ArquitecturaFPGA/Lab3 {C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/processor_arm.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:34:17 on Nov 11,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3" C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/processor_arm.sv 
-# -- Compiling module processor_arm
-# 
-# Top level modules:
-# 	processor_arm
-# End time: 13:34:17 on Nov 11,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/mat_o/Desktop/Cosas\ Facultad/ArqComp/ArquitecturaFPGA/Lab3 {C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/mux2.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:34:17 on Nov 11,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3" C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/mux2.sv 
-# -- Compiling module mux2
-# 
-# Top level modules:
-# 	mux2
-# End time: 13:34:17 on Nov 11,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/mat_o/Desktop/Cosas\ Facultad/ArqComp/ArquitecturaFPGA/Lab3 {C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/memory.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:34:17 on Nov 11,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3" C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/memory.sv 
-# -- Compiling module memory
-# 
-# Top level modules:
-# 	memory
-# End time: 13:34:17 on Nov 11,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/mat_o/Desktop/Cosas\ Facultad/ArqComp/ArquitecturaFPGA/Lab3 {C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/maindec.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:34:18 on Nov 11,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3" C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/maindec.sv 
-# -- Compiling module maindec
-# 
-# Top level modules:
-# 	maindec
-# End time: 13:34:18 on Nov 11,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/mat_o/Desktop/Cosas\ Facultad/ArqComp/ArquitecturaFPGA/Lab3 {C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/imem.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:34:18 on Nov 11,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3" C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/imem.sv 
-# -- Compiling module imem
-# 
-# Top level modules:
-# 	imem
-# End time: 13:34:18 on Nov 11,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/mat_o/Desktop/Cosas\ Facultad/ArqComp/ArquitecturaFPGA/Lab3 {C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopr.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:34:18 on Nov 11,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3" C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopr.sv 
-# -- Compiling module flopr
-# 
-# Top level modules:
-# 	flopr
-# End time: 13:34:18 on Nov 11,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/mat_o/Desktop/Cosas\ Facultad/ArqComp/ArquitecturaFPGA/Lab3 {C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/fetch.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:34:18 on Nov 11,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3" C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/fetch.sv 
-# -- Compiling module fetch
-# 
-# Top level modules:
-# 	fetch
-# End time: 13:34:19 on Nov 11,2019, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/mat_o/Desktop/Cosas\ Facultad/ArqComp/ArquitecturaFPGA/Lab3 {C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/execute.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:34:19 on Nov 11,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3" C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/execute.sv 
-# -- Compiling module execute
-# 
-# Top level modules:
-# 	execute
-# End time: 13:34:19 on Nov 11,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/mat_o/Desktop/Cosas\ Facultad/ArqComp/ArquitecturaFPGA/Lab3 {C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/decode.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:34:19 on Nov 11,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3" C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/decode.sv 
-# -- Compiling module decode
-# 
-# Top level modules:
-# 	decode
-# End time: 13:34:19 on Nov 11,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/mat_o/Desktop/Cosas\ Facultad/ArqComp/ArquitecturaFPGA/Lab3 {C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/datapath.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:34:19 on Nov 11,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3" C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/datapath.sv 
-# -- Compiling module datapath
-# 
-# Top level modules:
-# 	datapath
-# End time: 13:34:19 on Nov 11,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/mat_o/Desktop/Cosas\ Facultad/ArqComp/ArquitecturaFPGA/Lab3 {C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/controller.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:34:19 on Nov 11,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3" C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/controller.sv 
-# -- Compiling module controller
-# 
-# Top level modules:
-# 	controller
-# End time: 13:34:19 on Nov 11,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/mat_o/Desktop/Cosas\ Facultad/ArqComp/ArquitecturaFPGA/Lab3 {C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/aludec.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:34:20 on Nov 11,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3" C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/aludec.sv 
-# -- Compiling module aludec
-# 
-# Top level modules:
-# 	aludec
-# End time: 13:34:20 on Nov 11,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/mat_o/Desktop/Cosas\ Facultad/ArqComp/ArquitecturaFPGA/Lab3 {C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/alu.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:34:20 on Nov 11,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3" C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/alu.sv 
-# -- Compiling module alu
-# 
-# Top level modules:
-# 	alu
-# End time: 13:34:20 on Nov 11,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/mat_o/Desktop/Cosas\ Facultad/ArqComp/ArquitecturaFPGA/Lab3 {C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:34:20 on Nov 11,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3" C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv 
-# -- Compiling module flopre
-# 
-# Top level modules:
-# 	flopre
-# End time: 13:34:20 on Nov 11,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/mat_o/Desktop/Cosas\ Facultad/ArqComp/ArquitecturaFPGA/Lab3 {C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/hd_unit.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:34:20 on Nov 11,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3" C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/hd_unit.sv 
+# Start time: 14:56:42 on Nov 12,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3" C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/hd_unit.sv 
 # -- Compiling module hd_unit
 # 
 # Top level modules:
 # 	hd_unit
-# End time: 13:34:20 on Nov 11,2019, Elapsed time: 0:00:00
+# End time: 14:56:42 on Nov 12,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -2008 -work work {C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/dmem.vhd}
+# vlog -sv -work work +incdir+C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3 {C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/writeback.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:56:43 on Nov 12,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3" C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/writeback.sv 
+# -- Compiling module writeback
+# 
+# Top level modules:
+# 	writeback
+# End time: 14:56:43 on Nov 12,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3 {C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/signext.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:56:43 on Nov 12,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3" C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/signext.sv 
+# -- Compiling module signext
+# 
+# Top level modules:
+# 	signext
+# End time: 14:56:43 on Nov 12,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3 {C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/regfile.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:56:43 on Nov 12,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3" C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/regfile.sv 
+# -- Compiling module regfile
+# 
+# Top level modules:
+# 	regfile
+# End time: 14:56:43 on Nov 12,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3 {C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/processor_arm.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:56:43 on Nov 12,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3" C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/processor_arm.sv 
+# -- Compiling module processor_arm
+# 
+# Top level modules:
+# 	processor_arm
+# End time: 14:56:43 on Nov 12,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3 {C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/mux2.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:56:43 on Nov 12,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3" C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/mux2.sv 
+# -- Compiling module mux2
+# 
+# Top level modules:
+# 	mux2
+# End time: 14:56:43 on Nov 12,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3 {C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/memory.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:56:43 on Nov 12,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3" C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/memory.sv 
+# -- Compiling module memory
+# 
+# Top level modules:
+# 	memory
+# End time: 14:56:43 on Nov 12,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3 {C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/maindec.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:56:43 on Nov 12,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3" C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/maindec.sv 
+# -- Compiling module maindec
+# 
+# Top level modules:
+# 	maindec
+# End time: 14:56:43 on Nov 12,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3 {C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/imem.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:56:43 on Nov 12,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3" C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/imem.sv 
+# -- Compiling module imem
+# 
+# Top level modules:
+# 	imem
+# End time: 14:56:43 on Nov 12,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3 {C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/flopr.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:56:43 on Nov 12,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3" C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/flopr.sv 
+# -- Compiling module flopr
+# 
+# Top level modules:
+# 	flopr
+# End time: 14:56:43 on Nov 12,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3 {C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/fetch.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:56:43 on Nov 12,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3" C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/fetch.sv 
+# -- Compiling module fetch
+# 
+# Top level modules:
+# 	fetch
+# End time: 14:56:43 on Nov 12,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3 {C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/execute.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:56:43 on Nov 12,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3" C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/execute.sv 
+# -- Compiling module execute
+# 
+# Top level modules:
+# 	execute
+# End time: 14:56:43 on Nov 12,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3 {C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/decode.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:56:43 on Nov 12,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3" C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/decode.sv 
+# -- Compiling module decode
+# 
+# Top level modules:
+# 	decode
+# End time: 14:56:43 on Nov 12,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3 {C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/datapath.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:56:43 on Nov 12,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3" C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/datapath.sv 
+# -- Compiling module datapath
+# 
+# Top level modules:
+# 	datapath
+# End time: 14:56:43 on Nov 12,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3 {C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/controller.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:56:43 on Nov 12,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3" C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/controller.sv 
+# -- Compiling module controller
+# 
+# Top level modules:
+# 	controller
+# End time: 14:56:43 on Nov 12,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3 {C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/aludec.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:56:43 on Nov 12,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3" C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/aludec.sv 
+# -- Compiling module aludec
+# 
+# Top level modules:
+# 	aludec
+# End time: 14:56:44 on Nov 12,2019, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3 {C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/alu.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:56:44 on Nov 12,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3" C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/alu.sv 
+# -- Compiling module alu
+# 
+# Top level modules:
+# 	alu
+# End time: 14:56:44 on Nov 12,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3 {C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/flopre.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:56:44 on Nov 12,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3" C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/flopre.sv 
+# -- Compiling module flopre
+# 
+# Top level modules:
+# 	flopre
+# End time: 14:56:44 on Nov 12,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -2008 -work work {C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/dmem.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:34:21 on Nov 11,2019
-# vcom -reportprogress 300 -2008 -work work C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/dmem.vhd 
+# Start time: 14:56:44 on Nov 12,2019
+# vcom -reportprogress 300 -2008 -work work C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/dmem.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -202,24 +202,24 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity dmem
 # -- Compiling architecture behave of dmem
-# ** Warning: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/dmem.vhd(30): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
-# End time: 13:34:21 on Nov 11,2019, Elapsed time: 0:00:00
+# ** Warning: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/dmem.vhd(30): (vcom-1194) FILE declaration was written using VHDL 1987 syntax.
+# End time: 14:56:44 on Nov 12,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 1
 # 
-# vlog -sv -work work +incdir+C:/Users/mat_o/Desktop/Cosas\ Facultad/ArqComp/ArquitecturaFPGA/Lab3 {C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/processor_tb.sv}
+# vlog -sv -work work +incdir+C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3 {C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/processor_tb.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 13:34:21 on Nov 11,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3" C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/processor_tb.sv 
+# Start time: 14:56:44 on Nov 12,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3" C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/processor_tb.sv 
 # -- Compiling module processor_tb
 # 
 # Top level modules:
 # 	processor_tb
-# End time: 13:34:22 on Nov 11,2019, Elapsed time: 0:00:01
+# End time: 14:56:44 on Nov 12,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  processor_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" processor_tb 
-# Start time: 13:34:22 on Nov 11,2019
+# Start time: 14:56:44 on Nov 12,2019
 # Loading sv_std.std
 # Loading work.processor_tb
 # Loading work.processor_arm
@@ -229,12 +229,12 @@
 # Loading work.datapath
 # Loading work.fetch
 # Loading work.mux2
-# Loading work.flopr
 # Loading work.flopre
 # Loading work.hd_unit
 # Loading work.decode
 # Loading work.regfile
 # Loading work.signext
+# Loading work.flopr
 # Loading work.execute
 # Loading work.alu
 # Loading work.memory
@@ -247,26 +247,24 @@
 # Loading ieee.std_logic_signed(body)
 # Loading ieee.numeric_std(body)
 # Loading work.dmem(behave)
-# ** Warning: (vsim-3017) C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/processor_arm.sv(28): [TFMPC] - Too few port connections. Expected 19, found 18.
-#    Time: 0 ps  Iteration: 0  Instance: /processor_tb/dut/dp File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/datapath.sv
-# ** Warning: (vsim-3722) C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/processor_arm.sv(28): [TFMPC] - Missing connection for port 'enable'.
-# ** Warning: (vsim-3015) C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/datapath.sv(57): [PCDPC] - Port size (12) does not match connection size (11) for port 'd0'. The port definition is at: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/mux2.sv(4).
-#    Time: 0 ps  Iteration: 0  Instance: /processor_tb/dut/dp/m_hdu File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/mux2.sv
-# ** Warning: (vsim-3015) C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/datapath.sv(57): [PCDPC] - Port size (12) does not match connection size (11) for port 'd1'. The port definition is at: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/mux2.sv(4).
-#    Time: 0 ps  Iteration: 0  Instance: /processor_tb/dut/dp/m_hdu File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/mux2.sv
-# ** Warning: (vsim-3015) C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/datapath.sv(57): [PCDPC] - Port size (12) does not match connection size (11) for port 'y'. The port definition is at: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/mux2.sv(6).
-#    Time: 0 ps  Iteration: 0  Instance: /processor_tb/dut/dp/m_hdu File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/mux2.sv
-# ** Warning: (vsim-3015) C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/datapath.sv(73): [PCDPC] - Port size (282) does not match connection size (293) for port 'd'. The port definition is at: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopr.sv(2).
-#    Time: 0 ps  Iteration: 0  Instance: /processor_tb/dut/dp/ID_EX File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopr.sv
-# ** Warning: (vsim-3015) C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/datapath.sv(73): [PCDPC] - Port size (282) does not match connection size (272) for port 'q'. The port definition is at: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopr.sv(3).
-#    Time: 0 ps  Iteration: 0  Instance: /processor_tb/dut/dp/ID_EX File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopr.sv
+# ** Warning: (vsim-3017) C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/processor_arm.sv(28): [TFMPC] - Too few port connections. Expected 19, found 18.
+#    Time: 0 ps  Iteration: 0  Instance: /processor_tb/dut/dp File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/datapath.sv
+# ** Warning: (vsim-3722) C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/processor_arm.sv(28): [TFMPC] - Missing connection for port 'enable'.
+# ** Warning: (vsim-3015) C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/datapath.sv(56): [PCDPC] - Port size (12) does not match connection size (11) for port 'd0'. The port definition is at: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/mux2.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /processor_tb/dut/dp/hdu_mux File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/mux2.sv
+# ** Warning: (vsim-3015) C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/datapath.sv(56): [PCDPC] - Port size (12) does not match connection size (11) for port 'd1'. The port definition is at: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/mux2.sv(4).
+#    Time: 0 ps  Iteration: 0  Instance: /processor_tb/dut/dp/hdu_mux File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/mux2.sv
+# ** Warning: (vsim-3015) C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/datapath.sv(56): [PCDPC] - Port size (12) does not match connection size (11) for port 'y'. The port definition is at: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/mux2.sv(6).
+#    Time: 0 ps  Iteration: 0  Instance: /processor_tb/dut/dp/hdu_mux File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/mux2.sv
+# ** Warning: (vsim-3015) C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/datapath.sv(80): [PCDPC] - Port size (272) does not match connection size (283) for port 'd'. The port definition is at: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/flopr.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /processor_tb/dut/dp/ID_EX File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/flopr.sv
 # 
 # add wave *
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: rojomaldit  Hostname: RM  ProcessID: 6028
-#           Attempting to use alternate WLF file "./wlftvzqrjb".
+#           Attempting to use alternate WLF file "./wlft1h84wg".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftvzqrjb
+#           Using alternate file: ./wlft1h84wg
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
@@ -274,6 +272,8 @@
 # run -all
 # ** Note: fin del testdump
 #    Time: 20020 ps  Iteration: 1  Instance: /processor_tb/dut/dataMem
-# ** Note: $stop    : C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/processor_tb.sv(26)
+# ** Note: $stop    : C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/processor_tb.sv(26)
 #    Time: 20040 ps  Iteration: 0  Instance: /processor_tb
-# Break in Module processor_tb at C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/processor_tb.sv line 26
+# Break in Module processor_tb at C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/processor_tb.sv line 26
+# End time: 14:59:13 on Nov 12,2019, Elapsed time: 0:02:29
+# Errors: 0, Warnings: 8
