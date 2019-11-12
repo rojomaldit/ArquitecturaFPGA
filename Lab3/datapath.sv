@@ -43,7 +43,7 @@ module datapath #(parameter N = 64)
                     .enable(enable));
 
 
-  hd_unit hdu(.ID_EX_MemToReg(qID_EX[261]),
+  hd_unit hdu(.ID_EX_MemRead(qID_EX[264]),
               .ID_EX_RegisterRD(qID_EX[4:0]),
               .EX_MEM_RegisterRD(qEX_MEM[4:0]),
               .IF_ID_RegisterRS(first_i),
@@ -78,11 +78,9 @@ module datapath #(parameter N = 64)
 
   flopr   #(272)  ID_EX   (.clk(clk),
                     .reset(reset), 
-                    .d({ controlSignals, Nzero, AluSrc, AluControl, Branch, memRead, memWrite, regWrite, memtoReg,  
-                         qIF_ID[95:32], signImm_D, readData1_D, readData2_D, qIF_ID[4:0] }),
+                    .d({controlSignals, Nzero, AluSrc, AluControl, Branch, memRead, memWrite, regWrite,
+                        memtoReg, qIF_ID[95:32], signImm_D, readData1_D, readData2_D, qIF_ID[4:0]}),
                     .q(qID_EX));
-
-
 
   execute   #(64)   EXECUTE   (.AluSrc(qID_EX[270]),
                     .AluControl(qID_EX[269:266]),
@@ -117,7 +115,6 @@ module datapath #(parameter N = 64)
                     .reset(reset), 
                     .d({qEX_MEM[199:198], qEX_MEM[132:69],  DM_readData, qEX_MEM[4:0]}),
                     .q(qMEM_WB));
-
 
   writeback #(64)   WRITEBACK (.aluResult_W(qMEM_WB[132:69]), 
                     .DM_readData_W(qMEM_WB[68:5]), 

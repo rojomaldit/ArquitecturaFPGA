@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Lab3
-Tue Nov 12 14:56:31 2019
+Tue Nov 12 16:05:25 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -73,15 +73,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Nov 12 14:56:31 2019       ;
+; Analysis & Synthesis Status        ; Successful - Tue Nov 12 16:05:25 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Lab3                                        ;
 ; Top-level Entity Name              ; processor_arm                               ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 304                                         ;
-;     Total combinational functions  ; 301                                         ;
-;     Dedicated logic registers      ; 135                                         ;
-; Total registers                    ; 135                                         ;
+; Total logic elements               ; 282                                         ;
+;     Total combinational functions  ; 279                                         ;
+;     Dedicated logic registers      ; 131                                         ;
+; Total registers                    ; 131                                         ;
 ; Total pins                         ; 132                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 4,096                                       ;
@@ -236,20 +236,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 304            ;
+; Estimated Total logic elements              ; 282            ;
 ;                                             ;                ;
-; Total combinational functions               ; 301            ;
+; Total combinational functions               ; 279            ;
 ; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 94             ;
-;     -- 3 input functions                    ; 65             ;
-;     -- <=2 input functions                  ; 142            ;
+;     -- 4 input functions                    ; 71             ;
+;     -- 3 input functions                    ; 71             ;
+;     -- <=2 input functions                  ; 137            ;
 ;                                             ;                ;
 ; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 235            ;
+;     -- normal mode                          ; 213            ;
 ;     -- arithmetic mode                      ; 66             ;
 ;                                             ;                ;
-; Total registers                             ; 135            ;
-;     -- Dedicated logic registers            ; 135            ;
+; Total registers                             ; 131            ;
+;     -- Dedicated logic registers            ; 131            ;
 ;     -- I/O registers                        ; 0              ;
 ;                                             ;                ;
 ; I/O pins                                    ; 132            ;
@@ -258,9 +258,9 @@ refer to the applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 263            ;
-; Total fan-out                               ; 2284           ;
-; Average fan-out                             ; 2.76           ;
+; Maximum fan-out                             ; 259            ;
+; Total fan-out                               ; 2188           ;
+; Average fan-out                             ; 2.73           ;
 +---------------------------------------------+----------------+
 
 
@@ -269,8 +269,8 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                      ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                             ; Entity Name     ; Library Name ;
 +-------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |processor_arm                                  ; 301 (0)             ; 135 (0)                   ; 4096        ; 0            ; 0       ; 0         ; 132  ; 0            ; |processor_arm                                                                                                  ; processor_arm   ; work         ;
-;    |datapath:dp|                                ; 279 (0)             ; 135 (0)                   ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp                                                                                      ; datapath        ; work         ;
+; |processor_arm                                  ; 279 (0)             ; 131 (0)                   ; 4096        ; 0            ; 0       ; 0         ; 132  ; 0            ; |processor_arm                                                                                                  ; processor_arm   ; work         ;
+;    |datapath:dp|                                ; 273 (0)             ; 131 (0)                   ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp                                                                                      ; datapath        ; work         ;
 ;       |decode:DECODE|                           ; 128 (0)             ; 2 (0)                     ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|decode:DECODE                                                                        ; decode          ; work         ;
 ;          |regfile:registers|                    ; 128 (128)           ; 2 (2)                     ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|decode:DECODE|regfile:registers                                                      ; regfile         ; work         ;
 ;             |altsyncram:regs_rtl_0|             ; 0 (0)               ; 0 (0)                     ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|decode:DECODE|regfile:registers|altsyncram:regs_rtl_0                                ; altsyncram      ; work         ;
@@ -279,13 +279,12 @@ refer to the applicable agreement for further details.
 ;                |altsyncram_ui61:auto_generated| ; 0 (0)               ; 0 (0)                     ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|decode:DECODE|regfile:registers|altsyncram:regs_rtl_1|altsyncram_ui61:auto_generated ; altsyncram_ui61 ; work         ;
 ;       |execute:EXECUTE|                         ; 64 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|execute:EXECUTE                                                                      ; execute         ; work         ;
 ;          |alu:_alu|                             ; 64 (64)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|execute:EXECUTE|alu:_alu                                                             ; alu             ; work         ;
-;       |fetch:FETCH|                             ; 10 (4)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|fetch:FETCH                                                                          ; fetch           ; work         ;
-;          |flopre:_flopre|                       ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|fetch:FETCH|flopre:_flopre                                                           ; flopre          ; work         ;
+;       |fetch:FETCH|                             ; 9 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|fetch:FETCH                                                                          ; fetch           ; work         ;
+;          |flopre:_flopre|                       ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|fetch:FETCH|flopre:_flopre                                                           ; flopre          ; work         ;
 ;       |flopr:EX_MEM|                            ; 64 (64)             ; 128 (128)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|flopr:EX_MEM                                                                         ; flopr           ; work         ;
-;       |flopr:ID_EX|                             ; 0 (0)               ; 5 (5)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|flopr:ID_EX                                                                          ; flopr           ; work         ;
-;       |flopre:IF_ID|                            ; 11 (11)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|flopre:IF_ID                                                                         ; flopre          ; work         ;
-;       |hd_unit:hdu|                             ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|hd_unit:hdu                                                                          ; hd_unit         ; work         ;
-;    |imem:instrMem|                              ; 22 (22)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|imem:instrMem                                                                                    ; imem            ; work         ;
+;       |flopr:ID_EX|                             ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|flopr:ID_EX                                                                          ; flopr           ; work         ;
+;       |flopre:IF_ID|                            ; 8 (8)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|flopre:IF_ID                                                                         ; flopre          ; work         ;
+;    |imem:instrMem|                              ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|imem:instrMem                                                                                    ; imem            ; work         ;
 +-------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -300,32 +299,28 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+---------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                           ;
-+-----------------------------------------------------+--------------------------------+------------------------+
-; Latch Name                                          ; Latch Enable Signal            ; Free of Timing Hazards ;
-+-----------------------------------------------------+--------------------------------+------------------------+
-; datapath:dp|flopre:IF_ID|q[16]                      ; datapath:dp|hd_unit:hdu|Equal2 ; yes                    ;
-; datapath:dp|flopre:IF_ID|q[17]                      ; datapath:dp|hd_unit:hdu|Equal2 ; yes                    ;
-; datapath:dp|flopre:IF_ID|q[18]                      ; datapath:dp|hd_unit:hdu|Equal2 ; yes                    ;
-; datapath:dp|flopre:IF_ID|q[19]                      ; datapath:dp|hd_unit:hdu|Equal2 ; yes                    ;
-; datapath:dp|flopre:IF_ID|q[20]                      ; datapath:dp|hd_unit:hdu|Equal2 ; yes                    ;
-; datapath:dp|flopre:IF_ID|q[5]                       ; datapath:dp|hd_unit:hdu|Equal2 ; yes                    ;
-; datapath:dp|flopre:IF_ID|q[6]                       ; datapath:dp|hd_unit:hdu|Equal2 ; yes                    ;
-; datapath:dp|flopre:IF_ID|q[7]                       ; datapath:dp|hd_unit:hdu|Equal2 ; yes                    ;
-; datapath:dp|flopre:IF_ID|q[8]                       ; datapath:dp|hd_unit:hdu|Equal2 ; yes                    ;
-; datapath:dp|flopre:IF_ID|q[9]                       ; datapath:dp|hd_unit:hdu|Equal2 ; yes                    ;
-; datapath:dp|fetch:FETCH|flopre:_flopre|q[6]         ; datapath:dp|hd_unit:hdu|Equal2 ; yes                    ;
-; datapath:dp|fetch:FETCH|flopre:_flopre|q[2]         ; datapath:dp|hd_unit:hdu|Equal2 ; yes                    ;
-; datapath:dp|fetch:FETCH|flopre:_flopre|q[3]         ; datapath:dp|hd_unit:hdu|Equal2 ; yes                    ;
-; datapath:dp|fetch:FETCH|flopre:_flopre|q[4]         ; datapath:dp|hd_unit:hdu|Equal2 ; yes                    ;
-; datapath:dp|fetch:FETCH|flopre:_flopre|q[5]         ; datapath:dp|hd_unit:hdu|Equal2 ; yes                    ;
-; datapath:dp|flopre:IF_ID|q[0]                       ; datapath:dp|hd_unit:hdu|Equal2 ; yes                    ;
-; datapath:dp|flopre:IF_ID|q[1]                       ; datapath:dp|hd_unit:hdu|Equal2 ; yes                    ;
-; datapath:dp|flopre:IF_ID|q[2]                       ; datapath:dp|hd_unit:hdu|Equal2 ; yes                    ;
-; datapath:dp|flopre:IF_ID|q[3]                       ; datapath:dp|hd_unit:hdu|Equal2 ; yes                    ;
-; Number of user-specified and inferred latches = 19  ;                                ;                        ;
-+-----------------------------------------------------+--------------------------------+------------------------+
++----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                ;
++-----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------+------------------------+
+; datapath:dp|flopre:IF_ID|q[16]                      ; VCC                 ; yes                    ;
+; datapath:dp|flopre:IF_ID|q[17]                      ; VCC                 ; yes                    ;
+; datapath:dp|flopre:IF_ID|q[18]                      ; VCC                 ; yes                    ;
+; datapath:dp|flopre:IF_ID|q[19]                      ; VCC                 ; yes                    ;
+; datapath:dp|flopre:IF_ID|q[20]                      ; VCC                 ; yes                    ;
+; datapath:dp|flopre:IF_ID|q[5]                       ; VCC                 ; yes                    ;
+; datapath:dp|flopre:IF_ID|q[6]                       ; VCC                 ; yes                    ;
+; datapath:dp|flopre:IF_ID|q[7]                       ; VCC                 ; yes                    ;
+; datapath:dp|flopre:IF_ID|q[8]                       ; VCC                 ; yes                    ;
+; datapath:dp|flopre:IF_ID|q[9]                       ; VCC                 ; yes                    ;
+; datapath:dp|fetch:FETCH|flopre:_flopre|q[6]         ; VCC                 ; yes                    ;
+; datapath:dp|fetch:FETCH|flopre:_flopre|q[2]         ; VCC                 ; yes                    ;
+; datapath:dp|fetch:FETCH|flopre:_flopre|q[3]         ; VCC                 ; yes                    ;
+; datapath:dp|fetch:FETCH|flopre:_flopre|q[4]         ; VCC                 ; yes                    ;
+; datapath:dp|fetch:FETCH|flopre:_flopre|q[5]         ; VCC                 ; yes                    ;
+; Number of user-specified and inferred latches = 15  ;                     ;                        ;
++-----------------------------------------------------+---------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
@@ -4437,8 +4432,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; datapath:dp|flopr:MEM_WB|q[5..68,133,134]    ; Stuck at GND due to stuck port data_in      ;
 ; datapath:dp|flopr:EX_MEM|q[133,136..197]     ; Lost fanout                                 ;
 ; datapath:dp|flopr:ID_EX|q[133..194,199..260] ; Lost fanout                                 ;
-; datapath:dp|flopr:ID_EX|q[4]                 ; Stuck at GND due to stuck port data_in      ;
-; Total Number of Removed Registers = 4368     ;                                             ;
+; Total Number of Removed Registers = 4367     ;                                             ;
 +----------------------------------------------+---------------------------------------------+
 
 
@@ -5813,41 +5807,6 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ;                                ;                           ; dmem:dataMem|mem[63][56], dmem:dataMem|mem[63][57], dmem:dataMem|mem[63][58],    ;
 ;                                ;                           ; dmem:dataMem|mem[63][59], dmem:dataMem|mem[63][60], dmem:dataMem|mem[63][61],    ;
 ;                                ;                           ; dmem:dataMem|mem[63][62], dmem:dataMem|mem[63][63]                               ;
-; datapath:dp|flopr:ID_EX|q[261] ; Stuck at GND              ; datapath:dp|flopr:EX_MEM|q[198], datapath:dp|flopr:MEM_WB|q[133],                ;
-;                                ; due to stuck port data_in ; datapath:dp|flopr:EX_MEM|q[197], datapath:dp|flopr:EX_MEM|q[196],                ;
-;                                ;                           ; datapath:dp|flopr:EX_MEM|q[195], datapath:dp|flopr:EX_MEM|q[192],                ;
-;                                ;                           ; datapath:dp|flopr:EX_MEM|q[191], datapath:dp|flopr:EX_MEM|q[190],                ;
-;                                ;                           ; datapath:dp|flopr:EX_MEM|q[189], datapath:dp|flopr:EX_MEM|q[188],                ;
-;                                ;                           ; datapath:dp|flopr:EX_MEM|q[187], datapath:dp|flopr:EX_MEM|q[186],                ;
-;                                ;                           ; datapath:dp|flopr:EX_MEM|q[185], datapath:dp|flopr:EX_MEM|q[184],                ;
-;                                ;                           ; datapath:dp|flopr:EX_MEM|q[183], datapath:dp|flopr:EX_MEM|q[182],                ;
-;                                ;                           ; datapath:dp|flopr:EX_MEM|q[181], datapath:dp|flopr:EX_MEM|q[180],                ;
-;                                ;                           ; datapath:dp|flopr:EX_MEM|q[179], datapath:dp|flopr:EX_MEM|q[178],                ;
-;                                ;                           ; datapath:dp|flopr:EX_MEM|q[177], datapath:dp|flopr:EX_MEM|q[176],                ;
-;                                ;                           ; datapath:dp|flopr:EX_MEM|q[175], datapath:dp|flopr:EX_MEM|q[174],                ;
-;                                ;                           ; datapath:dp|flopr:EX_MEM|q[173], datapath:dp|flopr:EX_MEM|q[172],                ;
-;                                ;                           ; datapath:dp|flopr:EX_MEM|q[171], datapath:dp|flopr:EX_MEM|q[170],                ;
-;                                ;                           ; datapath:dp|flopr:EX_MEM|q[169], datapath:dp|flopr:EX_MEM|q[168],                ;
-;                                ;                           ; datapath:dp|flopr:EX_MEM|q[167], datapath:dp|flopr:EX_MEM|q[166],                ;
-;                                ;                           ; datapath:dp|flopr:EX_MEM|q[165], datapath:dp|flopr:EX_MEM|q[164],                ;
-;                                ;                           ; datapath:dp|flopr:EX_MEM|q[163], datapath:dp|flopr:EX_MEM|q[162],                ;
-;                                ;                           ; datapath:dp|flopr:EX_MEM|q[161], datapath:dp|flopr:EX_MEM|q[160],                ;
-;                                ;                           ; datapath:dp|flopr:EX_MEM|q[159], datapath:dp|flopr:EX_MEM|q[158],                ;
-;                                ;                           ; datapath:dp|flopr:EX_MEM|q[157], datapath:dp|flopr:EX_MEM|q[156],                ;
-;                                ;                           ; datapath:dp|flopr:EX_MEM|q[155], datapath:dp|flopr:EX_MEM|q[154],                ;
-;                                ;                           ; datapath:dp|flopr:EX_MEM|q[153], datapath:dp|flopr:EX_MEM|q[152],                ;
-;                                ;                           ; datapath:dp|flopr:EX_MEM|q[151], datapath:dp|flopr:EX_MEM|q[150],                ;
-;                                ;                           ; datapath:dp|flopr:EX_MEM|q[149], datapath:dp|flopr:EX_MEM|q[148],                ;
-;                                ;                           ; datapath:dp|flopr:EX_MEM|q[147], datapath:dp|flopr:EX_MEM|q[146],                ;
-;                                ;                           ; datapath:dp|flopr:EX_MEM|q[145], datapath:dp|flopr:EX_MEM|q[144],                ;
-;                                ;                           ; datapath:dp|flopr:EX_MEM|q[143], datapath:dp|flopr:EX_MEM|q[142],                ;
-;                                ;                           ; datapath:dp|flopr:EX_MEM|q[141], datapath:dp|flopr:EX_MEM|q[140],                ;
-;                                ;                           ; datapath:dp|flopr:EX_MEM|q[139], datapath:dp|flopr:EX_MEM|q[138],                ;
-;                                ;                           ; datapath:dp|flopr:EX_MEM|q[137], datapath:dp|flopr:EX_MEM|q[136],                ;
-;                                ;                           ; datapath:dp|flopr:ID_EX|q[260], datapath:dp|flopr:ID_EX|q[259],                  ;
-;                                ;                           ; datapath:dp|flopr:ID_EX|q[258], datapath:dp|flopr:ID_EX|q[257],                  ;
-;                                ;                           ; datapath:dp|flopr:ID_EX|q[256], datapath:dp|flopr:ID_EX|q[255],                  ;
-;                                ;                           ; datapath:dp|flopr:ID_EX|q[254], datapath:dp|flopr:ID_EX|q[253]                   ;
 ; datapath:dp|flopr:ID_EX|q[264] ; Stuck at GND              ; datapath:dp|flopr:EX_MEM|q[201], datapath:dp|flopr:MEM_WB|q[68],                 ;
 ;                                ; due to stuck port data_in ; datapath:dp|flopr:MEM_WB|q[67], datapath:dp|flopr:MEM_WB|q[66],                  ;
 ;                                ;                           ; datapath:dp|flopr:MEM_WB|q[65], datapath:dp|flopr:MEM_WB|q[64],                  ;
@@ -5880,7 +5839,41 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ;                                ;                           ; datapath:dp|flopr:MEM_WB|q[11], datapath:dp|flopr:MEM_WB|q[10],                  ;
 ;                                ;                           ; datapath:dp|flopr:MEM_WB|q[9], datapath:dp|flopr:MEM_WB|q[8],                    ;
 ;                                ;                           ; datapath:dp|flopr:MEM_WB|q[7], datapath:dp|flopr:MEM_WB|q[6],                    ;
-;                                ;                           ; datapath:dp|flopr:MEM_WB|q[5]                                                    ;
+;                                ;                           ; datapath:dp|flopr:MEM_WB|q[5], datapath:dp|flopr:EX_MEM|q[197],                  ;
+;                                ;                           ; datapath:dp|flopr:EX_MEM|q[196], datapath:dp|flopr:EX_MEM|q[195],                ;
+;                                ;                           ; datapath:dp|flopr:EX_MEM|q[194], datapath:dp|flopr:EX_MEM|q[191],                ;
+;                                ;                           ; datapath:dp|flopr:EX_MEM|q[190], datapath:dp|flopr:EX_MEM|q[189],                ;
+;                                ;                           ; datapath:dp|flopr:EX_MEM|q[188], datapath:dp|flopr:EX_MEM|q[187],                ;
+;                                ;                           ; datapath:dp|flopr:EX_MEM|q[186], datapath:dp|flopr:EX_MEM|q[185],                ;
+;                                ;                           ; datapath:dp|flopr:EX_MEM|q[184], datapath:dp|flopr:EX_MEM|q[183],                ;
+;                                ;                           ; datapath:dp|flopr:EX_MEM|q[182], datapath:dp|flopr:EX_MEM|q[181],                ;
+;                                ;                           ; datapath:dp|flopr:EX_MEM|q[180], datapath:dp|flopr:EX_MEM|q[179],                ;
+;                                ;                           ; datapath:dp|flopr:EX_MEM|q[178], datapath:dp|flopr:EX_MEM|q[177],                ;
+;                                ;                           ; datapath:dp|flopr:EX_MEM|q[176], datapath:dp|flopr:EX_MEM|q[175],                ;
+;                                ;                           ; datapath:dp|flopr:EX_MEM|q[174], datapath:dp|flopr:EX_MEM|q[173],                ;
+;                                ;                           ; datapath:dp|flopr:EX_MEM|q[172], datapath:dp|flopr:EX_MEM|q[171],                ;
+;                                ;                           ; datapath:dp|flopr:EX_MEM|q[170], datapath:dp|flopr:EX_MEM|q[169],                ;
+;                                ;                           ; datapath:dp|flopr:EX_MEM|q[168], datapath:dp|flopr:EX_MEM|q[167],                ;
+;                                ;                           ; datapath:dp|flopr:EX_MEM|q[166], datapath:dp|flopr:EX_MEM|q[165],                ;
+;                                ;                           ; datapath:dp|flopr:EX_MEM|q[164], datapath:dp|flopr:EX_MEM|q[163],                ;
+;                                ;                           ; datapath:dp|flopr:EX_MEM|q[162], datapath:dp|flopr:EX_MEM|q[161],                ;
+;                                ;                           ; datapath:dp|flopr:EX_MEM|q[160], datapath:dp|flopr:EX_MEM|q[159],                ;
+;                                ;                           ; datapath:dp|flopr:EX_MEM|q[158], datapath:dp|flopr:EX_MEM|q[157],                ;
+;                                ;                           ; datapath:dp|flopr:EX_MEM|q[156], datapath:dp|flopr:EX_MEM|q[155],                ;
+;                                ;                           ; datapath:dp|flopr:EX_MEM|q[154], datapath:dp|flopr:EX_MEM|q[153],                ;
+;                                ;                           ; datapath:dp|flopr:EX_MEM|q[152], datapath:dp|flopr:EX_MEM|q[151],                ;
+;                                ;                           ; datapath:dp|flopr:EX_MEM|q[150], datapath:dp|flopr:EX_MEM|q[149],                ;
+;                                ;                           ; datapath:dp|flopr:EX_MEM|q[148], datapath:dp|flopr:EX_MEM|q[147],                ;
+;                                ;                           ; datapath:dp|flopr:EX_MEM|q[146], datapath:dp|flopr:EX_MEM|q[145],                ;
+;                                ;                           ; datapath:dp|flopr:EX_MEM|q[144], datapath:dp|flopr:EX_MEM|q[143],                ;
+;                                ;                           ; datapath:dp|flopr:EX_MEM|q[142], datapath:dp|flopr:EX_MEM|q[141],                ;
+;                                ;                           ; datapath:dp|flopr:EX_MEM|q[140], datapath:dp|flopr:EX_MEM|q[139],                ;
+;                                ;                           ; datapath:dp|flopr:EX_MEM|q[138], datapath:dp|flopr:EX_MEM|q[137],                ;
+;                                ;                           ; datapath:dp|flopr:EX_MEM|q[136], datapath:dp|flopr:ID_EX|q[260],                 ;
+;                                ;                           ; datapath:dp|flopr:ID_EX|q[259], datapath:dp|flopr:ID_EX|q[258],                  ;
+;                                ;                           ; datapath:dp|flopr:ID_EX|q[257], datapath:dp|flopr:ID_EX|q[256],                  ;
+;                                ;                           ; datapath:dp|flopr:ID_EX|q[255], datapath:dp|flopr:ID_EX|q[254],                  ;
+;                                ;                           ; datapath:dp|flopr:ID_EX|q[253]                                                   ;
 ; datapath:dp|flopr:ID_EX|q[270] ; Stuck at GND              ; datapath:dp|flopr:ID_EX|q[196], datapath:dp|flopr:ID_EX|q[195],                  ;
 ;                                ; due to stuck port data_in ; datapath:dp|flopr:ID_EX|q[194], datapath:dp|flopr:ID_EX|q[191],                  ;
 ;                                ;                           ; datapath:dp|flopr:ID_EX|q[190], datapath:dp|flopr:ID_EX|q[189],                  ;
@@ -5912,11 +5905,13 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ;                                ;                           ; datapath:dp|flopr:ID_EX|q[138], datapath:dp|flopr:ID_EX|q[137],                  ;
 ;                                ;                           ; datapath:dp|flopr:ID_EX|q[136], datapath:dp|flopr:ID_EX|q[135],                  ;
 ;                                ;                           ; datapath:dp|flopr:ID_EX|q[134], datapath:dp|flopr:ID_EX|q[133]                   ;
-; datapath:dp|flopr:ID_EX|q[265] ; Stuck at GND              ; datapath:dp|flopr:EX_MEM|q[202], datapath:dp|flopr:EX_MEM|q[194],                ;
-;                                ; due to stuck port data_in ; datapath:dp|flopr:ID_EX|q[4]                                                     ;
-; datapath:dp|flopr:ID_EX|q[271] ; Stuck at GND              ; datapath:dp|flopr:EX_MEM|q[203], datapath:dp|flopr:EX_MEM|q[133]                 ;
-;                                ; due to stuck port data_in ;                                                                                  ;
+; datapath:dp|flopr:ID_EX|q[271] ; Stuck at GND              ; datapath:dp|flopr:EX_MEM|q[203], datapath:dp|flopr:EX_MEM|q[133],                ;
+;                                ; due to stuck port data_in ; datapath:dp|flopr:EX_MEM|q[192]                                                  ;
 ; datapath:dp|flopr:ID_EX|q[262] ; Stuck at GND              ; datapath:dp|flopr:EX_MEM|q[199], datapath:dp|flopr:MEM_WB|q[134]                 ;
+;                                ; due to stuck port data_in ;                                                                                  ;
+; datapath:dp|flopr:ID_EX|q[261] ; Stuck at GND              ; datapath:dp|flopr:EX_MEM|q[198], datapath:dp|flopr:MEM_WB|q[133]                 ;
+;                                ; due to stuck port data_in ;                                                                                  ;
+; datapath:dp|flopr:ID_EX|q[265] ; Stuck at GND              ; datapath:dp|flopr:EX_MEM|q[202]                                                  ;
 ;                                ; due to stuck port data_in ;                                                                                  ;
 +--------------------------------+---------------------------+----------------------------------------------------------------------------------+
 
@@ -5926,10 +5921,10 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 135   ;
+; Total registers                              ; 131   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 64    ;
-; Number of registers using Asynchronous Clear ; 135   ;
+; Number of registers using Asynchronous Clear ; 131   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
@@ -5942,7 +5937,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Register Name                            ; Megafunction                                           ; Type ;
 +------------------------------------------+--------------------------------------------------------+------+
 ; datapath:dp|flopr:ID_EX|q[69..132]       ; datapath:dp|decode:DECODE|regfile:registers|regs_rtl_0 ; RAM  ;
-; datapath:dp|flopr:ID_EX|q[5..68]         ; datapath:dp|decode:DECODE|regfile:registers|regs_rtl_1 ; RAM  ;
+; datapath:dp|flopr:ID_EX|q[0..68]         ; datapath:dp|decode:DECODE|regfile:registers|regs_rtl_1 ; RAM  ;
 ; datapath:dp|flopr:MEM_WB|q[0..4,69..132] ; datapath:dp|decode:DECODE|regfile:registers|regs_rtl_1 ; RAM  ;
 ; datapath:dp|flopr:EX_MEM|q[0..4]         ; datapath:dp|decode:DECODE|regfile:registers|regs_rtl_1 ; RAM  ;
 +------------------------------------------+--------------------------------------------------------+------+
@@ -6338,23 +6333,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 132                         ;
-; cycloneiii_ff         ; 135                         ;
-;     CLR               ; 71                          ;
+; cycloneiii_ff         ; 131                         ;
+;     CLR               ; 67                          ;
 ;     CLR SLD           ; 64                          ;
-; cycloneiii_lcell_comb ; 302                         ;
+; cycloneiii_lcell_comb ; 280                         ;
 ;     arith             ; 66                          ;
 ;         2 data inputs ; 2                           ;
 ;         3 data inputs ; 64                          ;
-;     normal            ; 236                         ;
+;     normal            ; 214                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 1                           ;
-;         2 data inputs ; 139                         ;
-;         3 data inputs ; 1                           ;
-;         4 data inputs ; 94                          ;
+;         2 data inputs ; 134                         ;
+;         3 data inputs ; 7                           ;
+;         4 data inputs ; 71                          ;
 ; cycloneiii_ram_block  ; 128                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 8.30                        ;
-; Average LUT depth     ; 3.70                        ;
+; Average LUT depth     ; 3.82                        ;
 +-----------------------+-----------------------------+
 
 
@@ -6373,7 +6368,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Nov 12 14:56:13 2019
+    Info: Processing started: Tue Nov 12 16:05:07 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab3 -c Lab3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -6454,7 +6449,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file flopre.
     Info (12023): Found entity 1: flopre File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/flopre.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file flopre_tb.sv
     Info (12023): Found entity 1: flopre_tb File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/flopre_tb.sv Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at datapath.sv(56): created implicit net for "BranchNotZero" File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/datapath.sv Line: 56
+Warning (10236): Verilog HDL Implicit Net warning at datapath.sv(55): created implicit net for "BranchNotZero" File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/datapath.sv Line: 55
 Info (12127): Elaborating entity "processor_arm" for the top level hierarchy
 Info (12128): Elaborating entity "controller" for hierarchy "controller:c" File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/processor_arm.sv Line: 25
 Info (12128): Elaborating entity "maindec" for hierarchy "controller:c|maindec:decPpal" File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/controller.sv Line: 19
@@ -6626,22 +6621,20 @@ Info (10041): Inferred latch for "q[92]" at flopre.sv(5) File: C:/Users/rojomald
 Info (10041): Inferred latch for "q[93]" at flopre.sv(5) File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
 Info (10041): Inferred latch for "q[94]" at flopre.sv(5) File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
 Info (10041): Inferred latch for "q[95]" at flopre.sv(5) File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
-Info (12128): Elaborating entity "hd_unit" for hierarchy "datapath:dp|hd_unit:hdu" File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/datapath.sv Line: 52
-Info (12128): Elaborating entity "mux2" for hierarchy "datapath:dp|mux2:hdu_mux" File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/datapath.sv Line: 66
-Info (12128): Elaborating entity "decode" for hierarchy "datapath:dp|decode:DECODE" File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/datapath.sv Line: 78
-Warning (10858): Verilog HDL warning at decode.sv(11): object ra1 used but never assigned File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/decode.sv Line: 11
-Warning (10030): Net "ra1" at decode.sv(11) has no driver or initial value, using a default initial value '0' File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/decode.sv Line: 11
+Info (12128): Elaborating entity "hd_unit" for hierarchy "datapath:dp|hd_unit:hdu" File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/datapath.sv Line: 51
+Info (12128): Elaborating entity "mux2" for hierarchy "datapath:dp|mux2:hdu_mux" File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/datapath.sv Line: 65
+Info (12128): Elaborating entity "decode" for hierarchy "datapath:dp|decode:DECODE" File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/datapath.sv Line: 77
 Info (12128): Elaborating entity "mux2" for hierarchy "datapath:dp|decode:DECODE|mux2:ra2mux" File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/decode.sv Line: 13
 Info (12128): Elaborating entity "regfile" for hierarchy "datapath:dp|decode:DECODE|regfile:registers" File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/decode.sv Line: 16
 Info (12128): Elaborating entity "signext" for hierarchy "datapath:dp|decode:DECODE|signext:ext" File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/decode.sv Line: 26
-Info (12128): Elaborating entity "flopr" for hierarchy "datapath:dp|flopr:ID_EX" File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/datapath.sv Line: 84
-Info (12128): Elaborating entity "execute" for hierarchy "datapath:dp|execute:EXECUTE" File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/datapath.sv Line: 97
+Info (12128): Elaborating entity "flopr" for hierarchy "datapath:dp|flopr:ID_EX" File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/datapath.sv Line: 83
+Info (12128): Elaborating entity "execute" for hierarchy "datapath:dp|execute:EXECUTE" File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/datapath.sv Line: 94
 Info (12128): Elaborating entity "mux2" for hierarchy "datapath:dp|execute:EXECUTE|mux2:_mux" File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/execute.sv Line: 10
 Info (12128): Elaborating entity "alu" for hierarchy "datapath:dp|execute:EXECUTE|alu:_alu" File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/execute.sv Line: 11
-Info (12128): Elaborating entity "flopr" for hierarchy "datapath:dp|flopr:EX_MEM" File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/datapath.sv Line: 102
-Info (12128): Elaborating entity "memory" for hierarchy "datapath:dp|memory:MEMORY" File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/datapath.sv Line: 107
-Info (12128): Elaborating entity "flopr" for hierarchy "datapath:dp|flopr:MEM_WB" File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/datapath.sv Line: 120
-Info (12128): Elaborating entity "writeback" for hierarchy "datapath:dp|writeback:WRITEBACK" File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/datapath.sv Line: 126
+Info (12128): Elaborating entity "flopr" for hierarchy "datapath:dp|flopr:EX_MEM" File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/datapath.sv Line: 99
+Info (12128): Elaborating entity "memory" for hierarchy "datapath:dp|memory:MEMORY" File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/datapath.sv Line: 104
+Info (12128): Elaborating entity "flopr" for hierarchy "datapath:dp|flopr:MEM_WB" File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/datapath.sv Line: 117
+Info (12128): Elaborating entity "writeback" for hierarchy "datapath:dp|writeback:WRITEBACK" File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/datapath.sv Line: 122
 Info (12128): Elaborating entity "imem" for hierarchy "imem:instrMem" File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/processor_arm.sv Line: 49
 Warning (10030): Net "rom.data_a" at imem.sv(25) has no driver or initial value, using a default initial value '0' File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/imem.sv Line: 25
 Warning (10030): Net "rom.waddr_a" at imem.sv(25) has no driver or initial value, using a default initial value '0' File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/imem.sv Line: 25
@@ -6724,15 +6717,15 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "dump" File: C:/Users/rojomaldit/Desktop/ArquitecturaFPGA/Lab3/processor_arm.sv Line: 7
-Info (21057): Implemented 632 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 606 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 129 output pins
-    Info (21061): Implemented 372 logic cells
+    Info (21061): Implemented 346 logic cells
     Info (21064): Implemented 128 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 27 warnings
-    Info: Peak virtual memory: 681 megabytes
-    Info: Processing ended: Tue Nov 12 14:56:31 2019
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 25 warnings
+    Info: Peak virtual memory: 680 megabytes
+    Info: Processing ended: Tue Nov 12 16:05:25 2019
     Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:39
+    Info: Total CPU time (on all processors): 00:00:41
 
 

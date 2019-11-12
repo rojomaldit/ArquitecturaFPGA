@@ -1696,8 +1696,7 @@ q[95] <= q[95]$latch.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |processor_arm|datapath:dp|hd_unit:hdu
-ID_EX_MemToReg => always0.IN1
-EX_Mem_MemToReg => ~NO_FANOUT~
+ID_EX_MemRead => always0.IN1
 ID_EX_RegisterRD[0] => Equal1.IN4
 ID_EX_RegisterRD[0] => Equal2.IN4
 ID_EX_RegisterRD[0] => Equal0.IN4
@@ -2079,11 +2078,11 @@ wa3_D[1] => wa3_D[1].IN1
 wa3_D[2] => wa3_D[2].IN1
 wa3_D[3] => wa3_D[3].IN1
 wa3_D[4] => wa3_D[4].IN1
-first_i[0] <= <GND>
-first_i[1] <= <GND>
-first_i[2] <= <GND>
-first_i[3] <= <GND>
-first_i[4] <= <GND>
+first_i[0] <= instr_D[5].DB_MAX_OUTPUT_PORT_TYPE
+first_i[1] <= instr_D[6].DB_MAX_OUTPUT_PORT_TYPE
+first_i[2] <= instr_D[7].DB_MAX_OUTPUT_PORT_TYPE
+first_i[3] <= instr_D[8].DB_MAX_OUTPUT_PORT_TYPE
+first_i[4] <= instr_D[9].DB_MAX_OUTPUT_PORT_TYPE
 second_i[0] <= ra2[0].DB_MAX_OUTPUT_PORT_TYPE
 second_i[1] <= ra2[1].DB_MAX_OUTPUT_PORT_TYPE
 second_i[2] <= ra2[2].DB_MAX_OUTPUT_PORT_TYPE

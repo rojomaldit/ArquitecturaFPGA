@@ -8,14 +8,14 @@ module decode #(parameter N = 64)
           input logic [4:0] wa3_D, // Eliminar para single cycle processor
           output logic [4:0] first_i, second_i);
 
-  logic [4:0] ra1, ra2;
+  logic [4:0] ra2;
 
   mux2   #(5)   ra2mux  (.d0(instr_D[20:16]), .d1(instr_D[4:0]), .s(reg2loc_D), .y(ra2));
 
   regfile     registers(.clk(clk), .we3(regWrite_D), .ra1(instr_D[9:5]), .ra2(ra2), .wa3(wa3_D), 
                  .wd3(writeData3_D), .rd1(readData1_D), .rd2(readData2_D));
 
-  assign first_i = ra1;
+  assign first_i = instr_D[9:5];
   assign second_i = ra2;
 
   // En single cycle processor:            
