@@ -46,6 +46,7 @@ module datapath #(parameter N = 64)
   hd_unit hdu(.ID_EX_MemRead(qID_EX[264]),
               .ID_EX_RegisterRD(qID_EX[4:0]),
               .EX_MEM_RegisterRD(qEX_MEM[4:0]),
+              .MEM_WB_RegisterRD(qMEM_WB[4:0]), // New
               .IF_ID_RegisterRS(first_i),
               .IF_ID_RegisterRT(second_i),
               .enable(enable));
