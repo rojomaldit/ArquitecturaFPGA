@@ -20,7 +20,6 @@ initial begin
 
        IF_ID_RegisterRS == MEM_WB_RegisterRD ||
        IF_ID_RegisterRT == MEM_WB_RegisterRD
-
      ))
     enable = 0;
   else
