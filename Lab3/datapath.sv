@@ -45,11 +45,9 @@ module datapath #(parameter N = 64)
 
   hd_unit hdu(.ID_EX_RegWrite(qID_EX[261]),
 				      .EX_Mem_RegWrite(qEX_MEM[183]), // Not sure
-
               .ID_EX_RegisterRD(qID_EX[4:0]),
               .EX_MEM_RegisterRD(qEX_MEM[4:0]),
               .MEM_WB_RegisterRD(qMEM_WB[4:0]),
-				      
               .IF_ID_RegisterRS(first_i),
               .IF_ID_RegisterRT(second_i),
 				      

@@ -14,7 +14,7 @@ initial begin
   if(ID_EX_RegWrite && ID_EX_RegisterRD != 31 &&
      (
        IF_ID_RegisterRS == ID_EX_RegisterRD ||
-       IF_ID_RegisterRT == ID_EX_RegisterRD ||
+       IF_ID_RegisterRT == ID_EX_RegisterRD
      ))
     enable = 0;
   else if(EX_Mem_RegWrite && ID_EX_RegisterRD != 31 &&
