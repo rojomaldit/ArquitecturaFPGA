@@ -37,26 +37,27 @@ module datapath #(parameter N = 64)
 
 
   flopre   #(96)    IF_ID   (.clk(clk),
-                    .reset(reset), 
-                    .d({IM_addr, IM_readData}),
-                    .q(qIF_ID),
-                    .enable(enable));
+                             .reset(reset),
+                             .d({IM_addr, IM_readData}),
+                             .q(qIF_ID),
+                             .enable(enable));
 
 
   hd_unit hdu(.ID_EX_MemToReg(qID_EX[261]),
 				  .ID_EX_MemRead(qID_EX[264]),
 				  .EX_Mem_MemToReg(qEX_MEM[198]),
 				  .EX_Mem_MemRead(qEX_MEM[201]),
-              .ID_EX_RegisterRD(qID_EX[4:0]),
-              .EX_MEM_RegisterRD(qEX_MEM[4:0]),
-              .MEM_WB_RegisterRD(qMEM_WB[4:0]),
+          .ID_EX_RegisterRD(qID_EX[4:0]),
+          .EX_MEM_RegisterRD(qEX_MEM[4:0]),
+          .MEM_WB_RegisterRD(qMEM_WB[4:0]),
 				  .IF_ID_RegisterRS(first_i),
-              .IF_ID_RegisterRT(second_i),
+          .IF_ID_RegisterRT(second_i),
 				  .enable(enable));
 
   logic [10:0]controlSignals;
 
-  mux2 #(11) hdu_mux(11'b0,{ BranchNotZero,
+  mux2 #(11) hdu_mux(11'b0,{
+                             BranchNotZero,
                              AluSrc,
                              AluControl,
                              Branch,
@@ -69,16 +70,16 @@ module datapath #(parameter N = 64)
                            controlSignals);
 
   decode   #(64)   DECODE   (.regWrite_D(qMEM_WB[134]),
-                    .reg2loc_D(reg2loc),
-                    .clk(clk),
-                    .writeData3_D(writeData3),
-                    .instr_D(qIF_ID[31:0]),
-                    .signImm_D(signImm_D),
-                    .readData1_D(readData1_D),
-                    .readData2_D(readData2_D),
-                    .wa3_D(qMEM_WB[4:0]),
-                    .first_i(first_i),
-                    .second_i(second_i));
+                             .reg2loc_D(reg2loc),
+                             .clk(clk),
+                             .writeData3_D(writeData3),
+                             .instr_D(qIF_ID[31:0]),
+                             .signImm_D(signImm_D),
+                             .readData1_D(readData1_D),
+                             .readData2_D(readData2_D),
+                             .wa3_D(qMEM_WB[4:0]),
+                             .first_i(first_i),
+                             .second_i(second_i));
 
   flopr   #(272)  ID_EX   (.clk(clk),
                     .reset(reset), 
