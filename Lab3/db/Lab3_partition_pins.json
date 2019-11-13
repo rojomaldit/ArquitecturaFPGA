@@ -516,6 +516,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "DM_writeEnable",
+					"strict" : false
+				},
+				{
 					"name" : "CLOCK_50",
 					"strict" : false
 				},

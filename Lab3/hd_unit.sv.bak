@@ -15,7 +15,7 @@ initial begin
        IF_ID_RegisterRS == ID_EX_RegisterRD ||
        IF_ID_RegisterRT == ID_EX_RegisterRD ||
 
-       IF_ID_RegisterRS == EX_MEM_RegisterRD ||	
+       IF_ID_RegisterRS == EX_MEM_RegisterRD ||
        IF_ID_RegisterRT == EX_MEM_RegisterRD ||
 
        IF_ID_RegisterRS == MEM_WB_RegisterRD ||

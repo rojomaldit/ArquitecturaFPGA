@@ -42,7 +42,7 @@ module processor_arm #(parameter N = 64)
                   .DM_addr(DM_addr), 
                   .DM_writeData(DM_writeData), 
                   .DM_writeEnable(DM_writeEnable), 
-                  .DM_readEnable(DM_readEnable),
+                  .DM_readEnable(DM_readEnable)
                   .enable(enable));        
           
           
