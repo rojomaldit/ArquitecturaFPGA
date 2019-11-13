@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Lab3
-Fri Nov 01 12:45:21 2019
+Wed Nov 13 04:10:49 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -14,42 +14,44 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
-  9. Registers Removed During Synthesis
- 10. Removed Registers Triggering Further Register Optimizations
- 11. General Register Statistics
- 12. Registers Packed Into Inferred Megafunctions
- 13. Registers Added for RAM Pass-Through Logic
- 14. Multiplexer Restructuring Statistics (Restructuring Performed)
- 15. Source assignments for datapath:dp|decode:DECODE|regfile:registers|altsyncram:regs_rtl_0|altsyncram_e5l1:auto_generated
- 16. Source assignments for datapath:dp|decode:DECODE|regfile:registers|altsyncram:regs_rtl_1|altsyncram_e5l1:auto_generated
- 17. Source assignments for imem:instrMem|altsyncram:rom_rtl_0|altsyncram_g161:auto_generated
+  9. User-Specified and Inferred Latches
+ 10. Registers Removed During Synthesis
+ 11. Removed Registers Triggering Further Register Optimizations
+ 12. General Register Statistics
+ 13. Registers Packed Into Inferred Megafunctions
+ 14. Registers Added for RAM Pass-Through Logic
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Source assignments for datapath:dp|decode:DECODE|regfile:registers|altsyncram:regs_rtl_0|altsyncram_e5l1:auto_generated
+ 17. Source assignments for datapath:dp|decode:DECODE|regfile:registers|altsyncram:regs_rtl_1|altsyncram_e5l1:auto_generated
  18. Source assignments for dmem:dataMem|altsyncram:mem_rtl_0|altsyncram_4tg1:auto_generated
  19. Parameter Settings for User Entity Instance: Top-level Entity: |processor_arm
  20. Parameter Settings for User Entity Instance: datapath:dp
- 21. Parameter Settings for User Entity Instance: datapath:dp|fetch:FETCH
- 22. Parameter Settings for User Entity Instance: datapath:dp|fetch:FETCH|mux2:_mux
- 23. Parameter Settings for User Entity Instance: datapath:dp|fetch:FETCH|flopr:flop
- 24. Parameter Settings for User Entity Instance: datapath:dp|flopr:IF_ID
- 25. Parameter Settings for User Entity Instance: datapath:dp|decode:DECODE
- 26. Parameter Settings for User Entity Instance: datapath:dp|decode:DECODE|mux2:ra2mux
- 27. Parameter Settings for User Entity Instance: datapath:dp|flopr:ID_EX
- 28. Parameter Settings for User Entity Instance: datapath:dp|execute:EXECUTE
- 29. Parameter Settings for User Entity Instance: datapath:dp|execute:EXECUTE|mux2:_mux
- 30. Parameter Settings for User Entity Instance: datapath:dp|execute:EXECUTE|alu:_alu
- 31. Parameter Settings for User Entity Instance: datapath:dp|flopr:EX_MEM
- 32. Parameter Settings for User Entity Instance: datapath:dp|flopr:MEM_WB
- 33. Parameter Settings for User Entity Instance: datapath:dp|writeback:WRITEBACK
- 34. Parameter Settings for User Entity Instance: datapath:dp|writeback:WRITEBACK|mux2:MtoRmux
- 35. Parameter Settings for User Entity Instance: flopr:IF_ID_TOP
- 36. Parameter Settings for Inferred Entity Instance: datapath:dp|decode:DECODE|regfile:registers|altsyncram:regs_rtl_0
- 37. Parameter Settings for Inferred Entity Instance: datapath:dp|decode:DECODE|regfile:registers|altsyncram:regs_rtl_1
- 38. Parameter Settings for Inferred Entity Instance: imem:instrMem|altsyncram:rom_rtl_0
+ 21. Parameter Settings for User Entity Instance: datapath:dp|mux2:hdu_mux
+ 22. Parameter Settings for User Entity Instance: datapath:dp|fetch:FETCH
+ 23. Parameter Settings for User Entity Instance: datapath:dp|fetch:FETCH|mux2:_mux
+ 24. Parameter Settings for User Entity Instance: datapath:dp|fetch:FETCH|flopre:flop
+ 25. Parameter Settings for User Entity Instance: datapath:dp|flopre:IF_ID
+ 26. Parameter Settings for User Entity Instance: datapath:dp|decode:DECODE
+ 27. Parameter Settings for User Entity Instance: datapath:dp|decode:DECODE|mux2:ra2mux
+ 28. Parameter Settings for User Entity Instance: datapath:dp|flopr:ID_EX
+ 29. Parameter Settings for User Entity Instance: datapath:dp|execute:EXECUTE
+ 30. Parameter Settings for User Entity Instance: datapath:dp|execute:EXECUTE|mux2:_mux
+ 31. Parameter Settings for User Entity Instance: datapath:dp|execute:EXECUTE|alu:_alu
+ 32. Parameter Settings for User Entity Instance: datapath:dp|flopr:EX_MEM
+ 33. Parameter Settings for User Entity Instance: datapath:dp|flopr:MEM_WB
+ 34. Parameter Settings for User Entity Instance: datapath:dp|writeback:WRITEBACK
+ 35. Parameter Settings for User Entity Instance: datapath:dp|writeback:WRITEBACK|mux2:MtoRmux
+ 36. Parameter Settings for User Entity Instance: flopr:IF_ID_TOP
+ 37. Parameter Settings for Inferred Entity Instance: datapath:dp|decode:DECODE|regfile:registers|altsyncram:regs_rtl_0
+ 38. Parameter Settings for Inferred Entity Instance: datapath:dp|decode:DECODE|regfile:registers|altsyncram:regs_rtl_1
  39. Parameter Settings for Inferred Entity Instance: dmem:dataMem|altsyncram:mem_rtl_0
  40. altsyncram Parameter Settings by Entity Instance
- 41. Port Connectivity Checks: "datapath:dp"
- 42. Post-Synthesis Netlist Statistics for Top Partition
- 43. Elapsed Time Per Partition
- 44. Analysis & Synthesis Messages
+ 41. Port Connectivity Checks: "datapath:dp|flopr:ID_EX"
+ 42. Port Connectivity Checks: "datapath:dp|mux2:hdu_mux"
+ 43. Port Connectivity Checks: "datapath:dp"
+ 44. Post-Synthesis Netlist Statistics for Top Partition
+ 45. Elapsed Time Per Partition
+ 46. Analysis & Synthesis Messages
 
 
 
@@ -75,18 +77,18 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Nov 01 12:45:21 2019       ;
+; Analysis & Synthesis Status        ; Successful - Wed Nov 13 04:10:49 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Lab3                                        ;
 ; Top-level Entity Name              ; processor_arm                               ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 1,065                                       ;
-;     Total combinational functions  ; 829                                         ;
-;     Dedicated logic registers      ; 472                                         ;
-; Total registers                    ; 472                                         ;
+; Total logic elements               ; 1,133                                       ;
+;     Total combinational functions  ; 903                                         ;
+;     Dedicated logic registers      ; 470                                         ;
+; Total registers                    ; 470                                         ;
 ; Total pins                         ; 132                                         ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 8,800                                       ;
+; Total memory bits                  ; 8,192                                       ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
 ; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
@@ -200,6 +202,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------+-----------------+-------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path      ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                                              ; Library ;
 +---------------------------------------+-----------------+-------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+---------+
+; hd_unit.sv                            ; yes             ; User SystemVerilog HDL File                           ; C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/hd_unit.sv                            ;         ;
 ; writeback.sv                          ; yes             ; User SystemVerilog HDL File                           ; C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/writeback.sv                          ;         ;
 ; signext.sv                            ; yes             ; User SystemVerilog HDL File                           ; C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/signext.sv                            ;         ;
 ; regfile.sv                            ; yes             ; User SystemVerilog HDL File                           ; C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/regfile.sv                            ;         ;
@@ -217,6 +220,7 @@ refer to the applicable agreement for further details.
 ; controller.sv                         ; yes             ; User SystemVerilog HDL File                           ; C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/controller.sv                         ;         ;
 ; aludec.sv                             ; yes             ; User SystemVerilog HDL File                           ; C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/aludec.sv                             ;         ;
 ; alu.sv                                ; yes             ; User SystemVerilog HDL File                           ; C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/alu.sv                                ;         ;
+; flopre.sv                             ; yes             ; User SystemVerilog HDL File                           ; C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv                             ;         ;
 ; altsyncram.tdf                        ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf                                     ;         ;
 ; stratix_ram_block.inc                 ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc                              ;         ;
 ; lpm_mux.inc                           ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc                                        ;         ;
@@ -228,8 +232,6 @@ refer to the applicable agreement for further details.
 ; altdpram.inc                          ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc                                       ;         ;
 ; db/altsyncram_e5l1.tdf                ; yes             ; Auto-Generated Megafunction                           ; C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/db/altsyncram_e5l1.tdf                ;         ;
 ; db/lab3.ram0_regfile_4c9f4da2.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/db/lab3.ram0_regfile_4c9f4da2.hdl.mif ;         ;
-; db/altsyncram_g161.tdf                ; yes             ; Auto-Generated Megafunction                           ; C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/db/altsyncram_g161.tdf                ;         ;
-; db/Lab3.ram0_imem_37c714.hdl.mif      ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/db/Lab3.ram0_imem_37c714.hdl.mif      ;         ;
 ; db/altsyncram_4tg1.tdf                ; yes             ; Auto-Generated Megafunction                           ; C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/db/altsyncram_4tg1.tdf                ;         ;
 +---------------------------------------+-----------------+-------------------------------------------------------+-----------------------------------------------------------------------------------------------------------+---------+
 
@@ -239,31 +241,31 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 1,065          ;
+; Estimated Total logic elements              ; 1,133          ;
 ;                                             ;                ;
-; Total combinational functions               ; 829            ;
+; Total combinational functions               ; 903            ;
 ; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 470            ;
-;     -- 3 input functions                    ; 143            ;
-;     -- <=2 input functions                  ; 216            ;
+;     -- 4 input functions                    ; 443            ;
+;     -- 3 input functions                    ; 250            ;
+;     -- <=2 input functions                  ; 210            ;
 ;                                             ;                ;
 ; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 757            ;
-;     -- arithmetic mode                      ; 72             ;
+;     -- normal mode                          ; 829            ;
+;     -- arithmetic mode                      ; 74             ;
 ;                                             ;                ;
-; Total registers                             ; 472            ;
-;     -- Dedicated logic registers            ; 472            ;
+; Total registers                             ; 470            ;
+;     -- Dedicated logic registers            ; 470            ;
 ;     -- I/O registers                        ; 0              ;
 ;                                             ;                ;
 ; I/O pins                                    ; 132            ;
-; Total memory bits                           ; 8800           ;
+; Total memory bits                           ; 8192           ;
 ;                                             ;                ;
 ; Embedded Multiplier 9-bit elements          ; 0              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 696            ;
-; Total fan-out                               ; 7360           ;
-; Average fan-out                             ; 4.11           ;
+; Maximum fan-out                             ; 662            ;
+; Total fan-out                               ; 7394           ;
+; Average fan-out                             ; 4.03           ;
 +---------------------------------------------+----------------+
 
 
@@ -272,35 +274,38 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node                      ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                             ; Entity Name     ; Library Name ;
 +-------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------+-----------------+--------------+
-; |processor_arm                                  ; 829 (0)             ; 472 (0)                   ; 8800        ; 0            ; 0       ; 0         ; 132  ; 0            ; |processor_arm                                                                                                  ; processor_arm   ; work         ;
-;    |controller:c|                               ; 31 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|controller:c                                                                                     ; controller      ; work         ;
-;       |aludec:decAlu|                           ; 10 (10)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|controller:c|aludec:decAlu                                                                       ; aludec          ; work         ;
-;       |maindec:decPpal|                         ; 21 (21)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|controller:c|maindec:decPpal                                                                     ; maindec         ; work         ;
-;    |datapath:dp|                                ; 782 (0)             ; 329 (0)                   ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp                                                                                      ; datapath        ; work         ;
-;       |decode:DECODE|                           ; 233 (0)             ; 2 (0)                     ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|decode:DECODE                                                                        ; decode          ; work         ;
+; |processor_arm                                  ; 903 (1)             ; 470 (0)                   ; 8192        ; 0            ; 0       ; 0         ; 132  ; 0            ; |processor_arm                                                                                                  ; processor_arm   ; work         ;
+;    |controller:c|                               ; 24 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|controller:c                                                                                     ; controller      ; work         ;
+;       |aludec:decAlu|                           ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|controller:c|aludec:decAlu                                                                       ; aludec          ; work         ;
+;       |maindec:decPpal|                         ; 17 (17)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|controller:c|maindec:decPpal                                                                     ; maindec         ; work         ;
+;    |datapath:dp|                                ; 824 (0)             ; 318 (0)                   ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp                                                                                      ; datapath        ; work         ;
+;       |decode:DECODE|                           ; 147 (0)             ; 2 (0)                     ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|decode:DECODE                                                                        ; decode          ; work         ;
 ;          |mux2:ra2mux|                          ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|decode:DECODE|mux2:ra2mux                                                            ; mux2            ; work         ;
-;          |regfile:registers|                    ; 195 (195)           ; 2 (2)                     ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|decode:DECODE|regfile:registers                                                      ; regfile         ; work         ;
+;          |regfile:registers|                    ; 128 (128)           ; 2 (2)                     ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|decode:DECODE|regfile:registers                                                      ; regfile         ; work         ;
 ;             |altsyncram:regs_rtl_0|             ; 0 (0)               ; 0 (0)                     ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|decode:DECODE|regfile:registers|altsyncram:regs_rtl_0                                ; altsyncram      ; work         ;
 ;                |altsyncram_e5l1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|decode:DECODE|regfile:registers|altsyncram:regs_rtl_0|altsyncram_e5l1:auto_generated ; altsyncram_e5l1 ; work         ;
 ;             |altsyncram:regs_rtl_1|             ; 0 (0)               ; 0 (0)                     ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|decode:DECODE|regfile:registers|altsyncram:regs_rtl_1                                ; altsyncram      ; work         ;
 ;                |altsyncram_e5l1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|decode:DECODE|regfile:registers|altsyncram:regs_rtl_1|altsyncram_e5l1:auto_generated ; altsyncram_e5l1 ; work         ;
-;          |signext:ext|                          ; 33 (33)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|decode:DECODE|signext:ext                                                            ; signext         ; work         ;
-;       |execute:EXECUTE|                         ; 474 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|execute:EXECUTE                                                                      ; execute         ; work         ;
-;          |alu:_alu|                             ; 410 (410)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|execute:EXECUTE|alu:_alu                                                             ; alu             ; work         ;
+;          |signext:ext|                          ; 14 (14)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|decode:DECODE|signext:ext                                                            ; signext         ; work         ;
+;       |execute:EXECUTE|                         ; 473 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|execute:EXECUTE                                                                      ; execute         ; work         ;
+;          |alu:_alu|                             ; 409 (409)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|execute:EXECUTE|alu:_alu                                                             ; alu             ; work         ;
 ;          |mux2:_mux|                            ; 64 (64)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|execute:EXECUTE|mux2:_mux                                                            ; mux2            ; work         ;
-;       |fetch:FETCH|                             ; 5 (0)               ; 5 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|fetch:FETCH                                                                          ; fetch           ; work         ;
-;          |flopr:flop|                           ; 5 (5)               ; 5 (5)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|fetch:FETCH|flopr:flop                                                               ; flopr           ; work         ;
-;       |flopr:EX_MEM|                            ; 5 (5)               ; 144 (144)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|flopr:EX_MEM                                                                         ; flopr           ; work         ;
-;       |flopr:ID_EX|                             ; 0 (0)               ; 38 (38)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|flopr:ID_EX                                                                          ; flopr           ; work         ;
-;       |flopr:IF_ID|                             ; 0 (0)               ; 5 (5)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|flopr:IF_ID                                                                          ; flopr           ; work         ;
-;       |flopr:MEM_WB|                            ; 64 (64)             ; 135 (135)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|flopr:MEM_WB                                                                         ; flopr           ; work         ;
+;       |fetch:FETCH|                             ; 18 (12)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|fetch:FETCH                                                                          ; fetch           ; work         ;
+;          |flopre:flop|                          ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|fetch:FETCH|flopre:flop                                                              ; flopre          ; work         ;
+;       |flopr:EX_MEM|                            ; 6 (6)               ; 144 (144)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|flopr:EX_MEM                                                                         ; flopr           ; work         ;
+;       |flopr:ID_EX|                             ; 7 (7)               ; 38 (38)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|flopr:ID_EX                                                                          ; flopr           ; work         ;
+;       |flopr:MEM_WB|                            ; 64 (64)             ; 134 (134)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|flopr:MEM_WB                                                                         ; flopr           ; work         ;
+;       |flopre:IF_ID|                            ; 29 (29)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|flopre:IF_ID                                                                         ; flopre          ; work         ;
+;       |hd_unit:hd|                              ; 11 (11)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|hd_unit:hd                                                                           ; hd_unit         ; work         ;
 ;       |memory:MEMORY|                           ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|memory:MEMORY                                                                        ; memory          ; work         ;
+;       |mux2:hdu_mux|                            ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|mux2:hdu_mux                                                                         ; mux2            ; work         ;
+;       |writeback:WRITEBACK|                     ; 64 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|writeback:WRITEBACK                                                                  ; writeback       ; work         ;
+;          |mux2:MtoRmux|                         ; 64 (64)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|datapath:dp|writeback:WRITEBACK|mux2:MtoRmux                                                     ; mux2            ; work         ;
 ;    |dmem:dataMem|                               ; 6 (6)               ; 142 (142)                 ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|dmem:dataMem                                                                                     ; dmem            ; work         ;
 ;       |altsyncram:mem_rtl_0|                    ; 0 (0)               ; 0 (0)                     ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|dmem:dataMem|altsyncram:mem_rtl_0                                                                ; altsyncram      ; work         ;
 ;          |altsyncram_4tg1:auto_generated|       ; 0 (0)               ; 0 (0)                     ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|dmem:dataMem|altsyncram:mem_rtl_0|altsyncram_4tg1:auto_generated                                 ; altsyncram_4tg1 ; work         ;
-;    |imem:instrMem|                              ; 10 (10)             ; 1 (1)                     ; 608         ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|imem:instrMem                                                                                    ; imem            ; work         ;
-;       |altsyncram:rom_rtl_0|                    ; 0 (0)               ; 0 (0)                     ; 608         ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|imem:instrMem|altsyncram:rom_rtl_0                                                               ; altsyncram      ; work         ;
-;          |altsyncram_g161:auto_generated|       ; 0 (0)               ; 0 (0)                     ; 608         ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|imem:instrMem|altsyncram:rom_rtl_0|altsyncram_g161:auto_generated                                ; altsyncram_g161 ; work         ;
+;    |flopr:IF_ID_TOP|                            ; 0 (0)               ; 10 (10)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|flopr:IF_ID_TOP                                                                                  ; flopr           ; work         ;
+;    |imem:instrMem|                              ; 48 (48)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor_arm|imem:instrMem                                                                                    ; imem            ; work         ;
 +-------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -313,100 +318,116 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; datapath:dp|decode:DECODE|regfile:registers|altsyncram:regs_rtl_0|altsyncram_e5l1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 32           ; 64           ; 32           ; 64           ; 2048 ; db/Lab3.ram0_regfile_4c9f4da2.hdl.mif ;
 ; datapath:dp|decode:DECODE|regfile:registers|altsyncram:regs_rtl_1|altsyncram_e5l1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 32           ; 64           ; 32           ; 64           ; 2048 ; db/Lab3.ram0_regfile_4c9f4da2.hdl.mif ;
 ; dmem:dataMem|altsyncram:mem_rtl_0|altsyncram_4tg1:auto_generated|ALTSYNCRAM                                 ; AUTO ; Simple Dual Port ; 64           ; 64           ; 64           ; 64           ; 4096 ; None                                  ;
-; imem:instrMem|altsyncram:rom_rtl_0|altsyncram_g161:auto_generated|ALTSYNCRAM                                ; AUTO ; ROM              ; 19           ; 32           ; --           ; --           ; 608  ; db/Lab3.ram0_imem_37c714.hdl.mif      ;
 +-------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+---------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                        ;
-+---------------------------------------------+---------------------------------------------+
-; Register name                               ; Reason for Removal                          ;
-+---------------------------------------------+---------------------------------------------+
-; datapath:dp|flopr:ID_EX|q[269]              ; Stuck at GND due to stuck port data_in      ;
-; datapath:dp|flopr:IF_ID|q[31]               ; Merged with flopr:IF_ID_TOP|q[10]           ;
-; datapath:dp|flopr:IF_ID|q[30]               ; Merged with flopr:IF_ID_TOP|q[9]            ;
-; datapath:dp|flopr:IF_ID|q[29]               ; Merged with flopr:IF_ID_TOP|q[8]            ;
-; datapath:dp|flopr:IF_ID|q[28]               ; Merged with flopr:IF_ID_TOP|q[7]            ;
-; datapath:dp|flopr:IF_ID|q[27]               ; Merged with flopr:IF_ID_TOP|q[6]            ;
-; datapath:dp|flopr:IF_ID|q[26]               ; Merged with flopr:IF_ID_TOP|q[5]            ;
-; datapath:dp|flopr:IF_ID|q[25]               ; Merged with flopr:IF_ID_TOP|q[4]            ;
-; datapath:dp|flopr:IF_ID|q[24]               ; Merged with flopr:IF_ID_TOP|q[3]            ;
-; datapath:dp|flopr:IF_ID|q[23]               ; Merged with flopr:IF_ID_TOP|q[2]            ;
-; datapath:dp|flopr:IF_ID|q[22]               ; Merged with flopr:IF_ID_TOP|q[1]            ;
-; datapath:dp|flopr:IF_ID|q[21]               ; Merged with flopr:IF_ID_TOP|q[0]            ;
-; datapath:dp|flopr:ID_EX|q[261]              ; Merged with datapath:dp|flopr:ID_EX|q[264]  ;
-; datapath:dp|flopr:EX_MEM|q[198]             ; Merged with datapath:dp|flopr:EX_MEM|q[201] ;
-; datapath:dp|flopr:ID_EX|q[152..196]         ; Merged with datapath:dp|flopr:ID_EX|q[151]  ;
-; datapath:dp|flopr:ID_EX|q[204..260]         ; Lost fanout                                 ;
-; datapath:dp|flopr:IF_ID|q[39..95]           ; Lost fanout                                 ;
-; datapath:dp|fetch:FETCH|flopr:flop|q[7..63] ; Lost fanout                                 ;
-; Total Number of Removed Registers = 230     ;                                             ;
-+---------------------------------------------+---------------------------------------------+
++---------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                           ;
++-----------------------------------------------------+--------------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal            ; Free of Timing Hazards ;
++-----------------------------------------------------+--------------------------------+------------------------+
+; datapath:dp|flopre:IF_ID|q[16]                      ; datapath:dp|hd_unit:hd|always0 ; yes                    ;
+; datapath:dp|flopre:IF_ID|q[0]                       ; datapath:dp|hd_unit:hd|always0 ; yes                    ;
+; datapath:dp|flopre:IF_ID|q[17]                      ; datapath:dp|hd_unit:hd|always0 ; yes                    ;
+; datapath:dp|flopre:IF_ID|q[1]                       ; datapath:dp|hd_unit:hd|always0 ; yes                    ;
+; datapath:dp|flopre:IF_ID|q[18]                      ; datapath:dp|hd_unit:hd|always0 ; yes                    ;
+; datapath:dp|flopre:IF_ID|q[2]                       ; datapath:dp|hd_unit:hd|always0 ; yes                    ;
+; datapath:dp|flopre:IF_ID|q[19]                      ; datapath:dp|hd_unit:hd|always0 ; yes                    ;
+; datapath:dp|flopre:IF_ID|q[3]                       ; datapath:dp|hd_unit:hd|always0 ; yes                    ;
+; datapath:dp|flopre:IF_ID|q[20]                      ; datapath:dp|hd_unit:hd|always0 ; yes                    ;
+; datapath:dp|flopre:IF_ID|q[10]                      ; datapath:dp|hd_unit:hd|always0 ; yes                    ;
+; datapath:dp|flopre:IF_ID|q[12]                      ; datapath:dp|hd_unit:hd|always0 ; yes                    ;
+; datapath:dp|flopre:IF_ID|q[21]                      ; datapath:dp|hd_unit:hd|always0 ; yes                    ;
+; datapath:dp|flopre:IF_ID|q[22]                      ; datapath:dp|hd_unit:hd|always0 ; yes                    ;
+; datapath:dp|flopre:IF_ID|q[23]                      ; datapath:dp|hd_unit:hd|always0 ; yes                    ;
+; datapath:dp|flopre:IF_ID|q[24]                      ; datapath:dp|hd_unit:hd|always0 ; yes                    ;
+; datapath:dp|flopre:IF_ID|q[25]                      ; datapath:dp|hd_unit:hd|always0 ; yes                    ;
+; datapath:dp|flopre:IF_ID|q[26]                      ; datapath:dp|hd_unit:hd|always0 ; yes                    ;
+; datapath:dp|flopre:IF_ID|q[27]                      ; datapath:dp|hd_unit:hd|always0 ; yes                    ;
+; datapath:dp|flopre:IF_ID|q[28]                      ; datapath:dp|hd_unit:hd|always0 ; yes                    ;
+; datapath:dp|flopre:IF_ID|q[29]                      ; datapath:dp|hd_unit:hd|always0 ; yes                    ;
+; datapath:dp|flopre:IF_ID|q[30]                      ; datapath:dp|hd_unit:hd|always0 ; yes                    ;
+; datapath:dp|flopre:IF_ID|q[31]                      ; datapath:dp|hd_unit:hd|always0 ; yes                    ;
+; datapath:dp|flopre:IF_ID|q[5]                       ; datapath:dp|hd_unit:hd|always0 ; yes                    ;
+; datapath:dp|flopre:IF_ID|q[9]                       ; datapath:dp|hd_unit:hd|always0 ; yes                    ;
+; datapath:dp|flopre:IF_ID|q[6]                       ; datapath:dp|hd_unit:hd|always0 ; yes                    ;
+; datapath:dp|flopre:IF_ID|q[7]                       ; datapath:dp|hd_unit:hd|always0 ; yes                    ;
+; datapath:dp|flopre:IF_ID|q[8]                       ; datapath:dp|hd_unit:hd|always0 ; yes                    ;
+; datapath:dp|flopre:IF_ID|q[11]                      ; datapath:dp|hd_unit:hd|always0 ; yes                    ;
+; datapath:dp|flopre:IF_ID|q[13]                      ; datapath:dp|hd_unit:hd|always0 ; yes                    ;
+; datapath:dp|flopre:IF_ID|q[14]                      ; datapath:dp|hd_unit:hd|always0 ; yes                    ;
+; datapath:dp|flopre:IF_ID|q[15]                      ; datapath:dp|hd_unit:hd|always0 ; yes                    ;
+; datapath:dp|fetch:FETCH|flopre:flop|q[6]            ; datapath:dp|hd_unit:hd|always0 ; yes                    ;
+; datapath:dp|fetch:FETCH|flopre:flop|q[7]            ; datapath:dp|hd_unit:hd|always0 ; yes                    ;
+; datapath:dp|fetch:FETCH|flopre:flop|q[4]            ; datapath:dp|hd_unit:hd|always0 ; yes                    ;
+; datapath:dp|fetch:FETCH|flopre:flop|q[5]            ; datapath:dp|hd_unit:hd|always0 ; yes                    ;
+; datapath:dp|fetch:FETCH|flopre:flop|q[2]            ; datapath:dp|hd_unit:hd|always0 ; yes                    ;
+; datapath:dp|fetch:FETCH|flopre:flop|q[3]            ; datapath:dp|hd_unit:hd|always0 ; yes                    ;
+; datapath:dp|flopre:IF_ID|q[38]                      ; datapath:dp|hd_unit:hd|always0 ; yes                    ;
+; datapath:dp|flopre:IF_ID|q[37]                      ; datapath:dp|hd_unit:hd|always0 ; yes                    ;
+; datapath:dp|flopre:IF_ID|q[36]                      ; datapath:dp|hd_unit:hd|always0 ; yes                    ;
+; datapath:dp|flopre:IF_ID|q[35]                      ; datapath:dp|hd_unit:hd|always0 ; yes                    ;
+; datapath:dp|flopre:IF_ID|q[34]                      ; datapath:dp|hd_unit:hd|always0 ; yes                    ;
+; datapath:dp|flopre:IF_ID|q[39]                      ; datapath:dp|hd_unit:hd|always0 ; yes                    ;
+; Number of user-specified and inferred latches = 43  ;                                ;                        ;
++-----------------------------------------------------+--------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++---------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                    ;
++-----------------------------------------+---------------------------------------------+
+; Register name                           ; Reason for Removal                          ;
++-----------------------------------------+---------------------------------------------+
+; datapath:dp|flopr:ID_EX|q[269]          ; Stuck at GND due to stuck port data_in      ;
+; datapath:dp|flopr:ID_EX|q[152..196]     ; Merged with datapath:dp|flopr:ID_EX|q[151]  ;
+; datapath:dp|flopr:EX_MEM|q[201]         ; Merged with datapath:dp|flopr:EX_MEM|q[198] ;
+; datapath:dp|flopr:ID_EX|q[264]          ; Merged with datapath:dp|flopr:ID_EX|q[261]  ;
+; datapath:dp|flopr:ID_EX|q[4]            ; Stuck at GND due to stuck port data_in      ;
+; datapath:dp|flopr:EX_MEM|q[4]           ; Stuck at GND due to stuck port data_in      ;
+; datapath:dp|flopr:MEM_WB|q[4]           ; Stuck at GND due to stuck port data_in      ;
+; flopr:IF_ID_TOP|q[2]                    ; Merged with flopr:IF_ID_TOP|q[0]            ;
+; datapath:dp|flopr:ID_EX|q[205..260]     ; Lost fanout                                 ;
+; datapath:dp|flopr:EX_MEM|q[142..197]    ; Lost fanout                                 ;
+; Total Number of Removed Registers = 164 ;                                             ;
++-----------------------------------------+---------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
 ; Removed Registers Triggering Further Register Optimizations                                                                   ;
-+--------------------------------+--------------------+-------------------------------------------------------------------------+
-; Register name                  ; Reason for Removal ; Registers Removed due to This Register                                  ;
-+--------------------------------+--------------------+-------------------------------------------------------------------------+
-; datapath:dp|flopr:ID_EX|q[260] ; Lost Fanouts       ; datapath:dp|flopr:IF_ID|q[95], datapath:dp|fetch:FETCH|flopr:flop|q[63] ;
-; datapath:dp|flopr:ID_EX|q[259] ; Lost Fanouts       ; datapath:dp|flopr:IF_ID|q[94], datapath:dp|fetch:FETCH|flopr:flop|q[62] ;
-; datapath:dp|flopr:ID_EX|q[258] ; Lost Fanouts       ; datapath:dp|flopr:IF_ID|q[93], datapath:dp|fetch:FETCH|flopr:flop|q[61] ;
-; datapath:dp|flopr:ID_EX|q[257] ; Lost Fanouts       ; datapath:dp|flopr:IF_ID|q[92], datapath:dp|fetch:FETCH|flopr:flop|q[60] ;
-; datapath:dp|flopr:ID_EX|q[256] ; Lost Fanouts       ; datapath:dp|flopr:IF_ID|q[91], datapath:dp|fetch:FETCH|flopr:flop|q[59] ;
-; datapath:dp|flopr:ID_EX|q[255] ; Lost Fanouts       ; datapath:dp|flopr:IF_ID|q[90], datapath:dp|fetch:FETCH|flopr:flop|q[58] ;
-; datapath:dp|flopr:ID_EX|q[254] ; Lost Fanouts       ; datapath:dp|flopr:IF_ID|q[89], datapath:dp|fetch:FETCH|flopr:flop|q[57] ;
-; datapath:dp|flopr:ID_EX|q[253] ; Lost Fanouts       ; datapath:dp|flopr:IF_ID|q[88], datapath:dp|fetch:FETCH|flopr:flop|q[56] ;
-; datapath:dp|flopr:ID_EX|q[252] ; Lost Fanouts       ; datapath:dp|flopr:IF_ID|q[87], datapath:dp|fetch:FETCH|flopr:flop|q[55] ;
-; datapath:dp|flopr:ID_EX|q[251] ; Lost Fanouts       ; datapath:dp|flopr:IF_ID|q[86], datapath:dp|fetch:FETCH|flopr:flop|q[54] ;
-; datapath:dp|flopr:ID_EX|q[250] ; Lost Fanouts       ; datapath:dp|flopr:IF_ID|q[85], datapath:dp|fetch:FETCH|flopr:flop|q[53] ;
-; datapath:dp|flopr:ID_EX|q[249] ; Lost Fanouts       ; datapath:dp|flopr:IF_ID|q[84], datapath:dp|fetch:FETCH|flopr:flop|q[52] ;
-; datapath:dp|flopr:ID_EX|q[248] ; Lost Fanouts       ; datapath:dp|flopr:IF_ID|q[83], datapath:dp|fetch:FETCH|flopr:flop|q[51] ;
-; datapath:dp|flopr:ID_EX|q[247] ; Lost Fanouts       ; datapath:dp|flopr:IF_ID|q[82], datapath:dp|fetch:FETCH|flopr:flop|q[50] ;
-; datapath:dp|flopr:ID_EX|q[246] ; Lost Fanouts       ; datapath:dp|flopr:IF_ID|q[81], datapath:dp|fetch:FETCH|flopr:flop|q[49] ;
-; datapath:dp|flopr:ID_EX|q[245] ; Lost Fanouts       ; datapath:dp|flopr:IF_ID|q[80], datapath:dp|fetch:FETCH|flopr:flop|q[48] ;
-; datapath:dp|flopr:ID_EX|q[244] ; Lost Fanouts       ; datapath:dp|flopr:IF_ID|q[79], datapath:dp|fetch:FETCH|flopr:flop|q[47] ;
-; datapath:dp|flopr:ID_EX|q[243] ; Lost Fanouts       ; datapath:dp|flopr:IF_ID|q[78], datapath:dp|fetch:FETCH|flopr:flop|q[46] ;
-; datapath:dp|flopr:ID_EX|q[242] ; Lost Fanouts       ; datapath:dp|flopr:IF_ID|q[77], datapath:dp|fetch:FETCH|flopr:flop|q[45] ;
-; datapath:dp|flopr:ID_EX|q[241] ; Lost Fanouts       ; datapath:dp|flopr:IF_ID|q[76], datapath:dp|fetch:FETCH|flopr:flop|q[44] ;
-; datapath:dp|flopr:ID_EX|q[240] ; Lost Fanouts       ; datapath:dp|flopr:IF_ID|q[75], datapath:dp|fetch:FETCH|flopr:flop|q[43] ;
-; datapath:dp|flopr:ID_EX|q[239] ; Lost Fanouts       ; datapath:dp|flopr:IF_ID|q[74], datapath:dp|fetch:FETCH|flopr:flop|q[42] ;
-; datapath:dp|flopr:ID_EX|q[238] ; Lost Fanouts       ; datapath:dp|flopr:IF_ID|q[73], datapath:dp|fetch:FETCH|flopr:flop|q[41] ;
-; datapath:dp|flopr:ID_EX|q[237] ; Lost Fanouts       ; datapath:dp|flopr:IF_ID|q[72], datapath:dp|fetch:FETCH|flopr:flop|q[40] ;
-; datapath:dp|flopr:ID_EX|q[236] ; Lost Fanouts       ; datapath:dp|flopr:IF_ID|q[71], datapath:dp|fetch:FETCH|flopr:flop|q[39] ;
-; datapath:dp|flopr:ID_EX|q[235] ; Lost Fanouts       ; datapath:dp|flopr:IF_ID|q[70], datapath:dp|fetch:FETCH|flopr:flop|q[38] ;
-; datapath:dp|flopr:ID_EX|q[234] ; Lost Fanouts       ; datapath:dp|flopr:IF_ID|q[69], datapath:dp|fetch:FETCH|flopr:flop|q[37] ;
-; datapath:dp|flopr:ID_EX|q[233] ; Lost Fanouts       ; datapath:dp|flopr:IF_ID|q[68], datapath:dp|fetch:FETCH|flopr:flop|q[36] ;
-; datapath:dp|flopr:ID_EX|q[232] ; Lost Fanouts       ; datapath:dp|flopr:IF_ID|q[67], datapath:dp|fetch:FETCH|flopr:flop|q[35] ;
-; datapath:dp|flopr:ID_EX|q[231] ; Lost Fanouts       ; datapath:dp|flopr:IF_ID|q[66], datapath:dp|fetch:FETCH|flopr:flop|q[34] ;
-; datapath:dp|flopr:ID_EX|q[230] ; Lost Fanouts       ; datapath:dp|flopr:IF_ID|q[65], datapath:dp|fetch:FETCH|flopr:flop|q[33] ;
-; datapath:dp|flopr:ID_EX|q[229] ; Lost Fanouts       ; datapath:dp|flopr:IF_ID|q[64], datapath:dp|fetch:FETCH|flopr:flop|q[32] ;
-; datapath:dp|flopr:ID_EX|q[228] ; Lost Fanouts       ; datapath:dp|flopr:IF_ID|q[63], datapath:dp|fetch:FETCH|flopr:flop|q[31] ;
-; datapath:dp|flopr:ID_EX|q[227] ; Lost Fanouts       ; datapath:dp|flopr:IF_ID|q[62], datapath:dp|fetch:FETCH|flopr:flop|q[30] ;
-; datapath:dp|flopr:ID_EX|q[226] ; Lost Fanouts       ; datapath:dp|flopr:IF_ID|q[61], datapath:dp|fetch:FETCH|flopr:flop|q[29] ;
-; datapath:dp|flopr:ID_EX|q[225] ; Lost Fanouts       ; datapath:dp|flopr:IF_ID|q[60], datapath:dp|fetch:FETCH|flopr:flop|q[28] ;
-; datapath:dp|flopr:ID_EX|q[224] ; Lost Fanouts       ; datapath:dp|flopr:IF_ID|q[59], datapath:dp|fetch:FETCH|flopr:flop|q[27] ;
-; datapath:dp|flopr:ID_EX|q[223] ; Lost Fanouts       ; datapath:dp|flopr:IF_ID|q[58], datapath:dp|fetch:FETCH|flopr:flop|q[26] ;
-; datapath:dp|flopr:ID_EX|q[222] ; Lost Fanouts       ; datapath:dp|flopr:IF_ID|q[57], datapath:dp|fetch:FETCH|flopr:flop|q[25] ;
-; datapath:dp|flopr:ID_EX|q[221] ; Lost Fanouts       ; datapath:dp|flopr:IF_ID|q[56], datapath:dp|fetch:FETCH|flopr:flop|q[24] ;
-; datapath:dp|flopr:ID_EX|q[220] ; Lost Fanouts       ; datapath:dp|flopr:IF_ID|q[55], datapath:dp|fetch:FETCH|flopr:flop|q[23] ;
-; datapath:dp|flopr:ID_EX|q[219] ; Lost Fanouts       ; datapath:dp|flopr:IF_ID|q[54], datapath:dp|fetch:FETCH|flopr:flop|q[22] ;
-; datapath:dp|flopr:ID_EX|q[218] ; Lost Fanouts       ; datapath:dp|flopr:IF_ID|q[53], datapath:dp|fetch:FETCH|flopr:flop|q[21] ;
-; datapath:dp|flopr:ID_EX|q[217] ; Lost Fanouts       ; datapath:dp|flopr:IF_ID|q[52], datapath:dp|fetch:FETCH|flopr:flop|q[20] ;
-; datapath:dp|flopr:ID_EX|q[216] ; Lost Fanouts       ; datapath:dp|flopr:IF_ID|q[51], datapath:dp|fetch:FETCH|flopr:flop|q[19] ;
-; datapath:dp|flopr:ID_EX|q[215] ; Lost Fanouts       ; datapath:dp|flopr:IF_ID|q[50], datapath:dp|fetch:FETCH|flopr:flop|q[18] ;
-; datapath:dp|flopr:ID_EX|q[214] ; Lost Fanouts       ; datapath:dp|flopr:IF_ID|q[49], datapath:dp|fetch:FETCH|flopr:flop|q[17] ;
-; datapath:dp|flopr:ID_EX|q[213] ; Lost Fanouts       ; datapath:dp|flopr:IF_ID|q[48], datapath:dp|fetch:FETCH|flopr:flop|q[16] ;
-; datapath:dp|flopr:ID_EX|q[212] ; Lost Fanouts       ; datapath:dp|flopr:IF_ID|q[47], datapath:dp|fetch:FETCH|flopr:flop|q[15] ;
-; datapath:dp|flopr:ID_EX|q[211] ; Lost Fanouts       ; datapath:dp|flopr:IF_ID|q[46], datapath:dp|fetch:FETCH|flopr:flop|q[14] ;
-; datapath:dp|flopr:ID_EX|q[210] ; Lost Fanouts       ; datapath:dp|flopr:IF_ID|q[45], datapath:dp|fetch:FETCH|flopr:flop|q[13] ;
-; datapath:dp|flopr:ID_EX|q[209] ; Lost Fanouts       ; datapath:dp|flopr:IF_ID|q[44], datapath:dp|fetch:FETCH|flopr:flop|q[12] ;
-; datapath:dp|flopr:ID_EX|q[208] ; Lost Fanouts       ; datapath:dp|flopr:IF_ID|q[43], datapath:dp|fetch:FETCH|flopr:flop|q[11] ;
-; datapath:dp|flopr:ID_EX|q[207] ; Lost Fanouts       ; datapath:dp|flopr:IF_ID|q[42], datapath:dp|fetch:FETCH|flopr:flop|q[10] ;
-; datapath:dp|flopr:ID_EX|q[206] ; Lost Fanouts       ; datapath:dp|flopr:IF_ID|q[41], datapath:dp|fetch:FETCH|flopr:flop|q[9]  ;
-; datapath:dp|flopr:ID_EX|q[205] ; Lost Fanouts       ; datapath:dp|flopr:IF_ID|q[40], datapath:dp|fetch:FETCH|flopr:flop|q[8]  ;
-; datapath:dp|flopr:ID_EX|q[204] ; Lost Fanouts       ; datapath:dp|flopr:IF_ID|q[39], datapath:dp|fetch:FETCH|flopr:flop|q[7]  ;
-+--------------------------------+--------------------+-------------------------------------------------------------------------+
++-------------------------------+---------------------------+-------------------------------------------------------------------+
+; Register name                 ; Reason for Removal        ; Registers Removed due to This Register                            ;
++-------------------------------+---------------------------+-------------------------------------------------------------------+
+; datapath:dp|flopr:ID_EX|q[4]  ; Stuck at GND              ; datapath:dp|flopr:EX_MEM|q[142], datapath:dp|flopr:EX_MEM|q[143], ;
+;                               ; due to stuck port data_in ; datapath:dp|flopr:EX_MEM|q[144], datapath:dp|flopr:EX_MEM|q[145], ;
+;                               ;                           ; datapath:dp|flopr:EX_MEM|q[146], datapath:dp|flopr:EX_MEM|q[147], ;
+;                               ;                           ; datapath:dp|flopr:EX_MEM|q[148], datapath:dp|flopr:EX_MEM|q[149], ;
+;                               ;                           ; datapath:dp|flopr:EX_MEM|q[150], datapath:dp|flopr:EX_MEM|q[151], ;
+;                               ;                           ; datapath:dp|flopr:EX_MEM|q[152], datapath:dp|flopr:EX_MEM|q[153], ;
+;                               ;                           ; datapath:dp|flopr:EX_MEM|q[154], datapath:dp|flopr:EX_MEM|q[155], ;
+;                               ;                           ; datapath:dp|flopr:EX_MEM|q[156], datapath:dp|flopr:EX_MEM|q[157], ;
+;                               ;                           ; datapath:dp|flopr:EX_MEM|q[158], datapath:dp|flopr:EX_MEM|q[159], ;
+;                               ;                           ; datapath:dp|flopr:EX_MEM|q[160], datapath:dp|flopr:EX_MEM|q[161], ;
+;                               ;                           ; datapath:dp|flopr:EX_MEM|q[162], datapath:dp|flopr:EX_MEM|q[163], ;
+;                               ;                           ; datapath:dp|flopr:EX_MEM|q[164], datapath:dp|flopr:EX_MEM|q[165], ;
+;                               ;                           ; datapath:dp|flopr:EX_MEM|q[166], datapath:dp|flopr:EX_MEM|q[167], ;
+;                               ;                           ; datapath:dp|flopr:EX_MEM|q[168], datapath:dp|flopr:EX_MEM|q[169], ;
+;                               ;                           ; datapath:dp|flopr:EX_MEM|q[170], datapath:dp|flopr:EX_MEM|q[171], ;
+;                               ;                           ; datapath:dp|flopr:EX_MEM|q[172], datapath:dp|flopr:EX_MEM|q[173], ;
+;                               ;                           ; datapath:dp|flopr:EX_MEM|q[174], datapath:dp|flopr:EX_MEM|q[175], ;
+;                               ;                           ; datapath:dp|flopr:EX_MEM|q[176], datapath:dp|flopr:EX_MEM|q[177], ;
+;                               ;                           ; datapath:dp|flopr:EX_MEM|q[178], datapath:dp|flopr:EX_MEM|q[179], ;
+;                               ;                           ; datapath:dp|flopr:EX_MEM|q[180], datapath:dp|flopr:EX_MEM|q[181], ;
+;                               ;                           ; datapath:dp|flopr:EX_MEM|q[182], datapath:dp|flopr:EX_MEM|q[183], ;
+;                               ;                           ; datapath:dp|flopr:EX_MEM|q[184], datapath:dp|flopr:EX_MEM|q[185], ;
+;                               ;                           ; datapath:dp|flopr:EX_MEM|q[186], datapath:dp|flopr:EX_MEM|q[187], ;
+;                               ;                           ; datapath:dp|flopr:EX_MEM|q[188], datapath:dp|flopr:EX_MEM|q[189], ;
+;                               ;                           ; datapath:dp|flopr:EX_MEM|q[190], datapath:dp|flopr:EX_MEM|q[191], ;
+;                               ;                           ; datapath:dp|flopr:EX_MEM|q[192], datapath:dp|flopr:EX_MEM|q[193], ;
+;                               ;                           ; datapath:dp|flopr:EX_MEM|q[196], datapath:dp|flopr:EX_MEM|q[197]  ;
+; datapath:dp|flopr:EX_MEM|q[4] ; Stuck at GND              ; datapath:dp|flopr:MEM_WB|q[4]                                     ;
+;                               ; due to stuck port data_in ;                                                                   ;
++-------------------------------+---------------------------+-------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -414,10 +435,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 472   ;
-; Number of registers using Synchronous Clear  ; 64    ;
-; Number of registers using Synchronous Load   ; 69    ;
-; Number of registers using Asynchronous Clear ; 337   ;
+; Total registers                              ; 470   ;
+; Number of registers using Synchronous Clear  ; 80    ;
+; Number of registers using Synchronous Load   ; 75    ;
+; Number of registers using Asynchronous Clear ; 335   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 64    ;
 ; Number of registers using Preset             ; 0     ;
@@ -431,8 +452,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------+--------------------------------------------------------+------+
 ; datapath:dp|flopr:ID_EX|q[69..132] ; datapath:dp|decode:DECODE|regfile:registers|regs_rtl_0 ; RAM  ;
 ; datapath:dp|flopr:ID_EX|q[5..68]   ; datapath:dp|decode:DECODE|regfile:registers|regs_rtl_1 ; RAM  ;
-; datapath:dp|flopr:IF_ID|q[0..20]   ; imem:instrMem|rom_rtl_0                                ; RAM  ;
-; flopr:IF_ID_TOP|q[0..10]           ; imem:instrMem|rom_rtl_0                                ; RAM  ;
 ; dmem:dataMem|mem[0..63][0..63]     ; dmem:dataMem|mem_rtl_0                                 ; RAM  ;
 +------------------------------------+--------------------------------------------------------+------+
 
@@ -522,16 +541,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------+------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
-; 4:1                ; 64 bits   ; 128 LEs       ; 128 LEs              ; 0 LEs                  ; Yes        ; |processor_arm|datapath:dp|flopr:MEM_WB|q[67]                   ;
-; 4:1                ; 11 bits   ; 22 LEs        ; 22 LEs               ; 0 LEs                  ; Yes        ; |processor_arm|datapath:dp|flopr:ID_EX|q[133]                   ;
-; 3:1                ; 64 bits   ; 128 LEs       ; 128 LEs              ; 0 LEs                  ; No         ; |processor_arm|datapath:dp|decode:DECODE|regfile:registers|regs ;
-; 8:1                ; 64 bits   ; 320 LEs       ; 256 LEs              ; 64 LEs                 ; No         ; |processor_arm|datapath:dp|execute:EXECUTE|alu:_alu|Mux55       ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
+; 4:1                ; 64 bits   ; 128 LEs       ; 128 LEs              ; 0 LEs                  ; Yes        ; |processor_arm|datapath:dp|flopr:MEM_WB|q[48]             ;
+; 4:1                ; 11 bits   ; 22 LEs        ; 22 LEs               ; 0 LEs                  ; Yes        ; |processor_arm|datapath:dp|flopr:ID_EX|q[140]             ;
+; 8:1                ; 64 bits   ; 320 LEs       ; 256 LEs              ; 64 LEs                 ; No         ; |processor_arm|datapath:dp|execute:EXECUTE|alu:_alu|Mux58 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------+
@@ -550,15 +568,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------+--------------------+------+-----------------------------------------------------------+
 ; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                         ;
 +---------------------------------+--------------------+------+-----------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------+
-; Source assignments for imem:instrMem|altsyncram:rom_rtl_0|altsyncram_g161:auto_generated ;
-+---------------------------------+--------------------+------+----------------------------+
-; Assignment                      ; Value              ; From ; To                         ;
-+---------------------------------+--------------------+------+----------------------------+
-; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                          ;
-+---------------------------------+--------------------+------+----------------------------+
 
 
 +-----------------------------------------------------------------------------------------+
@@ -590,6 +599,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|mux2:hdu_mux ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; N              ; 11    ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +----------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: datapath:dp|fetch:FETCH ;
 +----------------+-------+---------------------------------------------+
@@ -610,23 +629,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+---------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: datapath:dp|fetch:FETCH|flopr:flop ;
-+----------------+-------+--------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                   ;
-+----------------+-------+--------------------------------------------------------+
-; SIZE           ; 64    ; Signed Integer                                         ;
-+----------------+-------+--------------------------------------------------------+
++----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|fetch:FETCH|flopre:flop ;
++----------------+-------+---------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                    ;
++----------------+-------+---------------------------------------------------------+
+; SIZE           ; 64    ; Signed Integer                                          ;
++----------------+-------+---------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: datapath:dp|flopr:IF_ID ;
-+----------------+-------+---------------------------------------------+
-; Parameter Name ; Value ; Type                                        ;
-+----------------+-------+---------------------------------------------+
-; SIZE           ; 96    ; Signed Integer                              ;
-+----------------+-------+---------------------------------------------+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: datapath:dp|flopre:IF_ID ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; SIZE           ; 96    ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -862,67 +881,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: imem:instrMem|altsyncram:rom_rtl_0    ;
-+------------------------------------+----------------------------------+----------------+
-; Parameter Name                     ; Value                            ; Type           ;
-+------------------------------------+----------------------------------+----------------+
-; BYTE_SIZE_BLOCK                    ; 8                                ; Untyped        ;
-; AUTO_CARRY_CHAINS                  ; ON                               ; AUTO_CARRY     ;
-; IGNORE_CARRY_BUFFERS               ; OFF                              ; IGNORE_CARRY   ;
-; AUTO_CASCADE_CHAINS                ; ON                               ; AUTO_CASCADE   ;
-; IGNORE_CASCADE_BUFFERS             ; OFF                              ; IGNORE_CASCADE ;
-; WIDTH_BYTEENA                      ; 1                                ; Untyped        ;
-; OPERATION_MODE                     ; ROM                              ; Untyped        ;
-; WIDTH_A                            ; 32                               ; Untyped        ;
-; WIDTHAD_A                          ; 5                                ; Untyped        ;
-; NUMWORDS_A                         ; 19                               ; Untyped        ;
-; OUTDATA_REG_A                      ; UNREGISTERED                     ; Untyped        ;
-; ADDRESS_ACLR_A                     ; NONE                             ; Untyped        ;
-; OUTDATA_ACLR_A                     ; NONE                             ; Untyped        ;
-; WRCONTROL_ACLR_A                   ; NONE                             ; Untyped        ;
-; INDATA_ACLR_A                      ; NONE                             ; Untyped        ;
-; BYTEENA_ACLR_A                     ; NONE                             ; Untyped        ;
-; WIDTH_B                            ; 1                                ; Untyped        ;
-; WIDTHAD_B                          ; 1                                ; Untyped        ;
-; NUMWORDS_B                         ; 1                                ; Untyped        ;
-; INDATA_REG_B                       ; CLOCK1                           ; Untyped        ;
-; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                           ; Untyped        ;
-; RDCONTROL_REG_B                    ; CLOCK1                           ; Untyped        ;
-; ADDRESS_REG_B                      ; CLOCK1                           ; Untyped        ;
-; OUTDATA_REG_B                      ; UNREGISTERED                     ; Untyped        ;
-; BYTEENA_REG_B                      ; CLOCK1                           ; Untyped        ;
-; INDATA_ACLR_B                      ; NONE                             ; Untyped        ;
-; WRCONTROL_ACLR_B                   ; NONE                             ; Untyped        ;
-; ADDRESS_ACLR_B                     ; NONE                             ; Untyped        ;
-; OUTDATA_ACLR_B                     ; NONE                             ; Untyped        ;
-; RDCONTROL_ACLR_B                   ; NONE                             ; Untyped        ;
-; BYTEENA_ACLR_B                     ; NONE                             ; Untyped        ;
-; WIDTH_BYTEENA_A                    ; 1                                ; Untyped        ;
-; WIDTH_BYTEENA_B                    ; 1                                ; Untyped        ;
-; RAM_BLOCK_TYPE                     ; AUTO                             ; Untyped        ;
-; BYTE_SIZE                          ; 8                                ; Untyped        ;
-; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                        ; Untyped        ;
-; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ             ; Untyped        ;
-; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ             ; Untyped        ;
-; INIT_FILE                          ; db/Lab3.ram0_imem_37c714.hdl.mif ; Untyped        ;
-; INIT_FILE_LAYOUT                   ; PORT_A                           ; Untyped        ;
-; MAXIMUM_DEPTH                      ; 0                                ; Untyped        ;
-; CLOCK_ENABLE_INPUT_A               ; NORMAL                           ; Untyped        ;
-; CLOCK_ENABLE_INPUT_B               ; NORMAL                           ; Untyped        ;
-; CLOCK_ENABLE_OUTPUT_A              ; NORMAL                           ; Untyped        ;
-; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                           ; Untyped        ;
-; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN                  ; Untyped        ;
-; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN                  ; Untyped        ;
-; ENABLE_ECC                         ; FALSE                            ; Untyped        ;
-; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                            ; Untyped        ;
-; WIDTH_ECCSTATUS                    ; 3                                ; Untyped        ;
-; DEVICE_FAMILY                      ; Cyclone IV E                     ; Untyped        ;
-; CBXI_PARAMETER                     ; altsyncram_g161                  ; Untyped        ;
-+------------------------------------+----------------------------------+----------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
 +------------------------------------------------------------------------------------+
 ; Parameter Settings for Inferred Entity Instance: dmem:dataMem|altsyncram:mem_rtl_0 ;
 +------------------------------------+----------------------+------------------------+
@@ -989,7 +947,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+-------------------------------------------------------------------+
 ; Name                                      ; Value                                                             ;
 +-------------------------------------------+-------------------------------------------------------------------+
-; Number of entity instances                ; 4                                                                 ;
+; Number of entity instances                ; 3                                                                 ;
 ; Entity Instance                           ; datapath:dp|decode:DECODE|regfile:registers|altsyncram:regs_rtl_0 ;
 ;     -- OPERATION_MODE                     ; DUAL_PORT                                                         ;
 ;     -- WIDTH_A                            ; 64                                                                ;
@@ -1012,17 +970,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                      ;
 ;     -- RAM_BLOCK_TYPE                     ; AUTO                                                              ;
 ;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                                                          ;
-; Entity Instance                           ; imem:instrMem|altsyncram:rom_rtl_0                                ;
-;     -- OPERATION_MODE                     ; ROM                                                               ;
-;     -- WIDTH_A                            ; 32                                                                ;
-;     -- NUMWORDS_A                         ; 19                                                                ;
-;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                      ;
-;     -- WIDTH_B                            ; 1                                                                 ;
-;     -- NUMWORDS_B                         ; 1                                                                 ;
-;     -- ADDRESS_REG_B                      ; CLOCK1                                                            ;
-;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                      ;
-;     -- RAM_BLOCK_TYPE                     ; AUTO                                                              ;
-;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                         ;
 ; Entity Instance                           ; dmem:dataMem|altsyncram:mem_rtl_0                                 ;
 ;     -- OPERATION_MODE                     ; DUAL_PORT                                                         ;
 ;     -- WIDTH_A                            ; 64                                                                ;
@@ -1035,6 +982,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- RAM_BLOCK_TYPE                     ; AUTO                                                              ;
 ;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                                                          ;
 +-------------------------------------------+-------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "datapath:dp|flopr:ID_EX"                                                                                                                                                  ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                                                   ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; q    ; Output ; Warning  ; Output or bidir port (272 bits) is smaller than the port expression (273 bits) it drives.  The 1 most-significant bit(s) in the port expression will be connected to GND. ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; Port Connectivity Checks: "datapath:dp|mux2:hdu_mux" ;
++------+-------+----------+----------------------------+
+; Port ; Type  ; Severity ; Details                    ;
++------+-------+----------+----------------------------+
+; d0   ; Input ; Info     ; Stuck at GND               ;
++------+-------+----------+----------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -1053,25 +1018,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 132                         ;
-; cycloneiii_ff         ; 472                         ;
-;     CLR               ; 268                         ;
-;     CLR SCLR SLD      ; 64                          ;
-;     CLR SLD           ; 5                           ;
+; cycloneiii_ff         ; 470                         ;
+;     CLR               ; 255                         ;
+;     CLR SCLR          ; 5                           ;
+;     CLR SCLR SLD      ; 75                          ;
 ;     ENA               ; 64                          ;
 ;     plain             ; 71                          ;
-; cycloneiii_lcell_comb ; 829                         ;
-;     arith             ; 72                          ;
-;         2 data inputs ; 5                           ;
-;         3 data inputs ; 67                          ;
-;     normal            ; 757                         ;
-;         1 data inputs ; 1                           ;
-;         2 data inputs ; 210                         ;
-;         3 data inputs ; 76                          ;
-;         4 data inputs ; 470                         ;
-; cycloneiii_ram_block  ; 224                         ;
+; cycloneiii_lcell_comb ; 907                         ;
+;     arith             ; 74                          ;
+;         2 data inputs ; 6                           ;
+;         3 data inputs ; 68                          ;
+;     normal            ; 833                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 5                           ;
+;         2 data inputs ; 202                         ;
+;         3 data inputs ; 182                         ;
+;         4 data inputs ; 443                         ;
+; cycloneiii_ram_block  ; 192                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 15.70                       ;
-; Average LUT depth     ; 6.32                        ;
+; Max LUT depth         ; 14.90                       ;
+; Average LUT depth     ; 5.83                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1080,7 +1046,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:04     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -1090,10 +1056,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri Nov 01 12:44:56 2019
+    Info: Processing started: Wed Nov 13 04:10:22 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab3 -c Lab3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file hd_unit.sv
+    Info (12023): Found entity 1: hd_unit File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/hd_unit.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file writeback.sv
     Info (12023): Found entity 1: writeback File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/writeback.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file sl2.sv
@@ -1163,35 +1131,204 @@ Info (12021): Found 1 design units, including 1 entities, in source file alu_tb.
     Info (12023): Found entity 1: alu_tb File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/alu_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file alu.sv
     Info (12023): Found entity 1: alu File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/alu.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file flopre.sv
+    Info (12023): Found entity 1: flopre File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 1
 Info (12127): Elaborating entity "processor_arm" for the top level hierarchy
 Info (12128): Elaborating entity "controller" for hierarchy "controller:c" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/processor_arm.sv Line: 25
 Info (12128): Elaborating entity "maindec" for hierarchy "controller:c|maindec:decPpal" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/controller.sv Line: 19
 Info (12128): Elaborating entity "aludec" for hierarchy "controller:c|aludec:decAlu" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/controller.sv Line: 24
-Info (12128): Elaborating entity "datapath" for hierarchy "datapath:dp" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/processor_arm.sv Line: 45
-Info (12128): Elaborating entity "fetch" for hierarchy "datapath:dp|fetch:FETCH" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/datapath.sv Line: 32
+Info (12128): Elaborating entity "datapath" for hierarchy "datapath:dp" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/processor_arm.sv Line: 46
+Info (12128): Elaborating entity "mux2" for hierarchy "datapath:dp|mux2:hdu_mux" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/datapath.sv Line: 37
+Info (12128): Elaborating entity "hd_unit" for hierarchy "datapath:dp|hd_unit:hd" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/datapath.sv Line: 47
+Info (12128): Elaborating entity "fetch" for hierarchy "datapath:dp|fetch:FETCH" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/datapath.sv Line: 54
 Info (12128): Elaborating entity "mux2" for hierarchy "datapath:dp|fetch:FETCH|mux2:_mux" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/fetch.sv Line: 6
-Info (12128): Elaborating entity "flopr" for hierarchy "datapath:dp|fetch:FETCH|flopr:flop" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/fetch.sv Line: 7
-Info (12128): Elaborating entity "flopr" for hierarchy "datapath:dp|flopr:IF_ID" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/datapath.sv Line: 38
-Info (12128): Elaborating entity "decode" for hierarchy "datapath:dp|decode:DECODE" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/datapath.sv Line: 49
+Info (12128): Elaborating entity "flopre" for hierarchy "datapath:dp|fetch:FETCH|flopre:flop" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/fetch.sv Line: 7
+Warning (10240): Verilog HDL Always Construct warning at flopre.sv(5): inferring latch(es) for variable "q", which holds its previous value in one or more paths through the always construct File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[0]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[1]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[2]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[3]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[4]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[5]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[6]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[7]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[8]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[9]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[10]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[11]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[12]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[13]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[14]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[15]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[16]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[17]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[18]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[19]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[20]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[21]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[22]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[23]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[24]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[25]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[26]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[27]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[28]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[29]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[30]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[31]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[32]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[33]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[34]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[35]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[36]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[37]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[38]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[39]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[40]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[41]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[42]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[43]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[44]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[45]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[46]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[47]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[48]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[49]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[50]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[51]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[52]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[53]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[54]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[55]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[56]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[57]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[58]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[59]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[60]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[61]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[62]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[63]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (12128): Elaborating entity "flopre" for hierarchy "datapath:dp|flopre:IF_ID" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/datapath.sv Line: 61
+Warning (10240): Verilog HDL Always Construct warning at flopre.sv(5): inferring latch(es) for variable "q", which holds its previous value in one or more paths through the always construct File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[0]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[1]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[2]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[3]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[4]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[5]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[6]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[7]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[8]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[9]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[10]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[11]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[12]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[13]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[14]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[15]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[16]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[17]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[18]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[19]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[20]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[21]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[22]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[23]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[24]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[25]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[26]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[27]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[28]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[29]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[30]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[31]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[32]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[33]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[34]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[35]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[36]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[37]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[38]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[39]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[40]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[41]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[42]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[43]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[44]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[45]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[46]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[47]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[48]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[49]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[50]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[51]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[52]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[53]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[54]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[55]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[56]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[57]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[58]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[59]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[60]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[61]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[62]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[63]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[64]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[65]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[66]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[67]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[68]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[69]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[70]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[71]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[72]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[73]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[74]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[75]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[76]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[77]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[78]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[79]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[80]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[81]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[82]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[83]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[84]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[85]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[86]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[87]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[88]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[89]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[90]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[91]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[92]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[93]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[94]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (10041): Inferred latch for "q[95]" at flopre.sv(5) File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+Info (12128): Elaborating entity "decode" for hierarchy "datapath:dp|decode:DECODE" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/datapath.sv Line: 72
 Info (12128): Elaborating entity "mux2" for hierarchy "datapath:dp|decode:DECODE|mux2:ra2mux" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/decode.sv Line: 12
 Info (12128): Elaborating entity "regfile" for hierarchy "datapath:dp|decode:DECODE|regfile:registers" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/decode.sv Line: 15
 Info (12128): Elaborating entity "signext" for hierarchy "datapath:dp|decode:DECODE|signext:ext" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/decode.sv Line: 22
-Info (12128): Elaborating entity "flopr" for hierarchy "datapath:dp|flopr:ID_EX" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/datapath.sv Line: 56
-Info (12128): Elaborating entity "execute" for hierarchy "datapath:dp|execute:EXECUTE" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/datapath.sv Line: 68
+Info (12128): Elaborating entity "flopr" for hierarchy "datapath:dp|flopr:ID_EX" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/datapath.sv Line: 78
+Info (12128): Elaborating entity "execute" for hierarchy "datapath:dp|execute:EXECUTE" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/datapath.sv Line: 90
 Info (12128): Elaborating entity "mux2" for hierarchy "datapath:dp|execute:EXECUTE|mux2:_mux" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/execute.sv Line: 10
 Info (12128): Elaborating entity "alu" for hierarchy "datapath:dp|execute:EXECUTE|alu:_alu" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/execute.sv Line: 11
-Info (12128): Elaborating entity "flopr" for hierarchy "datapath:dp|flopr:EX_MEM" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/datapath.sv Line: 74
-Info (12128): Elaborating entity "memory" for hierarchy "datapath:dp|memory:MEMORY" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/datapath.sv Line: 80
-Info (12128): Elaborating entity "flopr" for hierarchy "datapath:dp|flopr:MEM_WB" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/datapath.sv Line: 94
-Info (12128): Elaborating entity "writeback" for hierarchy "datapath:dp|writeback:WRITEBACK" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/datapath.sv Line: 100
-Info (12128): Elaborating entity "imem" for hierarchy "imem:instrMem" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/processor_arm.sv Line: 49
-Warning (10030): Net "rom.data_a" at imem.sv(24) has no driver or initial value, using a default initial value '0' File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/imem.sv Line: 24
-Warning (10030): Net "rom.waddr_a" at imem.sv(24) has no driver or initial value, using a default initial value '0' File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/imem.sv Line: 24
-Warning (10030): Net "rom.we_a" at imem.sv(24) has no driver or initial value, using a default initial value '0' File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/imem.sv Line: 24
-Info (12128): Elaborating entity "dmem" for hierarchy "dmem:dataMem" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/processor_arm.sv Line: 58
-Info (12128): Elaborating entity "flopr" for hierarchy "flopr:IF_ID_TOP" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/processor_arm.sv Line: 64
+Info (12128): Elaborating entity "flopr" for hierarchy "datapath:dp|flopr:EX_MEM" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/datapath.sv Line: 96
+Info (12128): Elaborating entity "memory" for hierarchy "datapath:dp|memory:MEMORY" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/datapath.sv Line: 102
+Info (12128): Elaborating entity "flopr" for hierarchy "datapath:dp|flopr:MEM_WB" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/datapath.sv Line: 116
+Info (12128): Elaborating entity "writeback" for hierarchy "datapath:dp|writeback:WRITEBACK" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/datapath.sv Line: 122
+Info (12128): Elaborating entity "imem" for hierarchy "imem:instrMem" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/processor_arm.sv Line: 50
+Warning (10030): Net "rom.data_a" at imem.sv(25) has no driver or initial value, using a default initial value '0' File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/imem.sv Line: 25
+Warning (10030): Net "rom.waddr_a" at imem.sv(25) has no driver or initial value, using a default initial value '0' File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/imem.sv Line: 25
+Warning (10030): Net "rom.we_a" at imem.sv(25) has no driver or initial value, using a default initial value '0' File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/imem.sv Line: 25
+Info (12128): Elaborating entity "dmem" for hierarchy "dmem:dataMem" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/processor_arm.sv Line: 59
+Info (12128): Elaborating entity "flopr" for hierarchy "flopr:IF_ID_TOP" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/processor_arm.sv Line: 65
 Warning (276020): Inferred RAM node "dmem:dataMem|mem_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
-Info (19000): Inferred 4 megafunctions from design logic
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276007): RAM logic "imem:instrMem|rom" is uninferred due to asynchronous read logic File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/imem.sv Line: 25
+Critical Warning (127005): Memory depth (32) in the design file differs from memory depth (20) in the Memory Initialization File "C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/db/Lab3.ram0_imem_37c714.hdl.mif" -- setting initial value for remaining addresses to 0
+Info (19000): Inferred 3 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "datapath:dp|decode:DECODE|regfile:registers|regs_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
         Info (286033): Parameter WIDTH_A set to 64
@@ -1226,17 +1363,6 @@ Info (19000): Inferred 4 megafunctions from design logic
         Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
         Info (286033): Parameter INIT_FILE set to db/Lab3.ram0_regfile_4c9f4da2.hdl.mif
         Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
-    Info (276029): Inferred altsyncram megafunction from the following design logic: "imem:instrMem|rom_rtl_0" 
-        Info (286033): Parameter OPERATION_MODE set to ROM
-        Info (286033): Parameter WIDTH_A set to 32
-        Info (286033): Parameter WIDTHAD_A set to 5
-        Info (286033): Parameter NUMWORDS_A set to 19
-        Info (286033): Parameter OUTDATA_REG_A set to UNREGISTERED
-        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
-        Info (286033): Parameter OUTDATA_ACLR_A set to NONE
-        Info (286033): Parameter INDATA_ACLR_A set to NONE
-        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
-        Info (286033): Parameter INIT_FILE set to db/Lab3.ram0_imem_37c714.hdl.mif
     Info (276029): Inferred altsyncram megafunction from the following design logic: "dmem:dataMem|mem_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
         Info (286033): Parameter WIDTH_A set to 64
@@ -1273,20 +1399,6 @@ Info (12133): Instantiated megafunction "datapath:dp|decode:DECODE|regfile:regis
     Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_e5l1.tdf
     Info (12023): Found entity 1: altsyncram_e5l1 File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/db/altsyncram_e5l1.tdf Line: 27
-Info (12130): Elaborated megafunction instantiation "imem:instrMem|altsyncram:rom_rtl_0"
-Info (12133): Instantiated megafunction "imem:instrMem|altsyncram:rom_rtl_0" with the following parameter:
-    Info (12134): Parameter "OPERATION_MODE" = "ROM"
-    Info (12134): Parameter "WIDTH_A" = "32"
-    Info (12134): Parameter "WIDTHAD_A" = "5"
-    Info (12134): Parameter "NUMWORDS_A" = "19"
-    Info (12134): Parameter "OUTDATA_REG_A" = "UNREGISTERED"
-    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
-    Info (12134): Parameter "OUTDATA_ACLR_A" = "NONE"
-    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
-    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
-    Info (12134): Parameter "INIT_FILE" = "db/Lab3.ram0_imem_37c714.hdl.mif"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_g161.tdf
-    Info (12023): Found entity 1: altsyncram_g161 File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/db/altsyncram_g161.tdf Line: 27
 Info (12130): Elaborated megafunction instantiation "dmem:dataMem|altsyncram:mem_rtl_0"
 Info (12133): Instantiated megafunction "dmem:dataMem|altsyncram:mem_rtl_0" with the following parameter:
     Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
@@ -1306,21 +1418,36 @@ Info (12133): Instantiated megafunction "dmem:dataMem|altsyncram:mem_rtl_0" with
     Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_4tg1.tdf
     Info (12023): Found entity 1: altsyncram_4tg1 File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/db/altsyncram_4tg1.tdf Line: 27
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
+    Info (13026): Duplicate LATCH primitive "datapath:dp|flopre:IF_ID|q[9]" merged with LATCH primitive "datapath:dp|flopre:IF_ID|q[17]" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+    Info (13026): Duplicate LATCH primitive "datapath:dp|flopre:IF_ID|q[18]" merged with LATCH primitive "datapath:dp|flopre:IF_ID|q[17]" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+    Info (13026): Duplicate LATCH primitive "datapath:dp|flopre:IF_ID|q[20]" merged with LATCH primitive "datapath:dp|flopre:IF_ID|q[17]" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+    Info (13026): Duplicate LATCH primitive "datapath:dp|flopre:IF_ID|q[21]" merged with LATCH primitive "datapath:dp|flopre:IF_ID|q[17]" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+    Info (13026): Duplicate LATCH primitive "datapath:dp|flopre:IF_ID|q[23]" merged with LATCH primitive "datapath:dp|flopre:IF_ID|q[17]" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+    Info (13026): Duplicate LATCH primitive "datapath:dp|flopre:IF_ID|q[12]" merged with LATCH primitive "datapath:dp|flopre:IF_ID|q[10]" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+    Info (13026): Duplicate LATCH primitive "datapath:dp|flopre:IF_ID|q[5]" merged with LATCH primitive "datapath:dp|flopre:IF_ID|q[26]" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
+    Info (13026): Duplicate LATCH primitive "datapath:dp|flopre:IF_ID|q[13]" merged with LATCH primitive "datapath:dp|flopre:IF_ID|q[11]" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopre.sv Line: 5
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 171 registers lost all their fanouts during netlist optimizations.
+Info (17049): 112 registers lost all their fanouts during netlist optimizations.
+Info (17016): Found the following redundant logic cells in design
+    Info (17048): Logic cell "datapath:dp|flopr:ID_EX|q[133]~6" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopr.sv Line: 8
+    Info (17048): Logic cell "datapath:dp|flopr:ID_EX|q[134]~7" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopr.sv Line: 8
+    Info (17048): Logic cell "datapath:dp|flopr:ID_EX|q[141]~5" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopr.sv Line: 8
+    Info (17048): Logic cell "datapath:dp|flopr:ID_EX|q[144]~10" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/flopr.sv Line: 8
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "dump" File: C:/Users/mat_o/Desktop/Cosas Facultad/ArqComp/ArquitecturaFPGA/Lab3/processor_arm.sv Line: 7
-Info (21057): Implemented 1489 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1543 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 129 output pins
-    Info (21061): Implemented 1133 logic cells
-    Info (21064): Implemented 224 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 4846 megabytes
-    Info: Processing ended: Fri Nov 01 12:45:21 2019
-    Info: Elapsed time: 00:00:25
-    Info: Total CPU time (on all processors): 00:00:49
+    Info (21061): Implemented 1219 logic cells
+    Info (21064): Implemented 192 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 11 warnings
+    Info: Peak virtual memory: 4848 megabytes
+    Info: Processing ended: Wed Nov 13 04:10:49 2019
+    Info: Elapsed time: 00:00:27
+    Info: Total CPU time (on all processors): 00:00:46
 
 

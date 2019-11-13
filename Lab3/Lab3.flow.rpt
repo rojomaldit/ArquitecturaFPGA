@@ -1,5 +1,5 @@
 Flow report for Lab3
-Fri Nov 01 12:45:21 2019
+Wed Nov 13 04:10:49 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,18 +40,18 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Fri Nov 01 12:45:21 2019       ;
+; Flow Status                        ; Successful - Wed Nov 13 04:10:49 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Lab3                                        ;
 ; Top-level Entity Name              ; processor_arm                               ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 1,065                                       ;
-;     Total combinational functions  ; 829                                         ;
-;     Dedicated logic registers      ; 472                                         ;
-; Total registers                    ; 472                                         ;
+; Total logic elements               ; 1,133                                       ;
+;     Total combinational functions  ; 903                                         ;
+;     Dedicated logic registers      ; 470                                         ;
+; Total registers                    ; 470                                         ;
 ; Total pins                         ; 132                                         ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 8,800                                       ;
+; Total memory bits                  ; 8,192                                       ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
 ; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
@@ -62,7 +62,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/01/2019 12:44:57 ;
+; Start date & time ; 11/13/2019 04:10:23 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Lab3                ;
 +-------------------+---------------------+
@@ -73,7 +73,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+---------------+----------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name   ; Section Id     ;
 +--------------------------------------+----------------------------------------+---------------+---------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 88491857916260.157262309610460         ; --            ; --            ; --             ;
+; COMPILER_SIGNATURE_ID                ; 88491857916260.157362902310952         ; --            ; --            ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --            ; signext_tb     ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --            ; processor_tb   ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; processor_tb                           ; --            ; --            ; eda_simulation ;
@@ -101,8 +101,8 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:25     ; 1.0                     ; 4846 MB             ; 00:00:48                           ;
-; Total                ; 00:00:25     ; --                      ; --                  ; 00:00:48                           ;
+; Analysis & Synthesis ; 00:00:26     ; 1.0                     ; 4848 MB             ; 00:00:46                           ;
+; Total                ; 00:00:26     ; --                      ; --                  ; 00:00:46                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

@@ -42,7 +42,8 @@ module processor_arm #(parameter N = 64)
 									.DM_addr(DM_addr), 
 									.DM_writeData(DM_writeData), 
 									.DM_writeEnable(DM_writeEnable), 
-									.DM_readEnable(DM_readEnable));				
+									.DM_readEnable(DM_readEnable)
+									);				
 					
 					
 	imem 				instrMem (.addr(IM_address[7:2]),
@@ -59,7 +60,7 @@ module processor_arm #(parameter N = 64)
 		 
 							
 	flopr #(11)		IF_ID_TOP(.clk(CLOCK_50),
-									.reset(reset), 
+									.reset(reset),
 									.d(q[31:21]), 
 									.q(instr));
  	

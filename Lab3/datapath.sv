@@ -14,28 +14,51 @@ module datapath #(parameter N = 64)
 					input logic [31:0] IM_readData,
 					input logic [N-1:0] DM_readData,
 					output logic [N-1:0] IM_addr, DM_addr, DM_writeData,
-					output logic DM_writeEnable, DM_readEnable );					
+					output logic DM_writeEnable, DM_readEnable);					
 					
 	logic PCSrc;
+	logic enable;
 	logic [N-1:0] PCBranch_E, aluResult_E, writeData_E, writeData3; 
 	logic [N-1:0] signImm_D, readData1_D, readData2_D;
 	logic zero_E;
 	logic [95:0] qIF_ID;
-	logic [271:0] qID_EX;
+	logic [272:0] qID_EX;
 	logic [203:0] qEX_MEM;
 	logic [134:0] qMEM_WB;
+	logic [10:0] controlSignals;
+	logic [4:0] IF_ID_RT;
+	mux2 		#(11) 	hdu_mux	(11'b0,
+										{
+											Nzero, AluSrc, 
+											AluControl, Branch, 
+											memRead, memWrite, 
+											regWrite, memtoReg
+										},
+										enable,controlSignals);
+										
+	//mux2 #(5) rtMux(qIF_ID[20:16],qIF_ID[4:0],reg2loc,IF_ID_RT);
+										
+	hd_unit 				hd(.ID_EX_RegWrite(qID_EX[262]),
+								.EX_MEM_RegWrite(qEX_MEM[199]),
+								.ID_EX_RegisterRD(qID_EX[4:0]),
+								.EX_MEM_RegisterRD(qEX_MEM[4:0]),
+								.IF_ID_RegisterRT(qIF_ID[20:16]),
+								.IF_ID_RegisterRS(qIF_ID[9:5]),
+								.enable(enable));
 	
 	fetch 	#(64) 	FETCH 	(.PCSrc_F(PCSrc),
 										.clk(clk),
 										.reset(reset),
+										.enable(enable),
 										.PCBranch_F(qEX_MEM[197:134]),
 										.imem_addr_F(IM_addr));								
 					
 	
-	flopr 	#(96)		IF_ID 	(.clk(clk),
-										.reset(reset), 
-										.d({IM_addr, IM_readData}),
-										.q(qIF_ID));
+	flopre 	#(96)		IF_ID 	(	.clk(clk),
+											.reset(reset),
+											.enable(enable),
+											.d({IM_addr, IM_readData}),
+											.q(qIF_ID));
 										
 	
 	decode 	#(64) 	DECODE 	(.regWrite_D(qMEM_WB[134]),
@@ -47,11 +70,10 @@ module datapath #(parameter N = 64)
 										.readData1_D(readData1_D),
 										.readData2_D(readData2_D),
 										.wa3_D(qMEM_WB[4:0]));				
-																									
-									
+																																	
 	flopr 	#(272)	ID_EX 	(.clk(clk),
 										.reset(reset), 
-										.d({Nzero, AluSrc, AluControl, Branch, memRead, memWrite, regWrite, memtoReg,	
+										.d({controlSignals,	
 											qIF_ID[95:32], signImm_D, readData1_D, readData2_D, qIF_ID[4:0]}),
 										.q(qID_EX));	
 	
