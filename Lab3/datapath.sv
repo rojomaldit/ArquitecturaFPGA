@@ -43,17 +43,20 @@ module datapath #(parameter N = 64)
                     .enable(enable));
 
 
-  hd_unit hdu(.ID_EX_MemRead(qID_EX[264]),
+  hd_unit hdu(.ID_EX_MemToReg(qID_EX[261]),
+				  .ID_EX_MemRead(qID_EX[264]),
+				  .EX_Mem_MemToReg(qEX_MEM[198]),
+				  .EX_Mem_MemRead(qEX_MEM[201]),
               .ID_EX_RegisterRD(qID_EX[4:0]),
               .EX_MEM_RegisterRD(qEX_MEM[4:0]),
-              .MEM_WB_RegisterRD(qMEM_WB[4:0]), // New
-              .IF_ID_RegisterRS(first_i),
+              .MEM_WB_RegisterRD(qMEM_WB[4:0]),
+				  .IF_ID_RegisterRS(first_i),
               .IF_ID_RegisterRT(second_i),
-              .enable(enable));
+				  .enable(enable));
 
   logic [10:0]controlSignals;
 
-  mux2 #(12) hdu_mux(11'b0,{ BranchNotZero,
+  mux2 #(11) hdu_mux(11'b0,{ BranchNotZero,
                              AluSrc,
                              AluControl,
                              Branch,
@@ -86,16 +89,16 @@ module datapath #(parameter N = 64)
   execute   #(64)   EXECUTE   (.AluSrc(qID_EX[270]),
                     .AluControl(qID_EX[269:266]),
                     .PC_E(qID_EX[260:197]), 
-                    .signImm_E(qID_EX[196:133]), 
-                    .readData1_E(qID_EX[132:69]), 
-                    .readData2_E(qID_EX[68:5]), 
-                    .PCBranch_E(PCBranch_E), 
-                    .aluResult_E(aluResult_E), 
-                    .writeData_E(writeData_E), 
+                    .signImm_E(qID_EX[196:133]),
+                    .readData1_E(qID_EX[132:69]),
+                    .readData2_E(qID_EX[68:5]),
+                    .PCBranch_E(PCBranch_E),
+                    .aluResult_E(aluResult_E),
+                    .writeData_E(writeData_E),
                     .zero_E(zero_E));
 
   flopr   #(204)  EX_MEM   (.clk(clk),
-                    .reset(reset), 
+                    .reset(reset),
                     .d({qID_EX[271],qID_EX[265:261], PCBranch_E, zero_E, aluResult_E, writeData_E, qID_EX[4:0]}),
                     .q(qEX_MEM));  
 

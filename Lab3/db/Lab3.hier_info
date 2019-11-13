@@ -649,7 +649,7 @@ DM_writeData[61] <= flopr:EX_MEM.q
 DM_writeData[62] <= flopr:EX_MEM.q
 DM_writeData[63] <= flopr:EX_MEM.q
 DM_writeEnable <= flopr:EX_MEM.q
-DM_readEnable <= flopr:EX_MEM.q
+DM_readEnable <= qEX_MEM[201].DB_MAX_OUTPUT_PORT_TYPE
 enable <= enable.DB_MAX_OUTPUT_PORT_TYPE
 
 
@@ -1696,7 +1696,10 @@ q[95] <= q[95]$latch.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |processor_arm|datapath:dp|hd_unit:hdu
+ID_EX_MemToReg => always0.IN0
 ID_EX_MemRead => always0.IN1
+EX_Mem_MemToReg => always0.IN0
+EX_Mem_MemRead => always0.IN1
 ID_EX_RegisterRD[0] => Equal1.IN4
 ID_EX_RegisterRD[0] => Equal2.IN4
 ID_EX_RegisterRD[0] => Equal0.IN4
@@ -1722,47 +1725,32 @@ EX_MEM_RegisterRD[3] => Equal3.IN1
 EX_MEM_RegisterRD[3] => Equal4.IN1
 EX_MEM_RegisterRD[4] => Equal3.IN0
 EX_MEM_RegisterRD[4] => Equal4.IN0
-MEM_WB_RegisterRD[0] => Equal5.IN4
-MEM_WB_RegisterRD[0] => Equal6.IN4
-MEM_WB_RegisterRD[1] => Equal5.IN3
-MEM_WB_RegisterRD[1] => Equal6.IN3
-MEM_WB_RegisterRD[2] => Equal5.IN2
-MEM_WB_RegisterRD[2] => Equal6.IN2
-MEM_WB_RegisterRD[3] => Equal5.IN1
-MEM_WB_RegisterRD[3] => Equal6.IN1
-MEM_WB_RegisterRD[4] => Equal5.IN0
-MEM_WB_RegisterRD[4] => Equal6.IN0
+MEM_WB_RegisterRD[0] => ~NO_FANOUT~
+MEM_WB_RegisterRD[1] => ~NO_FANOUT~
+MEM_WB_RegisterRD[2] => ~NO_FANOUT~
+MEM_WB_RegisterRD[3] => ~NO_FANOUT~
+MEM_WB_RegisterRD[4] => ~NO_FANOUT~
 IF_ID_RegisterRS[0] => Equal1.IN9
 IF_ID_RegisterRS[0] => Equal3.IN9
-IF_ID_RegisterRS[0] => Equal5.IN9
 IF_ID_RegisterRS[1] => Equal1.IN8
 IF_ID_RegisterRS[1] => Equal3.IN8
-IF_ID_RegisterRS[1] => Equal5.IN8
 IF_ID_RegisterRS[2] => Equal1.IN7
 IF_ID_RegisterRS[2] => Equal3.IN7
-IF_ID_RegisterRS[2] => Equal5.IN7
 IF_ID_RegisterRS[3] => Equal1.IN6
 IF_ID_RegisterRS[3] => Equal3.IN6
-IF_ID_RegisterRS[3] => Equal5.IN6
 IF_ID_RegisterRS[4] => Equal1.IN5
 IF_ID_RegisterRS[4] => Equal3.IN5
-IF_ID_RegisterRS[4] => Equal5.IN5
 IF_ID_RegisterRT[0] => Equal2.IN9
 IF_ID_RegisterRT[0] => Equal4.IN9
-IF_ID_RegisterRT[0] => Equal6.IN9
 IF_ID_RegisterRT[1] => Equal2.IN8
 IF_ID_RegisterRT[1] => Equal4.IN8
-IF_ID_RegisterRT[1] => Equal6.IN8
 IF_ID_RegisterRT[2] => Equal2.IN7
 IF_ID_RegisterRT[2] => Equal4.IN7
-IF_ID_RegisterRT[2] => Equal6.IN7
 IF_ID_RegisterRT[3] => Equal2.IN6
 IF_ID_RegisterRT[3] => Equal4.IN6
-IF_ID_RegisterRT[3] => Equal6.IN6
 IF_ID_RegisterRT[4] => Equal2.IN5
 IF_ID_RegisterRT[4] => Equal4.IN5
-IF_ID_RegisterRT[4] => Equal6.IN5
-enable <= always0.DB_MAX_OUTPUT_PORT_TYPE
+enable <= enable.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |processor_arm|datapath:dp|mux2:hdu_mux
@@ -1777,7 +1765,6 @@ d0[7] => y.DATAA
 d0[8] => y.DATAA
 d0[9] => y.DATAA
 d0[10] => y.DATAA
-d0[11] => y.DATAA
 d1[0] => y.DATAB
 d1[1] => y.DATAB
 d1[2] => y.DATAB
@@ -1789,8 +1776,6 @@ d1[7] => y.DATAB
 d1[8] => y.DATAB
 d1[9] => y.DATAB
 d1[10] => y.DATAB
-d1[11] => y.DATAB
-s => y.OUTPUTSELECT
 s => y.OUTPUTSELECT
 s => y.OUTPUTSELECT
 s => y.OUTPUTSELECT
@@ -1813,7 +1798,6 @@ y[7] <= y.DB_MAX_OUTPUT_PORT_TYPE
 y[8] <= y.DB_MAX_OUTPUT_PORT_TYPE
 y[9] <= y.DB_MAX_OUTPUT_PORT_TYPE
 y[10] <= y.DB_MAX_OUTPUT_PORT_TYPE
-y[11] <= y.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |processor_arm|datapath:dp|decode:DECODE
