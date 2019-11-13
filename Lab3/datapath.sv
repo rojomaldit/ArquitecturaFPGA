@@ -22,7 +22,7 @@ module datapath #(parameter N = 64)
   logic zero_E,PCSrc;
 
   logic [95:0] qIF_ID;
-  logic [271:0] qID_EX;
+  logic [282:0] qID_EX;
   logic [203:0] qEX_MEM;
   logic [134:0] qMEM_WB;
 
@@ -43,16 +43,17 @@ module datapath #(parameter N = 64)
                              .enable(enable));
 
 
-  hd_unit hdu(.ID_EX_MemToReg(qID_EX[261]),
-				      .ID_EX_MemRead(qID_EX[264]),
-				      .EX_Mem_MemToReg(qEX_MEM[198]),
-				      .EX_Mem_MemRead(qEX_MEM[201]),
+  hd_unit hdu(.ID_EX_RegWrite(qID_EX[261]),
+				      .EX_Mem_RegWrite(qEX_MEM[183]), // Not sure
+
               .ID_EX_RegisterRD(qID_EX[4:0]),
               .EX_MEM_RegisterRD(qEX_MEM[4:0]),
               .MEM_WB_RegisterRD(qMEM_WB[4:0]),
-				      .IF_ID_RegisterRS(first_i),
+				      
+              .IF_ID_RegisterRS(first_i),
               .IF_ID_RegisterRT(second_i),
-				      .enable(enable));
+				      
+              .enable(enable));
 
   logic [10:0]controlSignals;
 
@@ -83,9 +84,21 @@ module datapath #(parameter N = 64)
 
   // Previously #(272)
   flopr   #(283)  ID_EX   (.clk(clk),
-                           .reset(reset), 
-                           .d({controlSignals, Nzero, AluSrc, AluControl, Branch, memRead, memWrite, regWrite,
-                               memtoReg, qIF_ID[95:32], signImm_D, readData1_D, readData2_D, qIF_ID[4:0]}),
+                           .reset(reset),
+                           .d({controlSignals,
+                               Nzero,
+                               AluSrc,
+                               AluControl,
+                               Branch,
+                               memRead,
+                               memWrite,
+                               regWrite,//rw=261
+                               memtoReg,
+                               qIF_ID[95:32],
+                               signImm_D,
+                               readData1_D,
+                               readData2_D,
+                               qIF_ID[4:0]}),
                            .q(qID_EX));
 
   execute   #(64)   EXECUTE   (.AluSrc(qID_EX[270]),
@@ -101,7 +114,13 @@ module datapath #(parameter N = 64)
 
   flopr   #(204)  EX_MEM   (.clk(clk),
                             .reset(reset),
-                            .d({qID_EX[271],qID_EX[265:261], PCBranch_E, zero_E, aluResult_E, writeData_E, qID_EX[4:0]}),
+                            .d({qID_EX[271],
+                                qID_EX[265:261],
+                                PCBranch_E,
+                                zero_E,
+                                aluResult_E,
+                                writeData_E,
+                                qID_EX[4:0]}),
                             .q(qEX_MEM));  
 
   memory        MEMORY  (.Nzero_W(qEX_MEM[203]),
