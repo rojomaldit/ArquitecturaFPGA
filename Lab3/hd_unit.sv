@@ -10,6 +10,7 @@ module hd_unit(input logic ID_EX_RegWrite,
                                  IF_ID_RegisterRD,
                                  IF_ID_RegisterRS,
                                  IF_ID_RegisterRT,
+                                 IF_ID_branch,
                output logic enable);
 
 initial begin

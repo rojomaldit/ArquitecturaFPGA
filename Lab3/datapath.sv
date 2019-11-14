@@ -58,6 +58,7 @@ module datapath #(parameter N = 64)
               .IF_ID_RegisterRD(qIF_ID[4:0]),
               .IF_ID_RegisterRS(first_i),
               .IF_ID_RegisterRT(second_i),
+              .IF_ID_branch(qID_EX[265]),
 
               // .IF_ID_Rn(qIF_ID[9:5]),
               // .IF_ID_Rm(qIF_ID_Rm),
