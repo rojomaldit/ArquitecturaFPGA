@@ -45,11 +45,22 @@ module datapath #(parameter N = 64)
 
   hd_unit hdu(.ID_EX_RegWrite(qID_EX[261]),
 				      .EX_Mem_RegWrite(qEX_MEM[183]), // Not sure
+
+              .ID_EX_MemToReg(qID_EX[261]),
+				      .ID_EX_MemRead(qID_EX[264]),
+				      .EX_Mem_MemToReg(qEX_MEM[198]),
+				      .EX_Mem_MemRead(qEX_MEM[201]),
+
               .ID_EX_RegisterRD(qID_EX[4:0]),
               .EX_MEM_RegisterRD(qEX_MEM[4:0]),
               .MEM_WB_RegisterRD(qMEM_WB[4:0]),
+              
+              .IF_ID_RegisterRD(qIF_ID[4:0]),
               .IF_ID_RegisterRS(first_i),
               .IF_ID_RegisterRT(second_i),
+
+              // .IF_ID_Rn(qIF_ID[9:5]),
+              // .IF_ID_Rm(qIF_ID_Rm),
 				      
               .enable(enable));
 
