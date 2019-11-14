@@ -43,8 +43,8 @@ module datapath #(parameter N = 64)
                              .enable(enable));
 
 
-  hd_unit hdu(.ID_EX_RegWrite(qID_EX[262]),
-				      .EX_Mem_RegWrite(qEX_MEM[199]), // 183? Not sure
+  hd_unit hdu(.ID_EX_RegWrite(qID_EX[261]),
+				      .EX_Mem_RegWrite(qEX_MEM[183]),
 
               .ID_EX_MemToReg(qID_EX[261]),
 				      .ID_EX_MemRead(qID_EX[264]),
@@ -60,9 +60,6 @@ module datapath #(parameter N = 64)
               .IF_ID_RegisterRT(second_i),
               .IF_ID_branch(qID_EX[265]),
 
-              // .IF_ID_Rn(qIF_ID[9:5]),
-              // .IF_ID_Rm(qIF_ID_Rm),
-				      
               .enable(enable));
 
   logic [10:0]controlSignals;
