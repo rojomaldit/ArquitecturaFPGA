@@ -1,5 +1,5 @@
 module hd_unit(input logic ID_EX_RegWrite,
-									         EX_Mem_RegWrite,
+                           EX_Mem_RegWrite,
                            ID_EX_MemToReg,
                            ID_EX_MemRead,
                            EX_Mem_MemToReg,
