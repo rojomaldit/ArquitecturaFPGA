@@ -43,8 +43,8 @@ module datapath #(parameter N = 64)
                              .enable(enable));
 
 
-  hd_unit hdu(.ID_EX_RegWrite(qID_EX[261]),
-				      .EX_Mem_RegWrite(qEX_MEM[183]), // Not sure
+  hd_unit hdu(.ID_EX_RegWrite(qID_EX[262]),
+				      .EX_Mem_RegWrite(qEX_MEM[199]), // 183? Not sure
 
               .ID_EX_MemToReg(qID_EX[261]),
 				      .ID_EX_MemRead(qID_EX[264]),
